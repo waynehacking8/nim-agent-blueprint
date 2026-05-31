@@ -84,3 +84,12 @@ calls (plan + validate) — the price of a self-checking agent.
 > Run it yourself (self-hosted): `NIM_MODE=selfhost NIM_LLM_URL=…:8011/v1
 > NIM_EMBED_URL=…:11434/v1 NIM_DISABLE_THINKING=1 python eval/run_eval.py`.
 > LLM served on GPU 2 only — the busy GPU 0 is never touched.
+
+## Talk
+
+This repo doubles as the supplementary material for a talk,
+**"Agentic RAG That Doesn't Hallucinate: Guardrails & Evaluation on the NVIDIA Stack."**
+
+- [`talk/slides.md`](talk/slides.md) — the deck (Marp; `marp talk/slides.md -o slides.pdf`), with speaker notes.
+- [`talk/walkthrough.md`](talk/walkthrough.md) — reproduce the guarded-vs-unguarded ablation in ~5 min.
+- [`talk/README.md`](talk/README.md) — abstract, format, and audience.
