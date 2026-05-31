@@ -58,5 +58,29 @@ docker compose -f deploy/compose.yml up -d
 python eval/run_eval.py        # -> eval/report.md
 ```
 
-## Results
-Eval numbers populated after a run against live NIMs — see `eval/report.md`. **(in progress)**
+## Results — self-hosted on 4× H100 (vLLM Qwen3-8B + Ollama embeddings)
+
+Full writeup: [`eval/report.md`](eval/report.md). NIM is OpenAI-compatible, so a self-hosted
+vLLM endpoint is a faithful stand-in — flip `NIM_MODE`/`NIM_LLM_URL` to a real
+`build.nvidia.com` or self-hosted NIM and the harness is unchanged. Corpus: 20 passages;
+eval: 16 answerable + 10 unanswerable (incl. **adversarial near-miss** — B200/H200/FP4
+questions the model is tempted to answer from the H100 facts in context).
+
+| metric | value |
+|---|---|
+| retrieval recall@3 | 94% |
+| answer accuracy (answerable) | 94% |
+| hallucination on unanswerable — **guarded** prompt | **0%** |
+| hallucination on unanswerable — **unguarded** (ablation) | **50%** |
+
+**The honest finding:** a guarded generator prompt drives hallucination to 0% on
+out-of-corpus questions; *removing* it (ablation) sends the same model to 50%. The
+`validate()` LLM-as-judge gate, scored as a hallucination detector on the unguarded run,
+is only a **weak second line of defense — recall 40%, F1 0.44**, cutting residual
+hallucination 50%→30%. A single-pass judge is not enough on its own; this is why the
+roadmap adds a multi-sample / NeMo-Guardrails validator. Per-answer cost is ~2 extra LLM
+calls (plan + validate) — the price of a self-checking agent.
+
+> Run it yourself (self-hosted): `NIM_MODE=selfhost NIM_LLM_URL=…:8011/v1
+> NIM_EMBED_URL=…:11434/v1 NIM_DISABLE_THINKING=1 python eval/run_eval.py`.
+> LLM served on GPU 2 only — the busy GPU 0 is never touched.

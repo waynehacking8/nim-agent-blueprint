@@ -1,3 +1,26 @@
-{"q": "What API style does NVIDIA NIM expose?", "gold": "OpenAI-compatible API"}
-{"q": "What syncs activations in tensor parallelism?", "gold": "all-reduce"}
-{"q": "What serves TensorRT-LLM engines with in-flight batching?", "gold": "Triton"}
+{"q": "What API style does NVIDIA NIM expose?", "answerable": true, "gold_passage": "nim-api", "gold": "OpenAI-compatible"}
+{"q": "What operation syncs activations across GPUs in tensor parallelism?", "answerable": true, "gold_passage": "tp-allreduce", "gold": "all-reduce"}
+{"q": "Which server provides in-flight batching for TensorRT-LLM engines?", "answerable": true, "gold_passage": "triton-batch", "gold": "Triton"}
+{"q": "Why is tensor-parallel decode communication-bound at small batch sizes?", "answerable": true, "gold_passage": "tp-commbound", "gold": "launch latency"}
+{"q": "What does NVLS (NVLink SHARP) do during an all-reduce?", "answerable": true, "gold_passage": "nccl-nvls", "gold": "reduction"}
+{"q": "Roughly what is the per-GPU unidirectional NVLink bandwidth on an H100?", "answerable": true, "gold_passage": "nvlink-bw", "gold": "478"}
+{"q": "In which regime does FP8 quantization help inference most?", "answerable": true, "gold_passage": "fp8-decode", "gold": "memory-bandwidth-bound"}
+{"q": "How does paged KV-cache manage attention keys and values?", "answerable": true, "gold_passage": "paged-kv", "gold": "fixed-size blocks"}
+{"q": "How do CUDA Graphs reduce overhead during decode?", "answerable": true, "gold_passage": "cuda-graph", "gold": "launch overhead"}
+{"q": "What does a reranker model do to retrieved passages?", "answerable": true, "gold_passage": "reranker", "gold": "rescores"}
+{"q": "What two signals does hybrid retrieval combine?", "answerable": true, "gold_passage": "hybrid-retrieval", "gold": "keyword"}
+{"q": "What is groundedness checking for?", "answerable": true, "gold_passage": "groundedness", "gold": "supported by the retrieved context"}
+{"q": "What does speculative decoding use a small draft model for?", "answerable": true, "gold_passage": "speculative", "gold": "propose"}
+{"q": "What does MIG do to an H100?", "answerable": true, "gold_passage": "mig", "gold": "partitions"}
+{"q": "What is the pipeline bubble?", "answerable": true, "gold_passage": "pp-bubble", "gold": "idle time"}
+{"q": "How is a NIM container distributed and what does it select at startup?", "answerable": true, "gold_passage": "nim-deploy", "gold": "TensorRT-LLM engine"}
+{"q": "What is the exact list price of an NVIDIA H100 GPU in US dollars?", "answerable": false, "gold_passage": null, "gold": null}
+{"q": "What time zone is the NVIDIA headquarters in?", "answerable": false, "gold_passage": null, "gold": null}
+{"q": "How many parameters does GPT-5 have?", "answerable": false, "gold_passage": null, "gold": null}
+{"q": "What is the capital of Australia?", "answerable": false, "gold_passage": null, "gold": null}
+{"q": "What was NVIDIA's quarterly revenue last quarter?", "answerable": false, "gold_passage": null, "gold": null}
+{"q": "Which sport did Jensen Huang play professionally?", "answerable": false, "gold_passage": null, "gold": null}
+{"q": "What is the per-GPU unidirectional NVLink bandwidth on a B200?", "answerable": false, "gold_passage": null, "gold": null}
+{"q": "What is the FP4 tensor-core throughput of an H100?", "answerable": false, "gold_passage": null, "gold": null}
+{"q": "How many NVLink links does an H200 SXM GPU have?", "answerable": false, "gold_passage": null, "gold": null}
+{"q": "What is the default maximum batch size Triton uses for in-flight batching?", "answerable": false, "gold_passage": null, "gold": null}

@@ -1,0 +1,20 @@
+{"id": "nim-api", "text": "NVIDIA NIM packages optimized inference as microservices exposing an OpenAI-compatible HTTP API, so existing OpenAI client code works against a self-hosted NIM unchanged."}
+{"id": "nim-deploy", "text": "A NIM is distributed as a prebuilt container from NGC; it auto-selects an optimized TensorRT-LLM engine for the detected GPU at startup."}
+{"id": "tp-allreduce", "text": "Tensor parallelism splits each layer's weight matrices across GPUs; after the attention and MLP blocks an all-reduce sums the partial activations so every GPU holds the full result."}
+{"id": "tp-commbound", "text": "At small decode batch sizes tensor-parallel inference is communication-bound: each per-layer all-reduce moves only a few kilobytes and pays the fixed NCCL launch latency rather than bandwidth."}
+{"id": "trtllm-engine", "text": "TensorRT-LLM compiles a model into an optimized engine with fused kernels, paged KV-cache and quantization; the engine is hardware-specific and built ahead of serving."}
+{"id": "triton-batch", "text": "Triton Inference Server hosts TensorRT-LLM engines and provides in-flight (continuous) batching, dynamically adding and removing requests from the running batch to keep the GPU saturated."}
+{"id": "nccl-nvls", "text": "On an NVSwitch system NCCL can use NVLS (NVLink SHARP), which performs the reduction inside the switch via multicast so each GPU sends its data once instead of the 2(N-1)/N passes a ring all-reduce needs."}
+{"id": "nvlink-bw", "text": "An H100 SXM GPU has 18 fourth-generation NVLink links at about 26.5 GB/s each per direction, roughly 478 GB/s per-GPU unidirectional NVLink bandwidth."}
+{"id": "fp8-decode", "text": "FP8 weight quantization helps most in the memory-bandwidth-bound decode regime because halving the weight bytes cuts per-token weight traffic, lowering inter-token latency at low concurrency."}
+{"id": "paged-kv", "text": "Paged KV-cache stores attention keys and values in fixed-size blocks like virtual memory pages, eliminating fragmentation and letting many sequences share GPU memory efficiently."}
+{"id": "cuda-graph", "text": "CUDA Graphs capture a sequence of GPU operations once and replay them as a single unit, removing per-kernel launch overhead; inference engines use this to hide the all-reduce launch latency during decode."}
+{"id": "reranker", "text": "A reranker model rescores an initial set of retrieved passages by joint query-passage relevance, improving precision over pure vector similarity at the top of the list."}
+{"id": "hybrid-retrieval", "text": "Hybrid retrieval fuses dense vector similarity with sparse keyword matching, so it catches both semantic paraphrases and exact term matches that either method alone would miss."}
+{"id": "groundedness", "text": "Groundedness checking validates that every claim in a generated answer is supported by the retrieved context; ungrounded answers are flagged or withheld to prevent hallucination."}
+{"id": "nemo-agent", "text": "The NeMo Agent Toolkit helps build, profile and evaluate multi-step agentic workflows, with hooks for tracing each tool call and step."}
+{"id": "otel-trace", "text": "OpenTelemetry spans wrap each agent step (plan, retrieve, generate, validate) so latency and failures are attributable to a specific hop in production."}
+{"id": "embed-model", "text": "An embedding model maps text to a fixed-length vector so that semantically similar texts have nearby vectors under cosine similarity, forming the dense index for retrieval."}
+{"id": "speculative", "text": "Speculative decoding uses a small draft model to propose several tokens that the large target model verifies in one pass, raising decode throughput when the draft is accurate."}
+{"id": "mig", "text": "Multi-Instance GPU (MIG) partitions a single H100 into isolated instances with dedicated compute and memory, useful for serving several small models with guaranteed isolation."}
+{"id": "pp-bubble", "text": "Pipeline parallelism splits layers across GPUs into stages; the idle time while the pipeline fills and drains is called the bubble, reduced by micro-batching."}

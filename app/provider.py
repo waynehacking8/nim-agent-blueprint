@@ -26,15 +26,26 @@ def _headers():
 
 def chat(messages, model=None, max_tokens=512, temperature=0.0):
     model = model or os.getenv("NIM_LLM_MODEL", "meta/llama-3.1-70b-instruct")
+    body = {"model": model, "messages": messages,
+            "max_tokens": max_tokens, "temperature": temperature}
+    # Hybrid-reasoning models (e.g. Qwen3) emit <think> blocks that blow short prompt
+    # budgets and corrupt structured replies. Disable for the agent's terse calls.
+    if os.getenv("NIM_DISABLE_THINKING"):
+        body["chat_template_kwargs"] = {"enable_thinking": False}
     r = httpx.post(f"{_base()['llm']}/chat/completions", headers=_headers(), timeout=120,
-                   json={"model": model, "messages": messages,
-                         "max_tokens": max_tokens, "temperature": temperature})
+                   json=body)
     r.raise_for_status()
     return r.json()["choices"][0]["message"]["content"]
 
 def embed(texts, model=None):
     model = model or os.getenv("NIM_EMBED_MODEL", "nvidia/nv-embedqa-e5-v5")
+    payload = {"model": model, "input": texts}
+    # NVIDIA NIM embedding models require input_type ("query"/"passage"); generic
+    # OpenAI-compatible endpoints (Ollama, OpenAI) reject the extra field. Opt in via env.
+    itype = os.getenv("NIM_EMBED_INPUT_TYPE")
+    if itype:
+        payload["input_type"] = itype
     r = httpx.post(f"{_base()['embed']}/embeddings", headers=_headers(), timeout=120,
-                   json={"model": model, "input": texts, "input_type": "query"})
+                   json=payload)
     r.raise_for_status()
     return [d["embedding"] for d in r.json()["data"]]

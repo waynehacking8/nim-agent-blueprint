@@ -19,7 +19,8 @@ class HybridRetriever:
         na = math.sqrt(sum(x*x for x in a)); nb = math.sqrt(sum(y*y for y in b))
         return dot / (na*nb + 1e-9)
 
-    def retrieve(self, query, k=8, alpha=0.5):
+    def retrieve_idx(self, query, k=8, alpha=0.5):
+        """Indices of the top-k passages, fused dense+keyword (for recall@k eval)."""
         qv = provider.embed([query])[0]
         qt = Counter(re.findall(r"\w+", query.lower()))
         scores = []
@@ -27,5 +28,7 @@ class HybridRetriever:
             dense = self._cos(qv, self.vecs[i])
             kw = sum(qt[w] * self.tok[i][w] for w in qt) / (sum(self.tok[i].values()) + 1)
             scores.append((alpha*dense + (1-alpha)*kw, i))
-        top = [i for _, i in sorted(scores, reverse=True)[:k]]
-        return [self.passages[i] for i in top]   # reranker hook lands here in Phase 1
+        return [i for _, i in sorted(scores, reverse=True)[:k]]   # reranker hook lands here
+
+    def retrieve(self, query, k=8, alpha=0.5):
+        return [self.passages[i] for i in self.retrieve_idx(query, k, alpha)]
