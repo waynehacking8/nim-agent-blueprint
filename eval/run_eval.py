@@ -87,6 +87,11 @@ def main():
       "(incl. adversarial near-miss: B200/H200/FP4 questions a model is tempted to answer "
       "from the H100 facts in context). Self-hosted on H100: vLLM (Qwen3-8B, "
       f"OpenAI-compatible NIM stand-in) + Ollama embeddings. k={K}, temp=0.\n")
+    w(f"> **Illustrative, not a statistical benchmark (N={len(rows)}).** Percentages are "
+      f"small integer ratios (e.g. {sum(r['recall'] for r in ans)}/{len(ans)} recall, "
+      f"{sum(r['u_halluc'] for r in una)}/{n_una} unguarded hallucinations); they show the "
+      "harness works and the directional effect, not a precise score. Scale the corpus and "
+      "eval set for a real number.\n")
 
     w("## Headline\n")
     w("| metric | value |")

@@ -9,8 +9,9 @@ blueprint a partner can clone, point at their own NIMs, and adapt. It ports my e
 multi-agent / hybrid-retrieval work onto the NVIDIA-native serving stack.
 
 ## What this is
-- A runnable agentic RAG app: NIM LLM for generation, NIM embedding + reranker for hybrid retrieval,
-  and an agent layer (plan / retrieve / generate / **validate**) over them.
+- A runnable agentic RAG app: NIM LLM for generation, NIM embeddings for hybrid (dense+keyword)
+  retrieval, and an agent layer (plan / retrieve / generate / **validate**) over them. A NIM
+  reranker is the intended next retrieval stage but is **not wired in this build** (hook only).
 - A **NIM-agnostic provider layer** — swap a hosted `build.nvidia.com` endpoint for a self-hosted NIM
   by changing one env var. (This mirrors the routing layer I built at work, on NVIDIA infra.)
 - An **eval harness**: retrieval hit-rate, answer groundedness (LLM-as-judge), latency — so the
@@ -29,13 +30,14 @@ multi-agent / hybrid-retrieval work onto the NVIDIA-native serving stack.
             └──────┬──────────────┬───────────────┬───────────────────┬─────────────────────────┘
                    │              │               │                   │
               NIM LLM       NIM embedding    NIM LLM            NIM LLM (judge)
-            (reasoning)     + NIM reranker   (answer)          + rule checks
+            (reasoning)   (+rerank hook,     (answer)          + rule checks
+                            not wired)
 ```
 
 ## Layout
 ```
 app/provider.py     # NIM provider: hosted (build.nvidia.com) or self-hosted, one switch
-app/retriever.py    # hybrid retrieval: NIM embeddings + NIM reranker over a vector store
+app/retriever.py    # hybrid retrieval: NIM embeddings (dense) + keyword, min-max fused (rerank hook, not wired)
 app/agent.py        # plan -> retrieve -> generate -> validate loop, OTel-traced
 app/serve.py        # FastAPI entrypoint
 eval/dataset.jsonl  # small grounded-QA eval set (seed questions + gold passages)

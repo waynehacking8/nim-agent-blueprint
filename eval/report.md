@@ -2,16 +2,18 @@
 
 Corpus 20 passages · 16 answerable + 10 unanswerable (incl. adversarial near-miss: B200/H200/FP4 questions a model is tempted to answer from the H100 facts in context). Self-hosted on H100: vLLM (Qwen3-8B, OpenAI-compatible NIM stand-in) + Ollama embeddings. k=3, temp=0.
 
+> **Illustrative, not a statistical benchmark (N=26).** Percentages are small integer ratios (e.g. 16/16 recall, 4/10 unguarded hallucinations); they show the harness works and the directional effect, not a precise score. Scale the corpus and eval set for a real number.
+
 ## Headline
 
 | metric | value |
 |---|---|
-| retrieval recall@3 (answerable) | 94% |
-| answer accuracy (answerable) | 94% |
+| retrieval recall@3 (answerable) | 100% |
+| answer accuracy (answerable) | 100% |
 | hallucination on unanswerable — **guarded** generator | **0%** |
-| hallucination on unanswerable — **unguarded** generator | **50%** |
+| hallucination on unanswerable — **unguarded** generator | **40%** |
 
-The guarded prompt ("answer only from context, else say you don't know") is the first line of defense. The ablation shows what happens without it: the same model hallucinates on 50% of out-of-corpus questions.
+The guarded prompt ("answer only from context, else say you don't know") is the first line of defense. The ablation shows what happens without it: the same model hallucinates on 40% of out-of-corpus questions.
 
 ## The validate() groundedness gate as a safety net (unguarded run)
 
@@ -19,11 +21,11 @@ Second line of defense: an LLM-as-judge checks each answer against the context a
 
 | | gate blocks | gate passes |
 |---|---|---|
-| hallucinated (should block) | TP=2 | FN=3 |
-| grounded/abstained (should pass) | FP=2 | TN=19 |
+| hallucinated (should block) | TP=1 | FN=3 |
+| grounded/abstained (should pass) | FP=1 | TN=21 |
 
-- precision **50%** · recall **40%** · F1 **0.44**
-- residual hallucination on unanswerable *after* gating: **30%** (down from 50%)
+- precision **50%** · recall **25%** · F1 **0.33**
+- residual hallucination on unanswerable *after* gating: **30%** (down from 40%)
 
 Recall is the safety number — of answers that *should* be blocked, the share the gate caught. FN are the dangerous misses. Two cheap defenses stacked (guarded prompt + judge gate) is how you get a low residual without a fine-tune.
 
@@ -31,7 +33,7 @@ Recall is the safety number — of answers that *should* be blocked, the share t
 
 | plan | retrieve | generate | validate | total |
 |---|---|---|---|---|
-| 0.21 | 0.155 | 0.29 | 0.16 | 0.81 |
+| 0.24 | 0.165 | 0.30 | 0.16 | 0.87 |
 
 plan + validate are the agentic tax (2 extra LLM calls wrapping each answer); retrieve is cheap (embed + in-memory fuse). The validate hop is what buys the safety-net recall above.
 
@@ -52,7 +54,7 @@ plan + validate are the agentic tax (2 extra LLM calls wrapping each answer); re
 | What two signals does hybrid retrieval combine | True | True | True | False | False | False |
 | What is groundedness checking for? | True | True | True | False | False | False |
 | What does speculative decoding use a small dra | True | True | True | False | False | False |
-| What does MIG do to an H100? | True | False | False | False | False | True |
+| What does MIG do to an H100? | True | True | True | False | False | False |
 | What is the pipeline bubble? | True | True | True | False | False | False |
 | How is a NIM container distributed and what do | True | True | True | False | False | False |
 | What is the exact list price of an NVIDIA H100 | False | None | False | False | False | False |
@@ -60,7 +62,7 @@ plan + validate are the agentic tax (2 extra LLM calls wrapping each answer); re
 | How many parameters does GPT-5 have? | False | None | False | False | False | False |
 | What is the capital of Australia? | False | None | False | False | True | True |
 | What was NVIDIA's quarterly revenue last quart | False | None | False | False | False | False |
-| Which sport did Jensen Huang play professional | False | None | False | False | True | True |
+| Which sport did Jensen Huang play professional | False | None | False | False | False | False |
 | What is the per-GPU unidirectional NVLink band | False | None | False | False | True | False |
 | What is the FP4 tensor-core throughput of an H | False | None | False | False | False | False |
 | How many NVLink links does an H200 SXM GPU hav | False | None | False | False | True | False |
