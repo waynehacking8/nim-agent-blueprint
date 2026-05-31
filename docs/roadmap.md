@@ -2,7 +2,7 @@
 
 ## Phase 1 — Working blueprint
 - [ ] provider layer (hosted + self-host) verified against live NIMs.
-- [ ] hybrid retrieval + NIM reranker wired into retrieve().
+- [x] hybrid retrieval + NIM reranker wired into retrieve() (rerank opt-in via `NIM_RERANK`, falls back to fusion).
 - [ ] plan/retrieve/generate/validate loop end-to-end; OTel traces visible.
 - [ ] eval (hit-rate, groundedness, latency) -> report.md with real numbers.
 

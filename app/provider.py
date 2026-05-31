@@ -49,3 +49,19 @@ def embed(texts, model=None):
                    json=payload)
     r.raise_for_status()
     return [d["embedding"] for d in r.json()["data"]]
+
+def rerank(query, passages, model=None, top_k=None):
+    """Rerank `passages` against `query` via a NIM reranking endpoint.
+
+    Returns passage indices (into the input list) best-first. The rerank URL in `_base()`
+    is already the full endpoint, so we POST to it directly. Raises on HTTP error so the
+    caller can fall back to the fusion order when no reranker is available.
+    """
+    model = model or os.getenv("NIM_RERANK_MODEL", "nvidia/llama-3.2-nv-rerankqa-1b-v2")
+    body = {"model": model, "query": {"text": query},
+            "passages": [{"text": p} for p in passages]}
+    r = httpx.post(_base()["rerank"], headers=_headers(), timeout=120, json=body)
+    r.raise_for_status()
+    rankings = r.json()["rankings"]          # [{"index": i, "logit": s}, ...] best-first
+    idx = [d["index"] for d in rankings]
+    return idx[:top_k] if top_k else idx

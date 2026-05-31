@@ -1,11 +1,13 @@
-"""Hybrid retrieval: dense (NIM embeddings) + keyword, min-max normalized and fused.
+"""Hybrid retrieval: dense (NIM embeddings) + keyword, min-max normalized and fused,
+then optionally reranked by a NIM reranker.
 
-A NIM reranker is the intended next stage (see the `# rerank hook` in retrieve_idx) but is
-NOT wired in this build — retrieval here is dense+keyword fusion only. Deliberately
-small/in-memory so the blueprint is self-contained; swap the store for Milvus/pgvector in
-production (one class).
+Two stages: (1) dense+keyword fusion over-fetches `fetch_k` candidates; (2) if a NIM
+reranker is available (opt in with `NIM_RERANK=1`), it reorders those candidates and we
+keep the top-k. With no reranker (e.g. an Ollama-only setup) it falls back to the fusion
+order, so the eval runs unchanged. Deliberately small/in-memory so the blueprint is
+self-contained; swap the store for Milvus/pgvector in production (one class).
 """
-import math, re
+import math, os, re
 from collections import Counter
 from app import provider
 
@@ -30,9 +32,8 @@ class HybridRetriever:
         rng = hi - lo
         return [(x - lo) / rng for x in xs] if rng > 1e-9 else [0.0 for _ in xs]
 
-    def retrieve_idx(self, query, k=8, alpha=0.5):
-        """Indices of the top-k passages, fused dense+keyword (for recall@k eval).
-        Each channel is min-max normalized across the corpus before the alpha blend."""
+    def _fuse(self, query, alpha):
+        """Min-max-normalized dense+keyword fusion -> passage indices, best-first."""
         qv = provider.embed([query])[0]
         qt = Counter(re.findall(r"\w+", query.lower()))
         dense = [self._cos(qv, self.vecs[i]) for i in range(len(self.passages))]
@@ -40,7 +41,24 @@ class HybridRetriever:
               for i in range(len(self.passages))]
         dn, kn = self._minmax(dense), self._minmax(kw)
         scores = [(alpha * dn[i] + (1 - alpha) * kn[i], i) for i in range(len(self.passages))]
-        return [i for _, i in sorted(scores, reverse=True)[:k]]   # rerank hook (not wired) lands here
+        return [i for _, i in sorted(scores, reverse=True)]
+
+    def retrieve_idx(self, query, k=8, alpha=0.5):
+        """Top-k passage indices: dense+keyword fusion, then NIM rerank if enabled.
+
+        Stage 1 over-fetches `fetch_k` fusion candidates; stage 2 reranks them with a NIM
+        reranker when `NIM_RERANK` is set and an endpoint is reachable, else returns the
+        fusion top-k unchanged."""
+        cand = self._fuse(query, alpha)
+        fetch_k = max(k, int(os.getenv("RETRIEVE_FETCH_K", "20")))
+        cand = cand[:fetch_k]
+        if os.getenv("NIM_RERANK"):
+            try:
+                order = provider.rerank(query, [self.passages[i] for i in cand], top_k=k)
+                return [cand[j] for j in order][:k]
+            except Exception:
+                pass  # no reranker reachable -> fall back to fusion order
+        return cand[:k]
 
     def retrieve(self, query, k=8, alpha=0.5):
         return [self.passages[i] for i in self.retrieve_idx(query, k, alpha)]
