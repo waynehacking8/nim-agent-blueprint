@@ -97,3 +97,7 @@ This repo doubles as the supplementary material for a talk,
 - [`talk/slides.md`](talk/slides.md) — the deck (Marp; `marp talk/slides.md -o slides.pdf`), with speaker notes.
 - [`talk/walkthrough.md`](talk/walkthrough.md) — reproduce the guarded-vs-unguarded ablation in ~5 min.
 - [`talk/README.md`](talk/README.md) — abstract, format, and audience.
+
+---
+
+_Part of my portfolio — [waynehacking8.github.io](https://waynehacking8.github.io/). Writeup: [0% vs 50%: making a RAG agent refuse to hallucinate](https://waynehacking8.github.io/blog/rag-groundedness-guardrail/)._
