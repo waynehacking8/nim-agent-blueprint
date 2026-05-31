@@ -1,0 +1,14 @@
+# Self-host NIMs on local GPUs. Requires NGC auth (NGC_API_KEY) and access to the NIM images.
+# Edit images/models to taste; the app talks to these via app/provider.py (NIM_MODE=selfhost).
+services:
+  nim-llm:
+    image: nvcr.io/nim/meta/llama-3.1-8b-instruct:latest
+    runtime: nvidia
+    environment: [ "NGC_API_KEY=${NGC_API_KEY}" ]
+    ports: [ "8000:8000" ]
+    shm_size: 16g
+  nim-embed:
+    image: nvcr.io/nim/nvidia/nv-embedqa-e5-v5:latest
+    runtime: nvidia
+    environment: [ "NGC_API_KEY=${NGC_API_KEY}" ]
+    ports: [ "8001:8000" ]

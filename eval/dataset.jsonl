@@ -1,0 +1,3 @@
+{"q": "What API style does NVIDIA NIM expose?", "gold": "OpenAI-compatible API"}
+{"q": "What syncs activations in tensor parallelism?", "gold": "all-reduce"}
+{"q": "What serves TensorRT-LLM engines with in-flight batching?", "gold": "Triton"}
