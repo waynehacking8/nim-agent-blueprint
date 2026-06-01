@@ -149,7 +149,8 @@ separate GPU. Paired comparison, exact McNemar test:
 Recall **+16 points (p = 0.0026, McNemar exact)** — of hallucinations caught by exactly one
 judge, the cross-family judge caught 19 vs the self judge's 4. This confirms the
 shared-blind-spots attribution and matches the cross-model detection literature (FINCH-ZK,
-arXiv:2508.14314: +6–39 F1 from cross-model consistency). The trade-off is real too: the
+arXiv:2508.14314: detection F1 improved by 6–39% on FELM from cross-model consistency). The
+trade-off is real too: the
 independent judge is stricter (precision 79%→71%, more false blocks).
 
 The honest residual: **46 of 95 hallucinations were caught by neither 8B judge** — two small
@@ -181,7 +182,7 @@ This repo doubles as the supplementary material for a talk,
 - [LLM Evaluators Recognize and Favor Their Own Generations (NeurIPS 2024)](https://arxiv.org/abs/2404.13076) — self-preference bias in LLM-as-judge.
 - [Replacing Judges with Juries (PoLL)](https://arxiv.org/abs/2404.18796) — a panel of diverse judges beats a single large judge at lower cost.
 - [SelfCheckGPT (EMNLP 2023)](https://arxiv.org/abs/2303.08896) — sampling-based hallucination detection without external resources.
-- [FINCH-ZK: Zero-knowledge LLM hallucination detection through fine-grained cross-model consistency](https://arxiv.org/abs/2508.14314) — cross-model checking adds +6–39 F1; the literature anchor for the cross-family-judge result.
+- [FINCH-ZK: Zero-knowledge LLM hallucination detection through fine-grained cross-model consistency](https://arxiv.org/abs/2508.14314) — cross-model checking improves detection F1 by 6–39% (FELM); the literature anchor for the cross-family-judge result.
 - [SQuAD 2.0 (Rajpurkar et al., ACL 2018)](https://arxiv.org/abs/1806.03822) — the adversarial-unanswerable QA dataset behind the N=200 eval.
 
 ## Disclaimer

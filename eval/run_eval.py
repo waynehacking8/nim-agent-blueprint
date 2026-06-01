@@ -242,7 +242,8 @@ def main():
           "score the same answers), so an exact McNemar test applies: of the hallucinations "
           f"caught by exactly one judge, the cross-family judge caught {mn['b_only']} vs the "
           f"self judge's {mn['a_only']} — **p = {mn['p']:.4f}**. Cross-model detection "
-          "literature (e.g. FINCH-ZK, arXiv:2508.14314: +6–39 F1 points from cross-model "
+          "literature (e.g. FINCH-ZK, arXiv:2508.14314: detection F1 improved by 6–39% on "
+          "FELM from cross-model "
           "consistency) predicts this gain when blind spots, not judging ability, are the "
           "bottleneck.\n")
         w(f"The equally important honest number: **{mn['neither']}** of the "

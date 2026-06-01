@@ -49,7 +49,7 @@ Hypothesis: a judge that is the same model that hallucinated misses the same fac
 | self (qwen3-8b) | 79% | 32% | 0.45 |
 | cross-family (llama-3.1-8b) | 71% | 47% | 0.57 |
 
-Recall delta: **+16 points**, and the comparison is *paired* (both judges score the same answers — temp=0 makes the generations identical), so an exact McNemar test applies: of the 23 hallucinations caught by exactly one judge, the cross-family judge caught **19** vs the self judge's **4** — **p = 0.0026**. Cross-model detection literature (e.g. FINCH-ZK, arXiv:2508.14314: +6–39 F1 points from cross-model consistency) predicts this gain when blind spots, not judging ability, are the bottleneck.
+Recall delta: **+16 points**, and the comparison is *paired* (both judges score the same answers — temp=0 makes the generations identical), so an exact McNemar test applies: of the 23 hallucinations caught by exactly one judge, the cross-family judge caught **19** vs the self judge's **4** — **p = 0.0026**. Cross-model detection literature (e.g. FINCH-ZK, arXiv:2508.14314: detection F1 improved by 6–39% on FELM from cross-model consistency) predicts this gain when blind spots, not judging ability, are the bottleneck.
 
 The equally important honest number: **46** of the 95 hallucinations were caught by *neither* 8B judge — two small same-size judges still share most blind spots with each other. The next rungs are a larger judge model, a judge panel (PoLL), or retrieval-grounded verification.
 
