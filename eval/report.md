@@ -1,6 +1,6 @@
 # Agentic-RAG eval — retrieval, hallucination gating, judge calibration, latency
 
-Corpus 20 passages · 16 answerable + 10 unanswerable (incl. adversarial near-miss: B200/H200/FP4 questions a model is tempted to answer from the H100 facts in context). Self-hosted on H100: vLLM (Qwen3-8B, OpenAI-compatible NIM stand-in) + Ollama embeddings. k=3, temp=0.
+Corpus 20 passages · 16 answerable + 10 unanswerable (incl. adversarial near-miss: B200/H200/FP4 questions a model is tempted to answer from the H100 facts in context). Self-hosted on a single H100 (one GPU of a 4× H100 box; the 8B model fits on one GPU, so the others are untouched): vLLM (Qwen3-8B, OpenAI-compatible NIM stand-in) + Ollama embeddings. k=3, temp=0.
 
 > **Illustrative, not a statistical benchmark (N=26).** Percentages are small integer ratios (e.g. 16/16 recall, 4/10 unguarded hallucinations); they show the harness works and the directional effect, not a precise score. Scale the corpus and eval set for a real number.
 
@@ -8,8 +8,8 @@ Corpus 20 passages · 16 answerable + 10 unanswerable (incl. adversarial near-mi
 
 | metric | value |
 |---|---|
-| retrieval recall@3 (answerable) | 100% |
-| answer accuracy (answerable) | 100% |
+| retrieval recall@3 (answerable) | 100% (16/16 — small illustrative set; near-trivial retrieval at 20-passage corpus, k=3) |
+| answer accuracy (answerable) | 100% (16/16 — same small illustrative set, N=26 total; not a statistical benchmark) |
 | hallucination on unanswerable — **guarded** generator | **0%** |
 | hallucination on unanswerable — **unguarded** generator | **40%** |
 
@@ -17,7 +17,7 @@ The guarded prompt ("answer only from context, else say you don't know") is the 
 
 ## The validate() groundedness gate as a safety net (unguarded run)
 
-Second line of defense: an LLM-as-judge checks each answer against the context and blocks unsupported ones. Scored on the unguarded run, where hallucinations exist:
+Second line of defense: an LLM-as-judge checks each answer against the context and blocks unsupported ones. The judge (`validate()`) uses the same model and endpoint as the generator, so this groundedness check carries a self-grading bias — the model is asked to flag its own output, a likely contributor to the low 25% gate recall below. Scored on the unguarded run, where hallucinations exist:
 
 | | gate blocks | gate passes |
 |---|---|---|

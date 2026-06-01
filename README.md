@@ -59,7 +59,9 @@ docker compose -f deploy/compose.yml up -d
 python eval/run_eval.py        # -> eval/report.md
 ```
 
-## Results — self-hosted on 4× H100 (vLLM Qwen3-8B + Ollama embeddings)
+## Results — self-hosted on a single H100 (vLLM Qwen3-8B + Ollama embeddings)
+
+_Hardware: one H100, on a 4× H100 box — the 8B model fits on a single GPU, so only one is used (the others are untouched)._
 
 Full writeup: [`eval/report.md`](eval/report.md). NIM is OpenAI-compatible, so a self-hosted
 vLLM endpoint is a faithful stand-in — flip `NIM_MODE`/`NIM_LLM_URL` to a real
@@ -69,8 +71,8 @@ questions the model is tempted to answer from the H100 facts in context).
 
 | metric | value |
 |---|---|
-| retrieval recall@3 | 100% (16/16) |
-| answer accuracy (answerable) | 100% (16/16) |
+| retrieval recall@3 | 100% (16/16 — small illustrative set; near-trivial retrieval at 20-passage corpus, k=3) |
+| answer accuracy (answerable) | 100% (16/16 — same small illustrative set, N=26 total; not a statistical benchmark) |
 | hallucination on unanswerable — **guarded** prompt | **0%** (0/10) |
 | hallucination on unanswerable — **unguarded** (ablation) | **40%** (4/10) |
 
@@ -80,8 +82,10 @@ questions the model is tempted to answer from the H100 facts in context).
 out-of-corpus questions; *removing* it (ablation) sends the same model to 40%. The
 `validate()` LLM-as-judge gate, scored as a hallucination detector on the unguarded run,
 is only a **weak second line of defense — recall 25%, F1 0.33** (caught 1 of 4
-hallucinations), cutting residual 40%→30%. A single-pass judge is not enough on its own;
-this is why the roadmap adds a multi-sample / NeMo-Guardrails validator. Per-answer cost is
+hallucinations), cutting residual 40%→30%. The judge shares the generator's model and
+endpoint, so this groundedness check has a self-grading bias (the model is asked to flag its
+own output) — a likely contributor to the low 25% gate recall. A single-pass judge is not
+enough on its own; this is why the roadmap adds a multi-sample / NeMo-Guardrails validator. Per-answer cost is
 ~2 extra LLM calls (plan + validate) — the price of a self-checking agent.
 
 > Run it yourself (self-hosted): `NIM_MODE=selfhost NIM_LLM_URL=…:8011/v1
