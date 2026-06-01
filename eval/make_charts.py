@@ -124,7 +124,7 @@ def chart_gate_confusion(path: str) -> None:
     ax.set_title(
         "validate() gate as a hallucination detector (unguarded run)\n"
         f"precision {PRECISION:.0%} · recall {RECALL:.0%} · F1 {F1:.2f} — "
-        "weak 2nd line of defense\n(self-grading bias: judge shares the generator's model)",
+        "weak 2nd line of defense\n(shared blind spots: judge lacks the same knowledge)",
         fontsize=10,
         pad=16,
     )

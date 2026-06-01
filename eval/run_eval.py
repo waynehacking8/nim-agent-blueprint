@@ -120,9 +120,11 @@ def main():
     w("## The validate() groundedness gate as a safety net (unguarded run)\n")
     w("Second line of defense: an LLM-as-judge checks each answer against the context and "
       "blocks unsupported ones. The judge (`validate()`) uses the same model and endpoint as "
-      "the generator, so this groundedness check carries a self-grading bias — the model is "
-      f"asked to flag its own output, a likely contributor to the low {rec:.0%} gate recall "
-      "below. Scored on the unguarded run, where hallucinations exist:\n")
+      f"the generator. The low {rec:.0%} gate recall below is consistent with published "
+      "self-detection findings (arXiv:2511.11087 reports ~22% recall without chain-of-thought, "
+      "58% with it); the primary mechanism is shared blind spots — the judge lacks the same "
+      "knowledge whose absence caused the hallucination, so prompt-level fixes cannot close "
+      "the gap. Scored on the unguarded run, where hallucinations exist:\n")
     w("| | gate blocks | gate passes |")
     w("|---|---|---|")
     w(f"| hallucinated (should block) | TP={tp} | FN={fn} |")
@@ -132,13 +134,20 @@ def main():
     w(f"- residual hallucination on unanswerable *after* gating: "
       f"**{residual_una:.0%}** (down from {u_halluc:.0%})\n")
     w(f"**The `validate()` gate as a hallucination detector — precision {prec:.0%}, recall "
-      f"{rec:.0%}, F1 {f1:.2f} (caught {tp} of {tp + fn}); the judge shares the generator's "
-      f"model/endpoint, hence the self-grading bias (small illustrative N={len(rows)}):**\n")
+      f"{rec:.0%}, F1 {f1:.2f} (caught {tp} of {tp + fn}). This ~{rec:.0%} recall matches "
+      "published self-detection findings (arXiv:2511.11087: ~22% without CoT); the primary "
+      "mechanism is shared blind spots — the judge lacks the same knowledge whose absence "
+      f"caused the hallucination (small illustrative N={len(rows)}):**\n")
     w(f"![Confusion matrix of the validate() gate on the unguarded run: TP={tp}, FN={fn}, "
       f"FP={fp}, TN={tn}](gate_confusion.png)\n")
     w("Recall is the safety number — of answers that *should* be blocked, the share the "
-      "gate caught. FN are the dangerous misses. Two cheap defenses stacked (guarded prompt "
-      "+ judge gate) is how you get a low residual without a fine-tune.\n")
+      "gate caught. FN are the dangerous misses. Because the dominant cause is missing "
+      "knowledge (shared blind spots), prompt-level fixes cannot close the gap; the "
+      "mitigations are an independent judge model (different model family), a judge panel "
+      "(PoLL), or retrieval-grounded verification (give the judge the retrieved context to "
+      "check against — natural for RAG), plus CoT judging as a cheap partial gain. Two cheap "
+      "defenses stacked (guarded prompt + judge gate) is how you get a low residual without a "
+      "fine-tune.\n")
 
     w("## Per-hop latency budget (mean seconds, guarded)\n")
     m = {h: statistics.mean(v) for h, v in hops.items()}

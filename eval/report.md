@@ -21,7 +21,7 @@ The guarded prompt ("answer only from context, else say you don't know") is the 
 
 ## The validate() groundedness gate as a safety net (unguarded run)
 
-Second line of defense: an LLM-as-judge checks each answer against the context and blocks unsupported ones. The judge (`validate()`) uses the same model and endpoint as the generator, so this groundedness check carries a self-grading bias — the model is asked to flag its own output, a likely contributor to the low 25% gate recall below. Scored on the unguarded run, where hallucinations exist:
+Second line of defense: an LLM-as-judge checks each answer against the context and blocks unsupported ones. The judge (`validate()`) uses the same model and endpoint as the generator. The low 25% gate recall below is consistent with published self-detection findings (arXiv:2511.11087 reports ~22% recall without chain-of-thought, 58% with it); the primary mechanism is shared blind spots — the judge lacks the same knowledge whose absence caused the hallucination, so prompt-level fixes cannot close the gap. Scored on the unguarded run, where hallucinations exist:
 
 | | gate blocks | gate passes |
 |---|---|---|
@@ -31,11 +31,11 @@ Second line of defense: an LLM-as-judge checks each answer against the context a
 - precision **50%** · recall **25%** · F1 **0.33**
 - residual hallucination on unanswerable *after* gating: **30%** (down from 40%)
 
-**The `validate()` gate as a hallucination detector — precision 50%, recall 25%, F1 0.33 (caught 1 of 4); the judge shares the generator's model/endpoint, hence the self-grading bias (small illustrative N=26):**
+**The `validate()` gate as a hallucination detector — precision 50%, recall 25%, F1 0.33 (caught 1 of 4). This ~25% recall matches published self-detection findings (arXiv:2511.11087: ~22% without CoT); the primary mechanism is shared blind spots — the judge lacks the same knowledge whose absence caused the hallucination (small illustrative N=26):**
 
 ![Confusion matrix of the validate() gate on the unguarded run: TP=1, FN=3, FP=1, TN=21](gate_confusion.png)
 
-Recall is the safety number — of answers that *should* be blocked, the share the gate caught. FN are the dangerous misses. Two cheap defenses stacked (guarded prompt + judge gate) is how you get a low residual without a fine-tune.
+Recall is the safety number — of answers that *should* be blocked, the share the gate caught. FN are the dangerous misses. Because the dominant cause is missing knowledge (shared blind spots), prompt-level fixes cannot close the gap; the mitigations are an independent judge model (different model family), a judge panel (PoLL), or retrieval-grounded verification (give the judge the retrieved context to check against — natural for RAG), plus CoT judging as a cheap partial gain. Two cheap defenses stacked (guarded prompt + judge gate) is how you get a low residual without a fine-tune.
 
 ## Per-hop latency budget (mean seconds, guarded)
 

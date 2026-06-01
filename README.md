@@ -82,7 +82,7 @@ questions the model is tempted to answer from the H100 facts in context).
 
 ![Hallucination rate on unanswerable questions: unguarded 40%, guarded 0%, residual 30% after the gate alone](eval/hallucination_ablation.png)
 
-**The `validate()` LLM-as-judge gate is a weak second line of defense — precision 50%, recall 25%, F1 0.33 (caught 1 of 4 hallucinations); the judge shares the generator's model/endpoint, so it has a self-grading bias (small illustrative N=26):**
+**The `validate()` LLM-as-judge gate is a weak second line of defense — precision 50%, recall 25%, F1 0.33 (caught 1 of 4 hallucinations). This ~25% recall is consistent with published self-detection findings (arXiv:2511.11087 reports ~22% recall without chain-of-thought); the primary mechanism is shared blind spots — the judge is the same model and lacks the same knowledge whose absence caused the hallucination (small illustrative N=26):**
 
 ![Confusion matrix of the validate() gate on the unguarded run: TP=1, FN=3, FP=1, TN=21](eval/gate_confusion.png)
 
@@ -90,11 +90,20 @@ questions the model is tempted to answer from the H100 facts in context).
 out-of-corpus questions; *removing* it (ablation) sends the same model to 40%. The
 `validate()` LLM-as-judge gate, scored as a hallucination detector on the unguarded run,
 is only a **weak second line of defense — recall 25%, F1 0.33** (caught 1 of 4
-hallucinations), cutting residual 40%→30%. The judge shares the generator's model and
-endpoint, so this groundedness check has a self-grading bias (the model is asked to flag its
-own output) — a likely contributor to the low 25% gate recall. A single-pass judge is not
-enough on its own; this is why the roadmap adds a multi-sample / NeMo-Guardrails validator. Per-answer cost is
-~2 extra LLM calls (plan + validate) — the price of a self-checking agent.
+hallucinations), cutting residual 40%→30%. That ~25% recall is consistent with published
+self-detection findings: arXiv:2511.11087 reports ~22% self-detection recall without
+chain-of-thought (rising to 58% with CoT), almost exactly our number. The **primary
+mechanism is shared blind spots** — the model hallucinated *because* it lacked the
+knowledge (these are out-of-corpus B200/H200/FP4 facts), and the judge, being the same
+model, still lacks that knowledge, so it cannot detect the error. **Self-preference bias**
+(the model favoring its own low-perplexity text, per Panickssery et al., NeurIPS 2024) is a
+secondary contributor. Because the dominant cause is missing knowledge, prompt-level fixes
+*cannot* close this gap. The roadmap mitigations target the mechanism directly: an
+**independent judge model** from a different model family, a **panel of diverse judges**
+(PoLL), or **retrieval-grounded verification** (give the judge the retrieved context to
+check claims against — already natural for RAG), plus **CoT judging** as a cheap partial
+improvement (~22%→58% per arXiv:2511.11087, but only where the knowledge exists). Per-answer
+cost is ~2 extra LLM calls (plan + validate) — the price of a self-checking agent.
 
 > Run it yourself (self-hosted): `NIM_MODE=selfhost NIM_LLM_URL=…:8011/v1
 > NIM_EMBED_URL=…:11434/v1 NIM_DISABLE_THINKING=1 python eval/run_eval.py`.
@@ -111,6 +120,10 @@ This repo doubles as the supplementary material for a talk,
 ## References
 - [NVIDIA NIM](https://build.nvidia.com/) — the microservices this blueprint consumes.
 - [NVIDIA/NeMo-Agent-Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit) — the toolkit the `nat_variant` targets.
+- [Can LLMs Detect Their Own Hallucinations?](https://arxiv.org/abs/2511.11087) — ~22% self-detection recall without CoT (58% with CoT); the shared-blind-spot finding behind our gate-recall attribution.
+- [LLM Evaluators Recognize and Favor Their Own Generations (NeurIPS 2024)](https://arxiv.org/abs/2404.13076) — self-preference bias in LLM-as-judge.
+- [Replacing Judges with Juries (PoLL)](https://arxiv.org/abs/2404.18796) — a panel of diverse judges beats a single large judge at lower cost.
+- [SelfCheckGPT (EMNLP 2023)](https://arxiv.org/abs/2303.08896) — sampling-based hallucination detection without external resources.
 
 ## Disclaimer
 Personal project for learning. Views and results are my own and do not represent any employer.

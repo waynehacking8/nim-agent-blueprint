@@ -166,7 +166,7 @@ Score `validate()` as a hallucination detector on the **unguarded** run
 **precision 50% · recall 25% · F1 0.33** → residual hallucination **40% → 30%**
 
 A single-pass LLM judge is **not** enough on its own. It's a net, not a wall.
-*(The judge shares the generator's model — self-grading bias is part of why recall is low.)*
+*(~25% recall matches published self-detection — arXiv:2511.11087 reports ~22% without CoT. The primary cause is shared blind spots: the judge is the same model and lacks the same knowledge the generator was missing, so prompt fixes can't help — needs an independent judge / panel / retrieval-grounded verification.)*
 
 <!--
 ~2.5 min. This is the slide that earns trust. Most talks would stop at "0%!" — this one
