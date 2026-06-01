@@ -2,7 +2,7 @@
 
 Hands-on companion to **"Agentic RAG That Doesn't Hallucinate."** By the end you'll have
 regenerated [`../eval/report.md`](../eval/report.md) yourself and watched the
-guarded-vs-unguarded ablation flip hallucination from **0% → 50%**.
+guarded-vs-unguarded ablation flip hallucination from **0% → 40%**.
 
 Budget: ~5–10 minutes once an endpoint is up.
 

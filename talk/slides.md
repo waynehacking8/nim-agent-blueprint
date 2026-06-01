@@ -134,17 +134,19 @@ improvement to a specific defense rather than to the model being good.
 
 | metric | value |
 |---|---|
-| retrieval recall@3 (answerable) | **94%** |
-| answer accuracy (answerable) | **94%** |
-| hallucination on unanswerable — **guarded** | **0%** |
-| hallucination on unanswerable — **unguarded** (ablation) | **50%** |
+| retrieval recall@3 (answerable) | **100%** (16/16) |
+| answer accuracy (answerable) | **100%** (16/16) |
+| hallucination on unanswerable — **guarded** | **0%** (0/10) |
+| hallucination on unanswerable — **unguarded** (ablation) | **40%** (4/10) |
 
 The same model, same corpus, same questions.
 The **only** difference is one instruction in the system prompt.
 
+*(N=26 illustrative set — the methodology is the point, not the score.)*
+
 <!--
 ~2 min. This is the money slide. Pause on it. The guarded prompt alone takes hallucination
-on out-of-corpus questions to zero in this eval; removing it sends the SAME model to 50%.
+on out-of-corpus questions to zero in this eval; removing it sends the SAME model to 40%.
 That's the "cheap defense, big effect" story. Then immediately complicate it — next slide —
 so you're credible, not salesy.
 -->
@@ -158,16 +160,17 @@ Score `validate()` as a hallucination detector on the **unguarded** run
 
 | | gate blocks | gate passes |
 |---|---|---|
-| hallucinated (should block) | TP = 2 | **FN = 3** |
-| grounded / abstained (should pass) | FP = 2 | TN = 19 |
+| hallucinated (should block) | TP = 1 | **FN = 3** |
+| grounded / abstained (should pass) | FP = 1 | TN = 21 |
 
-**precision 50% · recall 40% · F1 0.44** → residual hallucination **50% → 30%**
+**precision 50% · recall 25% · F1 0.33** → residual hallucination **40% → 30%**
 
 A single-pass LLM judge is **not** enough on its own. It's a net, not a wall.
+*(The judge shares the generator's model — self-grading bias is part of why recall is low.)*
 
 <!--
 ~2.5 min. This is the slide that earns trust. Most talks would stop at "0%!" — this one
-shows the judge alone catches only 40% of what it should (3 dangerous misses). The lesson:
+shows the judge alone catches only 25% of what it should (1 of 4 caught, 3 dangerous misses). The lesson:
 the guarded prompt does the heavy lifting; the judge is a backstop. Stacking two weak-ish
 prompt defenses is what gets you a low residual without a fine-tune. Say plainly: if you
 need stronger guarantees, this is where a fine-tuned grounding classifier or a second
@@ -180,11 +183,11 @@ retrieval pass goes — that's the roadmap.
 
 | plan | retrieve | generate | validate | **total** |
 |---|---|---|---|---|
-| 0.21s | 0.155s | 0.29s | 0.16s | **0.81s** |
+| 0.24s | 0.165s | 0.30s | 0.16s | **0.87s** |
 
 - `plan` + `validate` = **two extra LLM calls** wrapping every answer.
 - `retrieve` is cheap (embed + in-memory fuse).
-- The reliability you saw isn't free — it's **~0.37s of extra LLM calls** per query.
+- The reliability you saw isn't free — it's **~0.40s of extra LLM calls** per query.
 
 <!--
 ~1.5 min. Be the engineer who quotes the cost. The validate hop is what buys the safety-net
@@ -206,7 +209,7 @@ export NIM_MODE=selfhost NIM_LLM_URL=http://localhost:8000/v1
 python eval/run_eval.py        # regenerates eval/report.md
 ```
 
-Flip `guarded=False` in the harness and watch the 0% become 50%.
+Flip `guarded=False` in the harness and watch the 0% become 40%.
 Full walkthrough: **`talk/walkthrough.md`**
 
 <!--
@@ -221,7 +224,7 @@ NGC key to follow along. Point at walkthrough.md for the step-by-step.
 
 1. In enterprise RAG, **refusing** is a feature. Measure it.
 2. Your eval must include questions the corpus **can't** answer — incl. near-misses.
-3. A **guarded prompt** is the cheapest, biggest win. (50% → 0% here.)
+3. A **guarded prompt** is the cheapest, biggest win. (40% → 0% here.)
 4. An **LLM-judge gate** is a backstop, not a guarantee. Know its recall.
 5. Reliability has a **latency cost** — quote it at design time.
 

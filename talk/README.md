@@ -14,7 +14,7 @@ reproduce the results live.
 ## The one-sentence thesis
 
 You can drive an enterprise agent's hallucination rate on out-of-corpus questions from
-**50% → 0%** with two cheap defenses and **no fine-tune** — and the only way you *know*
+**40% → 0%** with two cheap defenses and **no fine-tune** — and the only way you *know*
 that is an evaluation that deliberately asks questions the corpus can't answer.
 
 ## What's in here
