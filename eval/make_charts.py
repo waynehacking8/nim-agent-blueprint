@@ -64,6 +64,7 @@ def chart_hallucination_ablation(path: str) -> None:
         "Hallucination on out-of-corpus questions (N=10 unanswerable)\n"
         "guarded prompt → 0% · weak gate alone → 30% residual",
         fontsize=11,
+        pad=12,
     )
     ax.yaxis.grid(True, linestyle="--", alpha=0.4)
     ax.set_axisbelow(True)
@@ -125,10 +126,12 @@ def chart_gate_confusion(path: str) -> None:
         f"precision {PRECISION:.0%} · recall {RECALL:.0%} · F1 {F1:.2f} — "
         "weak 2nd line of defense\n(self-grading bias: judge shares the generator's model)",
         fontsize=10,
+        pad=16,
     )
 
     fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="count")
-    fig.tight_layout()
+    # Reserve headroom so the 3-line title is not cramped against the heatmap.
+    fig.tight_layout(rect=(0, 0, 1, 0.93))
     fig.savefig(path, dpi=DPI)
     plt.close(fig)
 

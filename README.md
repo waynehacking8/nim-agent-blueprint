@@ -61,7 +61,7 @@ python eval/run_eval.py        # -> eval/report.md
 
 ## Results — self-hosted on a single H100 (vLLM Qwen3-8B + Ollama embeddings)
 
-_Hardware: one H100, on a 4× H100 box — the 8B model fits on a single GPU, so only one is used (the others are untouched)._
+_Hardware: a single H100 — the 8B model fits comfortably on one GPU._
 
 Full writeup: [`eval/report.md`](eval/report.md). NIM is OpenAI-compatible, so a self-hosted
 vLLM endpoint is a faithful stand-in — flip `NIM_MODE`/`NIM_LLM_URL` to a real
@@ -98,7 +98,6 @@ enough on its own; this is why the roadmap adds a multi-sample / NeMo-Guardrails
 
 > Run it yourself (self-hosted): `NIM_MODE=selfhost NIM_LLM_URL=…:8011/v1
 > NIM_EMBED_URL=…:11434/v1 NIM_DISABLE_THINKING=1 python eval/run_eval.py`.
-> LLM served on GPU 2 only — the busy GPU 0 is never touched.
 
 ## Talk
 

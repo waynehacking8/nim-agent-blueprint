@@ -85,7 +85,7 @@ def main():
     w("# Agentic-RAG eval — retrieval, hallucination gating, judge calibration, latency\n")
     w(f"Corpus {len(corpus)} passages · {len(ans)} answerable + {n_una} unanswerable "
       "(incl. adversarial near-miss: B200/H200/FP4 questions a model is tempted to answer "
-      "from the H100 facts in context). Self-hosted on H100: vLLM (Qwen3-8B, "
+      "from the H100 facts in context). Self-hosted on a single H100: vLLM (Qwen3-8B, "
       f"OpenAI-compatible NIM stand-in) + Ollama embeddings. k={K}, temp=0.\n")
     w(f"> **Illustrative, not a statistical benchmark (N={len(rows)}).** Percentages are "
       f"small integer ratios (e.g. {sum(r['recall'] for r in ans)}/{len(ans)} recall, "
@@ -96,8 +96,13 @@ def main():
     w("## Headline\n")
     w("| metric | value |")
     w("|---|---|")
-    w(f"| retrieval recall@{K} (answerable) | {recall_at_k:.0%} |")
-    w(f"| answer accuracy (answerable) | {accuracy:.0%} |")
+    n_ans = len(ans)
+    n_recall = sum(r["recall"] for r in ans)
+    n_correct = sum(r["correct"] for r in ans)
+    w(f"| retrieval recall@{K} (answerable) | {recall_at_k:.0%} ({n_recall}/{n_ans} — small "
+      f"illustrative set; near-trivial retrieval at {len(corpus)}-passage corpus, k={K}) |")
+    w(f"| answer accuracy (answerable) | {accuracy:.0%} ({n_correct}/{n_ans} — same small "
+      f"illustrative set, N={len(rows)} total; not a statistical benchmark) |")
     w(f"| hallucination on unanswerable — **guarded** generator | **{g_halluc:.0%}** |")
     w(f"| hallucination on unanswerable — **unguarded** generator | **{u_halluc:.0%}** |")
     w("")
@@ -105,9 +110,19 @@ def main():
       "first line of defense. The ablation shows what happens without it: the same model "
       f"hallucinates on {u_halluc:.0%} of out-of-corpus questions.\n")
 
+    w(f"**Guarded prompting -> 0%; ablation -> {u_halluc:.0%}; the weak `validate()` gate "
+      f"alone only claws it back to {residual_una:.0%} (illustrative N={n_una} unanswerable "
+      "set):**\n")
+    w(f"![Hallucination rate on unanswerable questions: unguarded {u_halluc:.0%}, guarded "
+      f"{g_halluc:.0%}, residual {residual_una:.0%} after the gate alone]"
+      "(hallucination_ablation.png)\n")
+
     w("## The validate() groundedness gate as a safety net (unguarded run)\n")
     w("Second line of defense: an LLM-as-judge checks each answer against the context and "
-      "blocks unsupported ones. Scored on the unguarded run, where hallucinations exist:\n")
+      "blocks unsupported ones. The judge (`validate()`) uses the same model and endpoint as "
+      "the generator, so this groundedness check carries a self-grading bias — the model is "
+      f"asked to flag its own output, a likely contributor to the low {rec:.0%} gate recall "
+      "below. Scored on the unguarded run, where hallucinations exist:\n")
     w("| | gate blocks | gate passes |")
     w("|---|---|---|")
     w(f"| hallucinated (should block) | TP={tp} | FN={fn} |")
@@ -116,6 +131,11 @@ def main():
     w(f"- precision **{prec:.0%}** · recall **{rec:.0%}** · F1 **{f1:.2f}**")
     w(f"- residual hallucination on unanswerable *after* gating: "
       f"**{residual_una:.0%}** (down from {u_halluc:.0%})\n")
+    w(f"**The `validate()` gate as a hallucination detector — precision {prec:.0%}, recall "
+      f"{rec:.0%}, F1 {f1:.2f} (caught {tp} of {tp + fn}); the judge shares the generator's "
+      f"model/endpoint, hence the self-grading bias (small illustrative N={len(rows)}):**\n")
+    w(f"![Confusion matrix of the validate() gate on the unguarded run: TP={tp}, FN={fn}, "
+      f"FP={fp}, TN={tn}](gate_confusion.png)\n")
     w("Recall is the safety number — of answers that *should* be blocked, the share the "
       "gate caught. FN are the dangerous misses. Two cheap defenses stacked (guarded prompt "
       "+ judge gate) is how you get a low residual without a fine-tune.\n")

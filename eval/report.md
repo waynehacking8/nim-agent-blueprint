@@ -1,6 +1,6 @@
 # Agentic-RAG eval — retrieval, hallucination gating, judge calibration, latency
 
-Corpus 20 passages · 16 answerable + 10 unanswerable (incl. adversarial near-miss: B200/H200/FP4 questions a model is tempted to answer from the H100 facts in context). Self-hosted on a single H100 (one GPU of a 4× H100 box; the 8B model fits on one GPU, so the others are untouched): vLLM (Qwen3-8B, OpenAI-compatible NIM stand-in) + Ollama embeddings. k=3, temp=0.
+Corpus 20 passages · 16 answerable + 10 unanswerable (incl. adversarial near-miss: B200/H200/FP4 questions a model is tempted to answer from the H100 facts in context). Self-hosted on a single H100: vLLM (Qwen3-8B, OpenAI-compatible NIM stand-in) + Ollama embeddings. k=3, temp=0.
 
 > **Illustrative, not a statistical benchmark (N=26).** Percentages are small integer ratios (e.g. 16/16 recall, 4/10 unguarded hallucinations); they show the harness works and the directional effect, not a precise score. Scale the corpus and eval set for a real number.
 
