@@ -4,9 +4,8 @@ A reference architecture for an **agentic RAG** application built on **NVIDIA NI
 microservices (LLM + embedding + reranker) with a **planning → retrieval → validation**
 agent loop and a built-in **evaluation + observability** harness.
 
-This is the artifact an NVIDIA Solutions Architect actually ships: a self-contained
-blueprint a partner can clone, point at their own NIMs, and adapt. It ports my existing
-multi-agent / hybrid-retrieval work onto the NVIDIA-native serving stack.
+A self-contained blueprint that can be cloned, pointed at any NIMs, and adapted. It
+implements a multi-agent / hybrid-retrieval pipeline on the NVIDIA-native serving stack.
 
 ## What this is
 - A runnable agentic RAG app: NIM LLM for generation, hybrid (dense+keyword) retrieval with an
@@ -98,6 +97,13 @@ This repo doubles as the supplementary material for a talk,
 - [`talk/walkthrough.md`](talk/walkthrough.md) — reproduce the guarded-vs-unguarded ablation in ~5 min.
 - [`talk/README.md`](talk/README.md) — abstract, format, and audience.
 
+## References
+- [NVIDIA NIM](https://build.nvidia.com/) — the microservices this blueprint consumes.
+- [NVIDIA/NeMo-Agent-Toolkit](https://github.com/NVIDIA/NeMo-Agent-Toolkit) — the toolkit the `nat_variant` targets.
+
+## Disclaimer
+Personal project for learning. Views and results are my own and do not represent any employer.
+
 ---
 
-_Part of my portfolio — [waynehacking8.github.io](https://waynehacking8.github.io/). Writeup: [0% vs 50%: making a RAG agent refuse to hallucinate](https://waynehacking8.github.io/blog/rag-groundedness-guardrail/)._
+_See [waynehacking8.github.io](https://waynehacking8.github.io/). Writeup: [0% vs 50%: making a RAG agent refuse to hallucinate](https://waynehacking8.github.io/blog/rag-groundedness-guardrail/)._
