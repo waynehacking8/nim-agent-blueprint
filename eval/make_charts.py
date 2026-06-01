@@ -50,7 +50,7 @@ def chart_hallucination_ablation(path: str) -> None:
     labels = [
         "Unguarded\n(ablation)",
         "Guarded\nprompt",
-        "Guarded? no —\nunguarded + gate\n(residual)",
+        "Unguarded + validate() gate\n(residual)",
     ]
     values = [UNGUARDED_HALLUC, GUARDED_HALLUC, RESIDUAL_AFTER_GATE]
     colors = [RED, NVIDIA_GREEN, AMBER]
@@ -62,7 +62,7 @@ def chart_hallucination_ablation(path: str) -> None:
     ax.set_ylim(0, 50)
     ax.set_title(
         "Hallucination on out-of-corpus questions (N=10 unanswerable)\n"
-        "Guarded prompt -> 0%; ablation -> 40%; weak gate only -> 30%",
+        "guarded prompt → 0% · weak gate alone → 30% residual",
         fontsize=11,
     )
     ax.yaxis.grid(True, linestyle="--", alpha=0.4)
