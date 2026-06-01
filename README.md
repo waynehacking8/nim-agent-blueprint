@@ -78,6 +78,14 @@ questions the model is tempted to answer from the H100 facts in context).
 
 *(N=26 — illustrative, not a statistical benchmark; see the caveat in `eval/report.md`.)*
 
+**Guarded prompting drives hallucination to 0% on out-of-corpus questions; removing it (ablation) sends the same model to 40%, and the weak `validate()` gate alone only claws it back to 30% (illustrative N=10 unanswerable set):**
+
+![Hallucination rate on unanswerable questions: unguarded 40%, guarded 0%, residual 30% after the gate alone](eval/hallucination_ablation.png)
+
+**The `validate()` LLM-as-judge gate is a weak second line of defense — precision 50%, recall 25%, F1 0.33 (caught 1 of 4 hallucinations); the judge shares the generator's model/endpoint, so it has a self-grading bias (small illustrative N=26):**
+
+![Confusion matrix of the validate() gate on the unguarded run: TP=1, FN=3, FP=1, TN=21](eval/gate_confusion.png)
+
 **The honest finding:** a guarded generator prompt drives hallucination to 0% on
 out-of-corpus questions; *removing* it (ablation) sends the same model to 40%. The
 `validate()` LLM-as-judge gate, scored as a hallucination detector on the unguarded run,

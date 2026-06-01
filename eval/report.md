@@ -15,6 +15,10 @@ Corpus 20 passages · 16 answerable + 10 unanswerable (incl. adversarial near-mi
 
 The guarded prompt ("answer only from context, else say you don't know") is the first line of defense. The ablation shows what happens without it: the same model hallucinates on 40% of out-of-corpus questions.
 
+**Guarded prompting -> 0%; ablation -> 40%; the weak `validate()` gate alone only claws it back to 30% (illustrative N=10 unanswerable set):**
+
+![Hallucination rate on unanswerable questions: unguarded 40%, guarded 0%, residual 30% after the gate alone](hallucination_ablation.png)
+
 ## The validate() groundedness gate as a safety net (unguarded run)
 
 Second line of defense: an LLM-as-judge checks each answer against the context and blocks unsupported ones. The judge (`validate()`) uses the same model and endpoint as the generator, so this groundedness check carries a self-grading bias — the model is asked to flag its own output, a likely contributor to the low 25% gate recall below. Scored on the unguarded run, where hallucinations exist:
@@ -26,6 +30,10 @@ Second line of defense: an LLM-as-judge checks each answer against the context a
 
 - precision **50%** · recall **25%** · F1 **0.33**
 - residual hallucination on unanswerable *after* gating: **30%** (down from 40%)
+
+**The `validate()` gate as a hallucination detector — precision 50%, recall 25%, F1 0.33 (caught 1 of 4); the judge shares the generator's model/endpoint, hence the self-grading bias (small illustrative N=26):**
+
+![Confusion matrix of the validate() gate on the unguarded run: TP=1, FN=3, FP=1, TN=21](gate_confusion.png)
 
 Recall is the safety number — of answers that *should* be blocked, the share the gate caught. FN are the dangerous misses. Two cheap defenses stacked (guarded prompt + judge gate) is how you get a low residual without a fine-tune.
 
