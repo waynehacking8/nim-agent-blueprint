@@ -17,7 +17,14 @@
 
 ## Phase 4 — Eval hardening (specified)
 
-- [ ] **Independent judge model** (different model family) for `validate()`.
+- [x] **Independent judge model** (different model family) for `validate()`. **DONE — README
+  "Results at scale" / eval/report_squad.md.** Run at N=200 (SQuAD profile) for statistical
+  power: self-judge recall 32% [23–41%] → cross-family (Llama-3.1-8B) recall 47% [38–57%],
+  **+16 points, McNemar exact p=0.0026** (paired — same answers, only the judge differs).
+  Precision trade-off observed as predicted (79%→71%). Shared-blind-spots attribution
+  confirmed; the deeper honest finding is that 46/95 hallucinations escape BOTH 8B judges.
+  Implementation: validate() takes judge_model/judge_url (or NIM_JUDGE_MODEL/NIM_JUDGE_URL);
+  the eval harness scores both judges in one pass (NIM_XJUDGE_MODEL/NIM_XJUDGE_URL).
   - **Question:** gate recall is 25% and the attribution is shared blind spots — the judge is the
     same model that hallucinated, so it is missing the same knowledge. If correct, swapping in a
     judge from a different model family should raise recall substantially; if recall stays ~25%,
@@ -33,7 +40,14 @@
     threshold. Also track precision: an independent judge may be stricter (more FPs) — the
     precision/recall trade-off is part of the result.
 
-- [ ] **Scale the eval set** to statistical usefulness.
+- [x] **Scale the eval set** to statistical usefulness. **DONE — eval/build_squad_eval.py +
+  eval/report_squad.md.** 100 SQuAD 2.0 dev passages, 100 answerable + 100 unanswerable
+  (crowdworker-written adversarial near-misses — strictly harder than the demo set's
+  out-of-corpus design). All metrics carry 95% Wilson CIs; accuracy now scored by both
+  substring (71%) and LLM judge (72% — the two agree, so the demo set's substring check was
+  not overstating). Key scale finding: the guarded prompt that achieved 0% hallucination on
+  out-of-corpus questions only achieves 49% [39–59%] on near-miss questions — guardrails must
+  be evaluated on the hard case.
   - **Question:** N=26 percentages (0% / 40% / 25%) demonstrate the method, not statistics. What
     are the confidence intervals at scale, and does the guarded-prompt result hold?
   - **Method:** extend `eval/corpus.jsonl` (20 → 100+ passages) and `eval/dataset.jsonl` (26 →

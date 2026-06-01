@@ -108,6 +108,63 @@ cost is ~2 extra LLM calls (plan + validate) — the price of a self-checking ag
 > Run it yourself (self-hosted): `NIM_MODE=selfhost NIM_LLM_URL=…:8011/v1
 > NIM_EMBED_URL=…:11434/v1 NIM_DISABLE_THINKING=1 python eval/run_eval.py`.
 
+## Results at scale — SQuAD 2.0, N=200, with confidence intervals
+
+The demo set above shows the harness works; it cannot support statistics (its own caveat).
+This run can: **100 SQuAD 2.0 dev passages, 100 answerable + 100 unanswerable questions**
+(SQuAD 2.0's unanswerable questions are crowdworker-written **adversarial near-misses** — the
+on-topic paragraph IS retrieved into context, it just doesn't contain the answer — a strictly
+harder test than out-of-corpus questions). Built deterministically by
+`eval/build_squad_eval.py`; full report with Wilson CIs:
+[`eval/report_squad.md`](eval/report_squad.md).
+
+| metric | value (95% CI) |
+|---|---|
+| retrieval recall@3 | 86% [78–91%] |
+| answer accuracy — substring | 71% [61–79%] |
+| answer accuracy — LLM judge | 72% [63–80%] |
+| hallucination, **guarded** generator | **49%** [39–59%] |
+| hallucination, **unguarded** generator | **79%** [70–86%] |
+
+Two findings that change the story the demo set told:
+
+**1. The guarded prompt is much weaker against near-miss questions.** On out-of-corpus
+questions (demo set) it achieved 0%; on SQuAD's adversarial near-misses it only cuts 79%→49%.
+When a tempting-but-wrong passage is *in* the context, "answer only from context" actively
+backfires — the model grounds a wrong answer in the near-miss passage. Guardrails must be
+evaluated against the hard case, not the easy one.
+
+![SQuAD ablation](eval/report_squad_ablation.png)
+
+**2. The cross-family judge experiment (the roadmap's shared-blind-spots test) — confirmed,
+with statistics.** The same unguarded answers were scored by two judges: the generator itself
+(qwen3-8b) and an independent judge from a different model family (llama-3.1-8b), serving on a
+separate GPU. Paired comparison, exact McNemar test:
+
+| judge | precision | recall | F1 | residual hallucination |
+|---|---|---|---|---|
+| self (qwen3-8b) | 79% | 32% [23–41%] | 0.45 | 52% |
+| **cross-family (llama-3.1-8b)** | 71% | **47%** [38–57%] | **0.57** | **38%** |
+
+Recall **+16 points (p = 0.0026, McNemar exact)** — of hallucinations caught by exactly one
+judge, the cross-family judge caught 19 vs the self judge's 4. This confirms the
+shared-blind-spots attribution and matches the cross-model detection literature (FINCH-ZK,
+arXiv:2508.14314: +6–39 F1 from cross-model consistency). The trade-off is real too: the
+independent judge is stricter (precision 79%→71%, more false blocks).
+
+The honest residual: **46 of 95 hallucinations were caught by neither 8B judge** — two small
+judges still share most blind spots with each other. The next rungs (larger judge, judge
+panel/PoLL, retrieval-grounded verification) target exactly that.
+
+![SQuAD gate comparison](eval/report_squad_gates.png)
+
+> Reproduce: `python3 eval/build_squad_eval.py` then
+> `NIM_MODE=selfhost NIM_LLM_URL=…:8011/v1 NIM_LLM_MODEL=qwen3-8b
+> NIM_EMBED_URL=…:11434/v1 NIM_EMBED_MODEL=nomic-embed-text NIM_DISABLE_THINKING=1
+> NIM_XJUDGE_MODEL=llama-3.1-8b NIM_XJUDGE_URL=…:8013/v1
+> EVAL_CORPUS=corpus_squad.jsonl EVAL_DATASET=dataset_squad.jsonl EVAL_REPORT=report_squad.md
+> python3 eval/run_eval.py` (generator and judge on separate GPUs).
+
 ## Talk
 
 This repo doubles as the supplementary material for a talk,
@@ -124,6 +181,8 @@ This repo doubles as the supplementary material for a talk,
 - [LLM Evaluators Recognize and Favor Their Own Generations (NeurIPS 2024)](https://arxiv.org/abs/2404.13076) — self-preference bias in LLM-as-judge.
 - [Replacing Judges with Juries (PoLL)](https://arxiv.org/abs/2404.18796) — a panel of diverse judges beats a single large judge at lower cost.
 - [SelfCheckGPT (EMNLP 2023)](https://arxiv.org/abs/2303.08896) — sampling-based hallucination detection without external resources.
+- [FINCH-ZK: Zero-knowledge LLM hallucination detection through fine-grained cross-model consistency](https://arxiv.org/abs/2508.14314) — cross-model checking adds +6–39 F1; the literature anchor for the cross-family-judge result.
+- [SQuAD 2.0 (Rajpurkar et al., ACL 2018)](https://arxiv.org/abs/1806.03822) — the adversarial-unanswerable QA dataset behind the N=200 eval.
 
 ## Disclaimer
 Personal project for learning. Views and results are my own and do not represent any employer.

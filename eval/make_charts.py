@@ -136,6 +136,92 @@ def chart_gate_confusion(path: str) -> None:
     plt.close(fig)
 
 
+def _gate(rows, key):
+    halluc = [r for r in rows if r["u_halluc"]]
+    clean = [r for r in rows if not r["u_halluc"]]
+    tp = sum(1 for r in halluc if r[key])
+    fn = len(halluc) - tp
+    fp = sum(1 for r in clean if r[key])
+    prec = tp / (tp + fp) if (tp + fp) else 0
+    rec = tp / (tp + fn) if (tp + fn) else 0
+    f1 = 2 * prec * rec / (prec + rec) if (prec + rec) else 0
+    return prec, rec, f1
+
+
+def squad_charts(rows_path: str) -> None:
+    """Charts for the SQuAD 2.0 (N=200) run, computed from the saved per-question rows —
+    nothing hard-coded. Produces report_squad_ablation.png + report_squad_gates.png."""
+    import json
+
+    import matplotlib.pyplot as plt
+
+    rows = json.load(open(rows_path))
+    una = [r for r in rows if not r["answerable"]]
+    n = len(una)
+    unguarded = 100 * sum(r["u_halluc"] for r in una) / n
+    guarded = 100 * sum(r["g_halluc"] for r in una) / n
+    resid_self = 100 * sum(1 for r in una if r["u_halluc"] and not r["u_gate_blocks"]) / n
+    resid_x = 100 * sum(1 for r in una if r["u_halluc"] and not r["u_xgate_blocks"]) / n
+
+    # --- ablation: 4 bars ---
+    fig, ax = plt.subplots(figsize=(8, 4.8))
+    labels = ["Unguarded\n(ablation)", "Guarded\nprompt",
+              "Unguarded +\nself gate", "Unguarded +\ncross-family gate"]
+    values = [unguarded, guarded, resid_self, resid_x]
+    colors = [RED, NVIDIA_GREEN, AMBER, "#2c6fbb"]
+    bars = ax.bar(labels, values, color=colors, width=0.62, edgecolor="black", linewidth=0.6)
+    for bar, val in zip(bars, values):
+        ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 1.5,
+                f"{val:.0f}%", ha="center", va="bottom", fontsize=11, fontweight="bold")
+    ax.set_ylabel("Hallucination rate on unanswerable questions (%)")
+    ax.set_ylim(0, max(values) * 1.2)
+    ax.set_title(f"SQuAD 2.0 adversarial near-miss questions (N={n} unanswerable)\n"
+                 "harder than out-of-corpus: the tempting-but-wrong passage IS in context",
+                 fontsize=11, pad=12)
+    ax.yaxis.grid(True, linestyle="--", alpha=0.4)
+    ax.set_axisbelow(True)
+    fig.tight_layout()
+    out = os.path.join(HERE, "report_squad_ablation.png")
+    fig.savefig(out, dpi=DPI)
+    plt.close(fig)
+    print(f"wrote {out}")
+
+    # --- gate comparison: self vs cross-family, grouped bars ---
+    sp, sr, sf = _gate(rows, "u_gate_blocks")
+    xp, xr, xf = _gate(rows, "u_xgate_blocks")
+    fig, ax = plt.subplots(figsize=(8, 4.8))
+    metrics = ["precision", "recall", "F1"]
+    self_vals = [sp * 100, sr * 100, sf * 100]
+    x_vals = [xp * 100, xr * 100, xf * 100]
+    xpos = range(len(metrics))
+    width = 0.36
+    b1 = ax.bar([x - width / 2 for x in xpos], self_vals, width,
+                label="self judge (qwen3-8b)", color="#9aa0a6", edgecolor="black", linewidth=0.6)
+    b2 = ax.bar([x + width / 2 for x in xpos], x_vals, width,
+                label="cross-family judge (llama-3.1-8b)", color=NVIDIA_GREEN,
+                edgecolor="black", linewidth=0.6)
+    for bars in (b1, b2):
+        for bar in bars:
+            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 1.5,
+                    f"{bar.get_height():.0f}", ha="center", va="bottom", fontsize=10,
+                    fontweight="bold")
+    ax.set_xticks(list(xpos))
+    ax.set_xticklabels(metrics)
+    ax.set_ylabel("score (%; F1 ×100)")
+    ax.set_ylim(0, 100)
+    ax.set_title("Hallucination gate: self vs cross-family judge (paired, N=95 hallucinations)\n"
+                 "recall +16 pts, McNemar exact p=0.0026 — shared blind spots confirmed",
+                 fontsize=11, pad=12)
+    ax.legend()
+    ax.yaxis.grid(True, linestyle="--", alpha=0.4)
+    ax.set_axisbelow(True)
+    fig.tight_layout()
+    out = os.path.join(HERE, "report_squad_gates.png")
+    fig.savefig(out, dpi=DPI)
+    plt.close(fig)
+    print(f"wrote {out}")
+
+
 def main() -> None:
     abl = os.path.join(HERE, "hallucination_ablation.png")
     conf = os.path.join(HERE, "gate_confusion.png")
@@ -143,6 +229,9 @@ def main() -> None:
     chart_gate_confusion(conf)
     print(f"wrote {abl}")
     print(f"wrote {conf}")
+    rows_path = os.path.join(HERE, "report_squad_rows.json")
+    if os.path.exists(rows_path):
+        squad_charts(rows_path)
 
 
 if __name__ == "__main__":

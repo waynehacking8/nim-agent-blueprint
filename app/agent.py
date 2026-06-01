@@ -3,6 +3,8 @@
 The validate step is the differentiator: every answer is checked for groundedness
 (supported by retrieved context) and basic safety before it is returned.
 """
+import os
+
 from app import provider
 try:
     from opentelemetry import trace
@@ -34,11 +36,21 @@ def generate(query, context, guarded=True):
         return provider.chat([{"role": "system", "content": sys},
                               {"role": "user", "content": f"Context:\n{ctx}\n\nQuestion: {query}"}])
 
-def validate(answer, context):
+def validate(answer, context, judge_model=None, judge_url=None):
+    """Groundedness gate. By default the judge is the same model/endpoint as the generator.
+
+    Cross-family judge (roadmap Phase 4): pass `judge_model`/`judge_url` (or set
+    NIM_JUDGE_MODEL / NIM_JUDGE_URL) to use a judge from a *different* model family —
+    a judge that is the same model that hallucinated tends to share the blind spots
+    that caused the hallucination in the first place.
+    """
     with tracer.start_as_current_span("validate"):
         ctx = "\n\n".join(context)
         verdict = provider.chat([{"role": "system", "content": "Is the ANSWER fully supported by the CONTEXT? Reply 'grounded' or 'unsupported'."},
-                                 {"role": "user", "content": f"CONTEXT:\n{ctx}\n\nANSWER:\n{answer}"}], max_tokens=16)
+                                 {"role": "user", "content": f"CONTEXT:\n{ctx}\n\nANSWER:\n{answer}"}],
+                                max_tokens=16,
+                                model=judge_model or os.getenv("NIM_JUDGE_MODEL") or None,
+                                base_url=judge_url or os.getenv("NIM_JUDGE_URL") or None)
         return "grounded" in verdict.lower()
 
 def answer(query, retriever):

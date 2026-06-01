@@ -24,16 +24,20 @@ def _headers():
     key = os.getenv("NVIDIA_API_KEY", "")
     return {"Authorization": f"Bearer {key}"} if key else {}
 
-def chat(messages, model=None, max_tokens=512, temperature=0.0):
+def chat(messages, model=None, max_tokens=512, temperature=0.0, base_url=None):
+    """`model`/`base_url` overrides let a single agent talk to more than one serving
+    endpoint — e.g. a generator on one GPU and an independent judge model (different
+    model family) on another. Defaults preserve the single-endpoint behavior."""
     model = model or os.getenv("NIM_LLM_MODEL", "meta/llama-3.1-70b-instruct")
     body = {"model": model, "messages": messages,
             "max_tokens": max_tokens, "temperature": temperature}
     # Hybrid-reasoning models (e.g. Qwen3) emit <think> blocks that blow short prompt
     # budgets and corrupt structured replies. Disable for the agent's terse calls.
+    # (Models whose chat template has no enable_thinking variable simply ignore it.)
     if os.getenv("NIM_DISABLE_THINKING"):
         body["chat_template_kwargs"] = {"enable_thinking": False}
-    r = httpx.post(f"{_base()['llm']}/chat/completions", headers=_headers(), timeout=120,
-                   json=body)
+    r = httpx.post(f"{base_url or _base()['llm']}/chat/completions", headers=_headers(),
+                   timeout=120, json=body)
     r.raise_for_status()
     return r.json()["choices"][0]["message"]["content"]
 

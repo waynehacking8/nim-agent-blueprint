@@ -1,0 +1,200 @@
+{"q": "What aspects of life does Islamism seek to integrate itself into?", "answerable": true, "gold_passage": "squad-004", "gold": "all spheres", "gold_alternatives": ["all spheres", "all spheres of life", "all spheres of life."]}
+{"q": "When did the Black Death spread into India?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-005"}
+{"q": "When was the Latin version of the word Norman first recorded?", "answerable": true, "gold_passage": "squad-021", "gold": "9th century", "gold_alternatives": ["9th century"]}
+{"q": "In what year did William the Silent issue his \"Apologie\"?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-022"}
+{"q": " What was Tugh Temur not known for?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-048"}
+{"q": "What equates to a squared integer according to polynomial time reduction?", "answerable": true, "gold_passage": "squad-024", "gold": "multiplying two integers", "gold_alternatives": ["multiplying two integers"]}
+{"q": "In the shortest building in downtown Jacksonville?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-002"}
+{"q": "What effect would happen if P is ultimately proven to not equal NP ?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-007"}
+{"q": "To what can the use of prolonged breathing of oxygen at 60 kPa lead?", "answerable": true, "gold_passage": "squad-046", "gold": "pulmonary fibrosis", "gold_alternatives": ["pulmonary fibrosis", "permanent pulmonary fibrosis"]}
+{"q": "Who wrote \"On the Computational Complexity of Science\"?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-036"}
+{"q": "What is the most frequently employed type of reduction?", "answerable": true, "gold_passage": "squad-024", "gold": "polynomial-time", "gold_alternatives": ["polynomial-time", "polynomial-time reduction"]}
+{"q": " How did the Yuan come to have the 8 schools of medicine?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-027"}
+{"q": "Vice President Agnew describes Civil disobedience in what activities?", "answerable": true, "gold_passage": "squad-023", "gold": "civil disobedience", "gold_alternatives": ["civil disobedience", "muggers, arsonists, draft evaders, campaign hecklers, campus militants, anti-war demonstrators, juvenile delinquents and political assassins", "activities of muggers, arsonists, draft evaders, campaign hecklers, campus militants, anti-war demonstrators, juvenile delinquents and political assassins"]}
+{"q": "What is Warsaw's symbol?", "answerable": true, "gold_passage": "squad-020", "gold": "mermaid", "gold_alternatives": ["mermaid", "The mermaid"]}
+{"q": "In 1940, what percentage of the population in Fresno was Asian?", "answerable": true, "gold_passage": "squad-017", "gold": "2.7%", "gold_alternatives": ["2.7%"]}
+{"q": "Who included 1 as the first prime number in the mid 18th century?", "answerable": true, "gold_passage": "squad-033", "gold": "mathematicians", "gold_alternatives": ["mathematicians", "Christian Goldbach"]}
+{"q": "The rotational inertia of planet Mars is what fixes the what?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-035"}
+{"q": "In what year was Fort Coligny built?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-000"}
+{"q": "Which country's cars became more highly sought after as they were more fuel efficient?", "answerable": true, "gold_passage": "squad-031", "gold": "Japan", "gold_alternatives": ["Japan", "Japanese", "Japanese imports"]}
+{"q": "What number did Henri Lebesgue not regard as a true number?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-033"}
+{"q": "What action did the US plan to take in 2004 due to rising oil prices?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-049"}
+{"q": "What organization is responsible for their own research?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-008"}
+{"q": "How did the Los Angeles Times define southern California in 1909?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-045"}
+{"q": "What beds are nitrogen-saturated? ", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-018"}
+{"q": "What can exposure to partial gas pressures greater than 166 kPa cause?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-046"}
+{"q": "When did General Sejm make Vilnius its permanent seat?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-030"}
+{"q": "What is another type of public key cryptography algorithm?", "answerable": true, "gold_passage": "squad-041", "gold": "Diffie\u2013Hellman", "gold_alternatives": ["Diffie\u2013Hellman", "Diffie\u2013Hellman key exchange", "the Diffie\u2013Hellman key exchange"]}
+{"q": "What is the process of removing trees from a forest known as?", "answerable": true, "gold_passage": "squad-037", "gold": "Deforestation", "gold_alternatives": ["Deforestation"]}
+{"q": "When did Setanta Sports say it would launch as a free service on the digital terrestrial platform?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-042"}
+{"q": "What were the first two destinations of Huguenot emigres?", "answerable": true, "gold_passage": "squad-000", "gold": "Switzerland and the Netherlands", "gold_alternatives": ["Switzerland and the Netherlands", "Switzerland and the Netherlands."]}
+{"q": "How did the Yuan come to have the 4 schools of medicine?", "answerable": true, "gold_passage": "squad-027", "gold": "inherited from the Jin dynasty", "gold_alternatives": ["inherited from the Jin dynasty"]}
+{"q": "What can the IPCC's report deadlines cause to be omitted?", "answerable": true, "gold_passage": "squad-008", "gold": "significant new evidence or events that change our understanding", "gold_alternatives": ["significant new evidence or events that change our understanding", "significant new evidence or events that change our understanding of climate science"]}
+{"q": "What does the IPCC rely on for research?", "answerable": true, "gold_passage": "squad-008", "gold": "other scientific bodies", "gold_alternatives": ["other scientific bodies", "scientific papers and independently documented results", "scientific papers and independently documented results from other scientific bodies"]}
+{"q": "What term do Islamists think should be applied to them?", "answerable": true, "gold_passage": "squad-019", "gold": "Muslims", "gold_alternatives": ["Muslims"]}
+{"q": "What makes day length constant on Earth?", "answerable": true, "gold_passage": "squad-035", "gold": "rotational inertia", "gold_alternatives": ["rotational inertia", "rotational inertia of planet", "rotational inertia of planet Earth", "The rotational inertia of planet Earth"]}
+{"q": "What paper is commonly considered the bellwether ushering in systematic studies computational complexity?", "answerable": true, "gold_passage": "squad-036", "gold": "On the Computational Complexity of Algorithms", "gold_alternatives": ["On the Computational Complexity of Algorithms", "\"On the Computational Complexity of Algorithms\""]}
+{"q": "What percentage of Pinedale is black?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-017"}
+{"q": "When was the Dutch Revolt?", "answerable": true, "gold_passage": "squad-022", "gold": "1568\u20131609", "gold_alternatives": ["1568\u20131609"]}
+{"q": "What channels were removed from the network in March of 2007?", "answerable": true, "gold_passage": "squad-009", "gold": "basic channels", "gold_alternatives": ["basic channels", "the basic channels"]}
+{"q": "When did the General Sejm make Warsaw it's permanent seat?", "answerable": true, "gold_passage": "squad-030", "gold": "1569", "gold_alternatives": ["1569"]}
+{"q": "Besides the study of prime numbers, what general theory was considered the official example of the military?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-006"}
+{"q": "What individuals were responsible for authoring \"On the Computational Complexity of Algorithms\"?", "answerable": true, "gold_passage": "squad-036", "gold": "Juris Hartmanis and Richard Stearns", "gold_alternatives": ["Juris Hartmanis and Richard Stearns"]}
+{"q": "What are the Sky Q mini set top boxes never able to connect to?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-015"}
+{"q": "What is a popular strolling destination for pheasants?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-026"}
+{"q": "When did the high school education movement occur?", "answerable": true, "gold_passage": "squad-039", "gold": "1910\u20131940", "gold_alternatives": ["1910\u20131940"]}
+{"q": "What is a particular problem in biology that would benefit from determining that P = NP?", "answerable": true, "gold_passage": "squad-007", "gold": "protein structure prediction", "gold_alternatives": ["protein structure prediction"]}
+{"q": "What name comes from the English words Normans/Normanz?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-021"}
+{"q": "Besides the study of prime numbers, what general theory was considered the official example of pure mathematics?", "answerable": true, "gold_passage": "squad-006", "gold": "number theory", "gold_alternatives": ["number theory"]}
+{"q": "When did income inequality begin to decrease in the US?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-001"}
+{"q": "How many French colonists were lost by British?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-016"}
+{"q": "What did Standard & Poor recommend to slow economy recovery?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-010"}
+{"q": "What revealed the intentions of the British in the middle east regarding oil prices in 2004?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-049"}
+{"q": "How much potential economic growth could the United States amass if everyone went through less schooling?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-010"}
+{"q": "Which country was thinking about going to war to forcibly take Middle Eastern oil fields?", "answerable": true, "gold_passage": "squad-049", "gold": "U.S", "gold_alternatives": ["U.S", "U.S.", "the U.S."]}
+{"q": "When was the University of Chicago established?", "answerable": true, "gold_passage": "squad-013", "gold": "1890", "gold_alternatives": ["1890"]}
+{"q": "Who benefits from the research carried out by the IPCC?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-008"}
+{"q": "How many homes had BSkyB's direct-to-home satellite service available to them in 2010?", "answerable": true, "gold_passage": "squad-014", "gold": "10 million", "gold_alternatives": ["10 million"]}
+{"q": "When did BSkyB announce it's intention to replace it's free-to-air digital channels?", "answerable": true, "gold_passage": "squad-042", "gold": "8 February 2007", "gold_alternatives": ["8 February 2007", "On 8 February 2007"]}
+{"q": "Which country was worried that the US would invade the Middle East?", "answerable": true, "gold_passage": "squad-049", "gold": "British", "gold_alternatives": ["British", "British Prime Minister Edward Heath"]}
+{"q": "How large was the audience BSkyB said they could reach?", "answerable": true, "gold_passage": "squad-014", "gold": "25m", "gold_alternatives": ["25m", "25m people", "36% of households"]}
+{"q": "What author argues pitching the conscience versus the collective?", "answerable": true, "gold_passage": "squad-032", "gold": "Thoreau", "gold_alternatives": ["Thoreau", "Thoreau's"]}
+{"q": "When did Augustus die?", "answerable": true, "gold_passage": "squad-029", "gold": "AD 14", "gold_alternatives": ["AD 14"]}
+{"q": "What is the meaning of polynomial-space reduction?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-024"}
+{"q": "What impact did the high school education movement have on the presence of unskilled workers?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-039"}
+{"q": "What makes the method of primality more efficient?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-003"}
+{"q": "What is involved in a review of prescribed medications?", "answerable": true, "gold_passage": "squad-047", "gold": "evaluation of the appropriateness of the drug therapy", "gold_alternatives": ["evaluation of the appropriateness of the drug therapy", "an evaluation of the appropriateness of the drug therapy"]}
+{"q": "Who joined Norman forces in the destruction of the Armenians?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-025"}
+{"q": "What is polish for \"mermaid\"?", "answerable": true, "gold_passage": "squad-020", "gold": "syrenka", "gold_alternatives": ["syrenka"]}
+{"q": "What number did early Greeks not regard as a true number?", "answerable": true, "gold_passage": "squad-033", "gold": "1", "gold_alternatives": ["1"]}
+{"q": "What is known as swing pressure adsorption?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-018"}
+{"q": "What is the original meaning of the word Norman?", "answerable": true, "gold_passage": "squad-021", "gold": "Viking", "gold_alternatives": ["Viking", "Norseman, Viking"]}
+{"q": "What did the Los Angeles Times add to the definition of southern California in 1990?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-045"}
+{"q": "What seminal paper is commonly considered the beginning of sociology studies?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-036"}
+{"q": "What is the name of Sky Q's broadband router?", "answerable": true, "gold_passage": "squad-015", "gold": "Sky Q Hub", "gold_alternatives": ["Sky Q Hub"]}
+{"q": "What was the name of the infamous German Heroic prison?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-043"}
+{"q": "What did the people of Rome accept as the only fertile plain?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-029"}
+{"q": "If P is ultimately proven to be equal tot NP, what effect would this have on the efficiency of problems?", "answerable": true, "gold_passage": "squad-007", "gold": "more efficient solutions", "gold_alternatives": ["more efficient solutions", "shown to have more efficient solutions", "many important problems can be shown to have more efficient solutions"]}
+{"q": "What was the taxman's political philosophy?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-032"}
+{"q": "The concept of inertia can explain the tendency of people to continue in what?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-035"}
+{"q": "What districts does downtown Santa Ana include?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-044"}
+{"q": "What does a writer for the International Crisis Group think the concept of political Islam is a creation of?", "answerable": true, "gold_passage": "squad-019", "gold": "Americans", "gold_alternatives": ["Americans"]}
+{"q": "How many schools of medicine were recognized in Japan?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-027"}
+{"q": "What did Standard & Poor recommend to speed economy recovery?", "answerable": true, "gold_passage": "squad-010", "gold": "increasing access to education", "gold_alternatives": ["increasing access to education"]}
+{"q": "What are the Sky Q mini set top boxes able to connect to?", "answerable": true, "gold_passage": "squad-015", "gold": "Sky Q Silver", "gold_alternatives": ["Sky Q Silver", "Sky Q Silver set top boxes", "the Sky Q Silver set top boxes"]}
+{"q": "When did income inequality begin to increase in the US?", "answerable": true, "gold_passage": "squad-001", "gold": "1970s", "gold_alternatives": ["1970s"]}
+{"q": "When was the Sierra Sky Park Airport formed?", "answerable": true, "gold_passage": "squad-028", "gold": "1946", "gold_alternatives": ["1946"]}
+{"q": "What year did BSkyB and Virgin Media have an agreement over the carriage of Sky Channels on cable TV?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-009"}
+{"q": "Assessing the Amazon rain forest was restricted after what era?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-037"}
+{"q": "What is the name of Sky Q's dial-up router?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-015"}
+{"q": "What academy did Tugh Temur found?", "answerable": true, "gold_passage": "squad-048", "gold": "Academy of the Pavilion of the Star of Literature", "gold_alternatives": ["Academy of the Pavilion of the Star of Literature"]}
+{"q": " Who did Duke Yansheng Kong Duanyou stay with?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-034"}
+{"q": "What impact did the high school education movement have on the presence of skilled workers?", "answerable": true, "gold_passage": "squad-039", "gold": "increase", "gold_alternatives": ["increase", "an increase"]}
+{"q": "What is one example of what a clinical pharmacist's duties entail?", "answerable": true, "gold_passage": "squad-047", "gold": "identifying goals of therapy", "gold_alternatives": ["identifying goals of therapy", "creating a comprehensive drug therapy plan for patient-specific problems"]}
+{"q": "What can happen when breathing in oxygen with 60 atm?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-046"}
+{"q": "The Rhine and what other river were accepted as the Germanic frontier?", "answerable": true, "gold_passage": "squad-029", "gold": "Danube", "gold_alternatives": ["Danube", "upper Danube"]}
+{"q": "What commemorates Old Town's heroic history?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-043"}
+{"q": "What is tuition for 2012 - 13 year at Harvard? ", "answerable": true, "gold_passage": "squad-011", "gold": "$38,000", "gold_alternatives": ["$38,000"]}
+{"q": "How many schools of medicine were recognized in China?", "answerable": true, "gold_passage": "squad-027", "gold": "four", "gold_alternatives": ["four", "Four"]}
+{"q": "Where and when did the investigation of the plague pathogen begin?", "answerable": true, "gold_passage": "squad-005", "gold": "Hong Kong", "gold_alternatives": ["Hong Kong", "Hong Kong in 1894"]}
+{"q": "How many French colonists were gained by British?", "answerable": true, "gold_passage": "squad-016", "gold": "80,000", "gold_alternatives": ["80,000"]}
+{"q": "Which county is developing its business center?", "answerable": true, "gold_passage": "squad-044", "gold": "Orange", "gold_alternatives": ["Orange", "Orange County"]}
+{"q": "What archdiocese is Market Square the seat of?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-040"}
+{"q": "When did the Jin dynasty begin?", "answerable": true, "gold_passage": "squad-034", "gold": "1115", "gold_alternatives": ["1115"]}
+{"q": "When did Augustus find Rome?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-029"}
+{"q": "Who did Warsaw serve as the seat for in 1529?", "answerable": true, "gold_passage": "squad-030", "gold": "General Sejm", "gold_alternatives": ["General Sejm"]}
+{"q": "What is not an example of what a clinical pharmacist's duties entail?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-047"}
+{"q": "What was Thoreau's punishment for not paying his taxes?", "answerable": true, "gold_passage": "squad-032", "gold": "imprisonment", "gold_alternatives": ["imprisonment"]}
+{"q": "What is Polish for \"female\"?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-020"}
+{"q": "What is a non-Islamic revival movement?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-004"}
+{"q": "What was the white population in 1942 in Fresno?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-017"}
+{"q": "During what time period did income inequality increase in the United States?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-001"}
+{"q": "What are two cars with V8 engines that were more fuel efficient?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-031"}
+{"q": "When did Setanta Sports say it would launch as a subscription service?", "answerable": true, "gold_passage": "squad-042", "gold": "March", "gold_alternatives": ["March", "in March"]}
+{"q": "Which sized cars were the least demanded cars in the crisis?", "answerable": true, "gold_passage": "squad-031", "gold": "large", "gold_alternatives": ["large", "large cars"]}
+{"q": "What is the least used type of reduction?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-024"}
+{"q": "How many homes had BSkyB's direct-to-home satellite service unavailable to them in 2010?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-014"}
+{"q": "What did families with incomes below $38,000 pay for tuition in 2009?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-011"}
+{"q": "Who created the nation's first aviation community?", "answerable": true, "gold_passage": "squad-028", "gold": "William Smilie", "gold_alternatives": ["William Smilie"]}
+{"q": "What percentage of oxygen will a zeolite sieve produce?", "answerable": true, "gold_passage": "squad-018", "gold": "90% to 93%", "gold_alternatives": ["90% to 93%"]}
+{"q": " When did the Germanic tribes not claim territory in north and west Europe?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-012"}
+{"q": "What was the name of the infamous German Gestapo prison?", "answerable": true, "gold_passage": "squad-043", "gold": "Pawiak", "gold_alternatives": ["Pawiak"]}
+{"q": "Over how many species of trees can be found in the Saxon Garden?", "answerable": true, "gold_passage": "squad-026", "gold": "100", "gold_alternatives": ["100", "over 100"]}
+{"q": "What is the most elemental way to test the primality of any division?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-003"}
+{"q": "The city of Pritzker is home to which University?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-013"}
+{"q": "What was considered responsible for the black death as well as the epidemic in southern China?", "answerable": true, "gold_passage": "squad-005", "gold": "Yersinia pestis", "gold_alternatives": ["Yersinia pestis"]}
+{"q": "Who created all of the nation's aviation communities?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-028"}
+{"q": "What county does the rapidly developing downtown Santa Ana include?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-044"}
+{"q": "What health condition can deep sea diving cause?", "answerable": true, "gold_passage": "squad-046", "gold": "Oxygen toxicity", "gold_alternatives": ["Oxygen toxicity", "Oxygen toxicity to the lungs and central nervous system"]}
+{"q": "What is another notable university in Warsaw after the University of Warsaw?", "answerable": true, "gold_passage": "squad-040", "gold": "Polish Academy of Sciences", "gold_alternatives": ["Polish Academy of Sciences"]}
+{"q": "Who did the Turks take up service with?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-025"}
+{"q": "What was the name of the Norman castle?", "answerable": true, "gold_passage": "squad-025", "gold": "Afranji", "gold_alternatives": ["Afranji"]}
+{"q": "Where were the Germanic tribes not originally located?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-012"}
+{"q": "Civil disobedience has been argued in more recent times to have suffered from what?", "answerable": true, "gold_passage": "squad-023", "gold": "debased", "gold_alternatives": ["debased", "ambiguity"]}
+{"q": "During what time period did income inequality decrease in the United States?", "answerable": true, "gold_passage": "squad-001", "gold": "1910 to 1940", "gold_alternatives": ["1910 to 1940"]}
+{"q": "Who included 1 as the first prime number in the mid 20th century?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-033"}
+{"q": " When did the Jip dynasty begin?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-034"}
+{"q": "What nationality was Pierre L'Oyseleur?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-022"}
+{"q": "What archdiocese is Warsaw the seat of?", "answerable": true, "gold_passage": "squad-040", "gold": "Roman Catholic", "gold_alternatives": ["Roman Catholic"]}
+{"q": "What makes the method of trial division more efficient?", "answerable": true, "gold_passage": "squad-003", "gold": "complete list of primes up to  is known", "gold_alternatives": ["complete list of primes up to  is known", "a complete list of primes up to  is known", "if a complete list of primes up to  is known"]}
+{"q": "What garden was formally only for running?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-026"}
+{"q": "What term don't Islamists think should be applied to them?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-019"}
+{"q": "What mechanism can be used to make oxygen?", "answerable": true, "gold_passage": "squad-018", "gold": "zeolite molecular sieves", "gold_alternatives": ["zeolite molecular sieves", "passing a stream of clean, dry air through one bed of a pair of identical zeolite molecular sieves", "passing a stream of clean, dry air through one bed of a pair of identical zeolite molecular sieves, which absorbs the nitrogen"]}
+{"q": "In which year did the newspaper define southern California?", "answerable": true, "gold_passage": "squad-045", "gold": "1900", "gold_alternatives": ["1900"]}
+{"q": "What ethnic neighborhood in Fresno had primarily Japanese residents in 1940?", "answerable": true, "gold_passage": "squad-017", "gold": "Chinatown", "gold_alternatives": ["Chinatown"]}
+{"q": "The process of growing more trees in the forest is known as what?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-037"}
+{"q": "How much potential economic growth could the United States amass if everyone went through more schooling?", "answerable": true, "gold_passage": "squad-010", "gold": "$105 billion", "gold_alternatives": ["$105 billion"]}
+{"q": "In what year did Alexandre Yersin discover the Yersinia pestis?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-005"}
+{"q": "Who did Duke Yansheng Kong Duanyou flee with?", "answerable": true, "gold_passage": "squad-034", "gold": "Song Emperor", "gold_alternatives": ["Song Emperor", "the Song Emperor", "the Song Emperor to Quzhou"]}
+{"q": "What channels were always available on the network?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-009"}
+{"q": "In what year did the Black Eagle Brewery change its name to Old Truman Brewery?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-038"}
+{"q": "Who was the leader when the Franks entered the Euphrates valley?", "answerable": true, "gold_passage": "squad-025", "gold": "Oursel", "gold_alternatives": ["Oursel"]}
+{"q": "What British mathematician took pride in doing work that he felt had no military benefit?", "answerable": true, "gold_passage": "squad-006", "gold": "G. H. Hardy", "gold_alternatives": ["G. H. Hardy"]}
+{"q": "What is one type of public key cryptography algorithm?", "answerable": true, "gold_passage": "squad-041", "gold": "RSA", "gold_alternatives": ["RSA"]}
+{"q": "What is an Islamic revival movement?", "answerable": true, "gold_passage": "squad-004", "gold": "Islamism", "gold_alternatives": ["Islamism"]}
+{"q": "What did the Vilnius formally establish in 1573?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-030"}
+{"q": "What concept explains why objects continue in constant motion?", "answerable": true, "gold_passage": "squad-035", "gold": "inertia", "gold_alternatives": ["inertia"]}
+{"q": "What standards did American cars create in the auto industry?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-031"}
+{"q": "What distinction does the Bank of America Tower hold?", "answerable": true, "gold_passage": "squad-002", "gold": "tallest building in Downtown Jacksonville", "gold_alternatives": ["tallest building in Downtown Jacksonville", "tallest precast, post-tensioned concrete structure"]}
+{"q": "What is another type of private key cryptography algorithm?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-041"}
+{"q": "What was Tugh Temur known for?", "answerable": true, "gold_passage": "squad-048", "gold": "his cultural contribution", "gold_alternatives": ["his cultural contribution"]}
+{"q": " What does a writer for the International Crisis Group think the concept of political Islam is not a creation of?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-019"}
+{"q": "Which newspaper defined southern California?", "answerable": true, "gold_passage": "squad-045", "gold": "Los Angeles Times", "gold_alternatives": ["Los Angeles Times", "the Los Angeles Times"]}
+{"q": "What else were families with incomes below $38,000 not required to pay for in 2009?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-011"}
+{"q": "What is never involved in a review of prescribed medications?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-047"}
+{"q": "What garden was formally only for royalty?", "answerable": true, "gold_passage": "squad-026", "gold": "Saxon Garden", "gold_alternatives": ["Saxon Garden", "The Saxon Garden"]}
+{"q": "What is Sigilium's symbol?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-020"}
+{"q": "How many Huguenots were part of the group that founded France Antarctique in 1555?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-000"}
+{"q": "What commemorates Warsaw's heroic history?", "answerable": true, "gold_passage": "squad-043", "gold": "many places", "gold_alternatives": ["many places"]}
+{"q": "What is one type of private key cryptography algorithm?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-041"}
+{"q": " What academy did Tugh Temur destroy?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-048"}
+{"q": "Where are international corporations headquartered?", "answerable": true, "gold_passage": "squad-044", "gold": "University of California", "gold_alternatives": ["University of California", "University of California, Irvine", "the University of California, Irvine"]}
+{"q": "When was the deportation of Acadians?", "answerable": true, "gold_passage": "squad-016", "gold": "1755", "gold_alternatives": ["1755"]}
+{"q": "What kind of university is the University of Chicago?", "answerable": true, "gold_passage": "squad-013", "gold": "private research", "gold_alternatives": ["private research", "private research university", "a private research university"]}
+{"q": "Building a 617 m tall?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-002"}
+{"q": "What year did BSkyB and Virgin Media have a dispute over the carriage of Sky Channels on cable TV?", "answerable": true, "gold_passage": "squad-009", "gold": "2007", "gold_alternatives": ["2007"]}
+{"q": "When was the French version of the word Norman first recorded?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-021"}
+{"q": "What had Vice President Agnew always suffered from? ", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-023"}
+{"q": "The Bank of America Tower was previously known as what?", "answerable": true, "gold_passage": "squad-002", "gold": "Barnett Center", "gold_alternatives": ["Barnett Center"]}
+{"q": "Nearly 7,000 students are enrolled where?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-013"}
+{"q": "Who did the Dutch fight in the Dutch Revolt?", "answerable": true, "gold_passage": "squad-022", "gold": "Spain", "gold_alternatives": ["Spain"]}
+{"q": "When did the middle school education movement occur?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-039"}
+{"q": "What early Huguenot Church was established in England?", "answerable": true, "gold_passage": "squad-038", "gold": "The French Protestant Church of London", "gold_alternatives": ["The French Protestant Church of London"]}
+{"q": "What was Warsaw's Market Square listed as in 1980?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-040"}
+{"q": "What British mathematician took pride in doing work that he felt had no mathematical benefit?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-006"}
+{"q": "When was the French colony in modern day Brazil founded?", "answerable": true, "gold_passage": "squad-000", "gold": "1555", "gold_alternatives": ["1555"]}
+{"q": "When did BSkyB announce it's intention to improve it's free-to-air digital channels?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-042"}
+{"q": "How many French colonists weren't gained by British?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-016"}
+{"q": "In what year did Huguenot refugees first start to move to London?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-038"}
+{"q": "When did the Sierra Sky Park fall out of use?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-028"}
+{"q": "What is the total cost of attendance in 2012-13?", "answerable": true, "gold_passage": "squad-011", "gold": "$57,000", "gold_alternatives": ["$57,000"]}
+{"q": "What was the government the final judge of?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-032"}
+{"q": "What had happened to Vice President Agnew's status in modern times?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-023"}
+{"q": " What aspects of life does Islamism not seek to integrate itself into?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-004"}
+{"q": "When did the Germanic tribes claim territory in north and west Europe?", "answerable": true, "gold_passage": "squad-012", "gold": "middle period of classical antiquity", "gold_alternatives": ["middle period of classical antiquity", "the middle period of classical antiquity"]}
+{"q": "Acessing the Amazon rainforest was restricted before what era?", "answerable": true, "gold_passage": "squad-037", "gold": "1960s", "gold_alternatives": ["1960s", "early 1960s", "the early 1960s"]}
+{"q": "When was the charter for this church signed?", "answerable": true, "gold_passage": "squad-038", "gold": "1550", "gold_alternatives": ["1550"]}
+{"q": "Where were the Germanic tribes originally located?", "answerable": true, "gold_passage": "squad-012", "gold": "Scandinavia", "gold_alternatives": ["Scandinavia", "Scandinavia and northern Europe", "Scandinavia and northern Europe,"]}
+{"q": "What is the most elemental way to test the primality of any integer n?", "answerable": true, "gold_passage": "squad-003", "gold": "trial division", "gold_alternatives": ["trial division"]}
+{"q": "What is one of the least important open questions in theoretical computer science?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-007"}
+{"q": "How small was the audience BSkyB said they couldn't reach?", "answerable": false, "gold_passage": null, "gold": null, "near_miss_passage": "squad-014"}
