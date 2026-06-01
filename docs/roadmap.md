@@ -22,7 +22,8 @@
   power: self-judge recall 32% [23–41%] → cross-family (Llama-3.1-8B) recall 47% [38–57%],
   **+16 points, McNemar exact p=0.0026** (paired — same answers, only the judge differs).
   Precision trade-off observed as predicted (79%→71%). Shared-blind-spots attribution
-  confirmed; the deeper honest finding is that 46/95 hallucinations escape BOTH 8B judges.
+  supported on this setup (single dataset, one 8B judge pair; unanswerable-only robustness
+  check p=0.0043); the deeper honest finding is that 46/95 hallucinations escape BOTH 8B judges.
   Implementation: validate() takes judge_model/judge_url (or NIM_JUDGE_MODEL/NIM_JUDGE_URL);
   the eval harness scores both judges in one pass (NIM_XJUDGE_MODEL/NIM_XJUDGE_URL).
   - **Question:** gate recall is 25% and the attribution is shared blind spots — the judge is the

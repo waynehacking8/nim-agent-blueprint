@@ -161,7 +161,12 @@ def squad_charts(rows_path: str) -> None:
     unguarded = 100 * sum(r["u_halluc"] for r in una) / n
     guarded = 100 * sum(r["g_halluc"] for r in una) / n
     resid_self = 100 * sum(1 for r in una if r["u_halluc"] and not r["u_gate_blocks"]) / n
-    resid_x = 100 * sum(1 for r in una if r["u_halluc"] and not r["u_xgate_blocks"]) / n
+    # u_xgate_blocks is None when the eval ran without NIM_XJUDGE_MODEL set;
+    # treat None as "no cross-judge data", not as "not blocked"
+    resid_x = 100 * sum(
+        1 for r in una
+        if r["u_halluc"] and r["u_xgate_blocks"] is not None and not r["u_xgate_blocks"]
+    ) / n
 
     # --- ablation: 4 bars ---
     fig, ax = plt.subplots(figsize=(8, 4.8))

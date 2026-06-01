@@ -136,7 +136,7 @@ evaluated against the hard case, not the easy one.
 
 ![SQuAD ablation](eval/report_squad_ablation.png)
 
-**2. The cross-family judge experiment (the roadmap's shared-blind-spots test) — confirmed,
+**2. The cross-family judge experiment (the roadmap's shared-blind-spots test) — supported,
 with statistics.** The same unguarded answers were scored by two judges: the generator itself
 (qwen3-8b) and an independent judge from a different model family (llama-3.1-8b), serving on a
 separate GPU. Paired comparison, exact McNemar test:
@@ -147,10 +147,11 @@ separate GPU. Paired comparison, exact McNemar test:
 | **cross-family (llama-3.1-8b)** | 71% | **47%** [38–57%] | **0.57** | **38%** |
 
 Recall **+16 points (p = 0.0026, McNemar exact)** — of hallucinations caught by exactly one
-judge, the cross-family judge caught 19 vs the self judge's 4. This confirms the
-shared-blind-spots attribution and matches the cross-model detection literature (FINCH-ZK,
-arXiv:2508.14314: detection F1 improved by 6–39% on FELM from cross-model consistency). The
-trade-off is real too: the
+judge, the cross-family judge caught 19 vs the self judge's 4. This supports the
+shared-blind-spots attribution on this setup (single dataset, one 8B judge pair — see
+[`eval/report_squad.md`](eval/report_squad.md) for the robustness check and limitations) and
+matches the cross-model detection literature (FINCH-ZK, arXiv:2508.14314: detection F1
+improved by 6–39% on FELM from cross-model consistency). The trade-off is real too: the
 independent judge is stricter (precision 79%→71%, more false blocks).
 
 The honest residual: **46 of 95 hallucinations were caught by neither 8B judge** — two small

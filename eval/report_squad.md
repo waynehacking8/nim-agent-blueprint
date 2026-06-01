@@ -51,7 +51,11 @@ Hypothesis: a judge that is the same model that hallucinated misses the same fac
 
 Recall delta: **+16 points**, and the comparison is *paired* (both judges score the same answers — temp=0 makes the generations identical), so an exact McNemar test applies: of the 23 hallucinations caught by exactly one judge, the cross-family judge caught **19** vs the self judge's **4** — **p = 0.0026**. Cross-model detection literature (e.g. FINCH-ZK, arXiv:2508.14314: detection F1 improved by 6–39% on FELM from cross-model consistency) predicts this gain when blind spots, not judging ability, are the bottleneck.
 
+Robustness note: the 95 "hallucinations" pool combines 79 unanswerable-question hallucinations with 16 answerable-but-wrong answers. Restricting the McNemar test to the 79 unanswerable rows (where the shared-blind-spots argument applies most directly) gives discordant pairs 4 vs 18, **p = 0.0043** — the conclusion is unchanged.
+
 The equally important honest number: **46** of the 95 hallucinations were caught by *neither* 8B judge — two small same-size judges still share most blind spots with each other. The next rungs are a larger judge model, a judge panel (PoLL), or retrieval-grounded verification.
+
+Limitations: single dataset (SQuAD 2.0 adversarial near-miss), one judge pair (qwen3-8b / llama-3.1-8b — both 8B-class), 23 discordant pairs as the test base. The result quantifies *this* setup; it does not establish the size of the effect under domain shift, with larger judges, or with judges of different capacities.
 
 ![Gate comparison](report_squad_gates.png)
 
