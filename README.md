@@ -243,6 +243,51 @@ uncertainty cannot see.
 
 ![Semantic entropy](eval/semantic_entropy.png)
 
+## The capacity question, answered: 70B judge vs judge panel vs grounding
+
+The last open Phase 4 item: are the shared blind spots a **capacity** problem (8B judges too
+small) or a **structural** one (parametric judging has a ceiling no matter the size)? Three
+arms, same 200 rows / same answers as every gate above (paired, exact McNemar;
+[`eval/report_blind_spot_arms.md`](eval/report_blind_spot_arms.md)):
+
+| gate | precision | recall | F1 | of the 48 both-8B-missed | of the 23 escape-everything |
+|---|---|---|---|---|---|
+| cross-family 8B *(baseline)* | 67% | 46% | 0.55 | 0 | 0 |
+| MiniCheck 770M *(baseline)* | 74% | 41% | 0.53 | **14** | 0 |
+| **(a) Llama-3.3-70B parametric** | 68% | 48% | 0.56 | 9 | 2 |
+| (b) PoLL 3-family majority (arXiv:2404.18796) | 70% | 41% | 0.52 | 0 | 0 |
+| (b3) phi-4 alone (3rd family, 14B) | 60% | **54%** | 0.57 | 13 | **3** |
+| (c) question-aware grounded 8B | 64% | **9%** | 0.17 | 2 | 1 |
+
+![Blind spot arms](eval/blind_spot_arms.png)
+
+**The answer is structural, with four pieces of evidence:**
+
+1. **Capacity buys nothing.** The 70B judge's recall (48%) is statistically indistinguishable
+   from the 8B cross-family judge's (46%) — McNemar p=0.82. Nine times the parameters, same
+   blind spots. And the 770M *grounded* MiniCheck still recovers more of the blind-spot set
+   (14) than the 70B parametric judge (9).
+2. **The escape-everything set is essentially immune to parametric judging at any scale**:
+   the 70B catches 2 of 23; phi-4 catches 3. These hallucinations are wrong in ways that
+   knowledge-based judging cannot see — they need evidence-based verification or better
+   retrieval, not bigger judges.
+3. **PoLL majority voting (published as an upgrade) is a measured downgrade here**: 41% <
+   the best panel member alone (54%) and < the cross judge it contains (46%). Majority vote
+   drags recall toward the weakest member (the 33% self-judge) — it buys precision (70%),
+   not recall. Family *diversity* is what matters: phi-4 (14B, third family) is the best
+   single judge measured, beating the 70B.
+4. **Question-aware grounding backfires catastrophically at 8B** (46% → 9%, p<0.0001): shown
+   the question, the judge falls into the same near-miss trap as the generator (raw one-word
+   `grounded` verdicts on hallucinated answers — not a parsing artifact; verdict columns
+   committed in the rows JSON). Grounding works as a *discriminative* check (MiniCheck), not
+   as a generative QA judgment. The "obvious fix" of showing the judge the question is an
+   anti-pattern on adversarial material.
+
+Deployment guidance after all 9 gates measured: **cross-family 8B judge OR MiniCheck remains
+the best configuration** (62% recall, F1 0.63) — a 70B judge adds cost, not coverage. The
+36/95 hallucinations that escape this union are the honest open problem, and the evidence
+says their solution is retrieval/evidence-side, not judge-side.
+
 ## Talk
 
 This repo doubles as the supplementary material for a talk,

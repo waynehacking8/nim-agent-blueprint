@@ -300,6 +300,70 @@ def judge_variants_chart(rows_path: str) -> None:
     print(f"wrote {out}")
 
 
+def blind_spot_arms_chart(rows_path: str) -> None:
+    """The capacity-vs-grounding answer in one chart (roadmap Phase 4, final item):
+    every gate's recall + how many of the 23 escape-everything hallucinations it recovers."""
+    import json
+
+    rows = json.load(open(rows_path))
+    if "u_70b_blocks" not in rows[0]:
+        return  # three-arm experiment not run yet
+    halluc = [r for r in rows if r["u_halluc"]]
+    prior = ["u_gate_blocks", "u_xgate_blocks", "u_cot_gate_blocks", "u_cot_xgate_blocks",
+             "u_minicheck_blocks", "u_union_blocks"]
+    escape_all = [r for r in halluc if not any(r.get(k) for k in prior)]
+
+    gates = [("self 8B", "u_gate_blocks", "#9aa0a6"),
+             ("cross 8B", "u_xgate_blocks", "#6b7280"),
+             ("MiniCheck\n770M", "u_minicheck_blocks", "#2c6fbb"),
+             ("(a) 70B\nparametric", "u_70b_blocks", "#b45309"),
+             ("(b) PoLL\n3-family", "u_poll_blocks", "#7c3aed"),
+             ("(c) grounded 8B\n(question-aware)", "u_qa_grounded_blocks", NVIDIA_GREEN),
+             ("best union\n(c OR MiniCheck OR a)", "u_best_union_blocks", "#0d7a3f")]
+    gates = [(n, k, c) for n, k, c in gates if k in rows[0]]
+
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(14, 5.2), width_ratios=[3, 2])
+    recs = [_gate(rows, k)[1] * 100 for _, k, _ in gates]
+    precs = [_gate(rows, k)[0] * 100 for _, k, _ in gates]
+    xpos = range(len(gates))
+    width = 0.38
+    b1 = ax.bar([x - width / 2 for x in xpos], recs, width, label="recall",
+                color=[c for _, _, c in gates], edgecolor="black", linewidth=0.6)
+    b2 = ax.bar([x + width / 2 for x in xpos], precs, width, label="precision",
+                color=[c for _, _, c in gates], alpha=0.45, edgecolor="black", linewidth=0.6)
+    for bars in (b1, b2):
+        for bar in bars:
+            ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 1,
+                    f"{bar.get_height():.0f}", ha="center", va="bottom", fontsize=9,
+                    fontweight="bold")
+    ax.set_xticks(list(xpos))
+    ax.set_xticklabels([n for n, _, _ in gates], fontsize=8.5)
+    ax.set_ylabel("score (%)")
+    ax.set_ylim(0, 100)
+    ax.set_title(f"Capacity vs grounding: every gate vs the same {len(halluc)} hallucinations\n"
+                 "solid = recall · translucent = precision", fontsize=11)
+    ax.yaxis.grid(True, linestyle="--", alpha=0.4)
+    ax.set_axisbelow(True)
+
+    catch = [sum(1 for r in escape_all if r.get(k)) for _, k, _ in gates]
+    bars = ax2.barh([n.replace("\n", " ") for n, _, _ in gates], catch,
+                    color=[c for _, _, c in gates], edgecolor="black", linewidth=0.6)
+    for bar, v in zip(bars, catch):
+        ax2.text(v + 0.25, bar.get_y() + bar.get_height() / 2, str(v), va="center",
+                 fontsize=10, fontweight="bold")
+    ax2.set_xlabel(f"caught of the {len(escape_all)} hallucinations that escaped EVERY prior gate")
+    ax2.set_xlim(0, max(catch) * 1.3 if any(catch) else 1)
+    ax2.set_title("Who recovers the escape-everything set?", fontsize=11)
+    ax2.xaxis.grid(True, linestyle="--", alpha=0.4)
+    ax2.set_axisbelow(True)
+    ax2.invert_yaxis()
+    fig.tight_layout()
+    out = os.path.join(HERE, "blind_spot_arms.png")
+    fig.savefig(out, dpi=DPI)
+    plt.close(fig)
+    print(f"wrote {out}")
+
+
 def rerank_chart(base_path: str, rerank_path: str) -> None:
     """Fusion-only vs fusion+reranker, paired on the same questions (roadmap Phase 5)."""
     import json
@@ -429,6 +493,7 @@ def main() -> None:
     if os.path.exists(rows_path):
         squad_charts(rows_path)
         judge_variants_chart(rows_path)
+        blind_spot_arms_chart(rows_path)
     rerank_path = os.path.join(HERE, "report_squad_rerank_rows.json")
     if os.path.exists(rows_path) and os.path.exists(rerank_path):
         rerank_chart(rows_path, rerank_path)

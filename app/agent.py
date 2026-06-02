@@ -44,6 +44,15 @@ JUDGE_SYS_COT = ("Is the ANSWER fully supported by the CONTEXT? Think step by st
                  "factual claim in the ANSWER and check whether the CONTEXT supports it. "
                  "Then give your verdict on the last line as exactly one word: "
                  "grounded or unsupported.")
+# Question-aware grounded judging (roadmap Phase 4 arm c). The plain judge never sees the
+# QUESTION, so a near-miss hallucination — context-supported facts assembled to answer a
+# DIFFERENT question than the one asked — looks "grounded" to it. Adding the question makes
+# the judge check the right thing: does this answer THIS question from THIS evidence?
+JUDGE_SYS_QA = ("You are given a QUESTION, the retrieved CONTEXT, and an ANSWER. "
+                "Is the ANSWER a correct answer to the QUESTION based ONLY on the CONTEXT? "
+                "If the CONTEXT does not contain the information needed to answer the "
+                "QUESTION, then any answer other than a refusal is wrong. "
+                "Reply with exactly one word: grounded or unsupported.")
 
 
 def _parse_verdict(text):
@@ -56,7 +65,7 @@ def _parse_verdict(text):
     return g > u
 
 
-def validate(answer, context, judge_model=None, judge_url=None, cot=False):
+def validate(answer, context, judge_model=None, judge_url=None, cot=False, question=None):
     """Groundedness gate. By default the judge is the same model/endpoint as the generator.
 
     Cross-family judge (roadmap Phase 4): pass `judge_model`/`judge_url` (or set
@@ -66,11 +75,21 @@ def validate(answer, context, judge_model=None, judge_url=None, cot=False):
 
     CoT judging (roadmap Phase 5): `cot=True` makes the judge reason step-by-step before
     its verdict (more tokens, higher recall in the literature).
+
+    Question-aware grounding (roadmap Phase 4 arm c): pass `question=` to make the judge
+    verify the answer against the question AND the evidence, not just the evidence — the
+    distinction that near-miss hallucinations exploit.
     """
     with tracer.start_as_current_span("validate"):
         ctx = "\n\n".join(context)
-        verdict = provider.chat([{"role": "system", "content": JUDGE_SYS_COT if cot else JUDGE_SYS},
-                                 {"role": "user", "content": f"CONTEXT:\n{ctx}\n\nANSWER:\n{answer}"}],
+        if question is not None:
+            sys_prompt = JUDGE_SYS_QA
+            user = f"QUESTION:\n{question}\n\nCONTEXT:\n{ctx}\n\nANSWER:\n{answer}"
+        else:
+            sys_prompt = JUDGE_SYS_COT if cot else JUDGE_SYS
+            user = f"CONTEXT:\n{ctx}\n\nANSWER:\n{answer}"
+        verdict = provider.chat([{"role": "system", "content": sys_prompt},
+                                 {"role": "user", "content": user}],
                                 max_tokens=512 if cot else 16,
                                 model=judge_model or os.getenv("NIM_JUDGE_MODEL") or None,
                                 base_url=judge_url or os.getenv("NIM_JUDGE_URL") or None)

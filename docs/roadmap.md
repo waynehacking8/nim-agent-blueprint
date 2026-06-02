@@ -64,7 +64,20 @@
     stays <5% at scale, the "one guarded prompt" conclusion upgrades from demonstration to
     statistically supported.
 
-- [ ] **Attack the 46/95 (48/95 in the current run) shared blind spots: larger judge vs judge panel vs retrieval-grounded.**
+- [x] **Attack the 46/95 (48/95 in the current run) shared blind spots: larger judge vs judge panel vs retrieval-grounded.**
+  **DONE — README "The capacity question, answered" / eval/report_blind_spot_arms.md /
+  eval/blind_spot_arms.png / eval/blind_spot_arms.py.** The answer is **structural**:
+  (a) Llama-3.3-70B (AWQ; official repo is gated) recall 48% vs cross-8B 46%, McNemar
+  **p=0.82** — capacity buys nothing; the 770M grounded MiniCheck still recovers more blind
+  spots (14) than the 70B (9); the 23 escape-everything hallucinations are essentially immune
+  (70B catches 2, phi-4 catches 3). (b) PoLL majority vote (qwen3-8b + llama-3.1-8b + phi-4;
+  gemma-2-9b is gated) is a measured DOWNGRADE: 41% < phi-4 alone (54%) < the published claim —
+  majority voting drags toward the weakest member; family diversity, not panel size, is the
+  useful ingredient. (c) Question-aware grounded 8B judging BACKFIRES (46%→9%, p<0.0001): the
+  judge falls into the generator's near-miss trap when shown the question — grounding must be
+  discriminative (MiniCheck-style), not generative. Best deployable config unchanged:
+  cross-family 8B OR MiniCheck (62% recall). Judges/answers all on the same rows → all
+  comparisons paired.
   - **Question:** 46 of 95 hallucinations escape BOTH 8B judges (self + cross-family). Is that
     a capacity problem (8B judges are too small) or a structural one (judging from parametric
     knowledge has a ceiling no matter the size)? The answer decides where validate() should
