@@ -78,3 +78,52 @@
     parametric judge, the bottleneck is grounding, not capacity — directly actionable (the
     validate() step should always receive the retrieved context). Track precision per arm;
     panel and grounding may trade precision differently.
+
+## Phase 5 — Literature-ceiling reproductions (specified)
+
+Goal: reproduce published hallucination-detection ceilings on this repo's own eval set, so the
+46/95 escaped-hallucinations finding gets attacked with every method class the literature offers.
+
+- [ ] **MiniCheck grounded NLI verifier (arXiv:2404.10774) on the 95 hallucinations.**
+  Published target: 770M model reaches GPT-4-level balanced accuracy on LLM-AGGREFACT.
+  - **Question:** the repo's finding is that 46/95 hallucinations escape both 8B generative
+    judges. Can a 770M *discriminative* claim-vs-document verifier — which checks the answer
+    against the retrieved context instead of judging from parametric knowledge — catch them?
+    This is a structural test: grounding vs capacity.
+  - **Method:** run MiniCheck-FT5 (HuggingFace, fits on any single GPU) over the existing
+    `eval/report_squad_rows.json`: input = (retrieved context, generated answer) pairs; score
+    every row; McNemar test vs the cross-family judge on the same rows.
+  - **Read-out:** recall/precision vs self-judge (32%) and cross-family judge (47%); how many
+    of the 46 both-judges-missed hallucinations MiniCheck catches. If a 770M grounded model
+    beats 8B generative judges, the bottleneck is grounding, not capacity — the validate()
+    step should always receive the retrieved context.
+
+- [ ] **Semantic Entropy (Farquhar et al., Nature 2024) on the same eval set.**
+  Published target: AUROC 0.790 (vs 0.691 naive entropy) for hallucination detection.
+  - **Question:** every gate in this repo is a binary post-hoc judge. Sampling-based
+    uncertainty from the generator itself is a pre-answer signal — does it reach the published
+    AUROC on our adversarial near-miss set?
+  - **Method:** for each of the 200 questions, sample the generator 10× at T=1.0; cluster the
+    answers by bidirectional NLI entailment (DeBERTa-large-MNLI); compute semantic entropy;
+    plot AUROC against the gold hallucination labels.
+  - **Read-out:** AUROC vs the 0.790 ceiling. Adds a continuous-score axis (the repo currently
+    only has discrete recall) and a pre-generation confidence filter that costs no extra model.
+
+- [ ] **CoT judging (arXiv:2511.11087) — cited in this repo's docs but never run.**
+  Published target: chain-of-thought raises self-detection recall from ~22% to ~58%.
+  - **Question:** the cheapest possible intervention — does adding "think step by step before
+    your verdict" to the existing judge prompt close any of the self-judge's 32%-recall gap?
+  - **Method:** one prompt change in validate(); re-run the judge pass (not the generation) on
+    the existing rows for both self and cross-family judges.
+  - **Read-out:** recall/precision with vs without CoT, both judges. Directly tests whether
+    the published 22%→58% gain holds on adversarial near-miss material.
+
+- [ ] **NIM reranker gain (NV-RerankQA, arXiv:2409.07691) — wired but never measured.**
+  Published target: +14% retrieval accuracy over embedding-only retrieval.
+  - **Question:** the repo's retrieve() supports `NIM_RERANK` but the eval has never measured
+    what it buys. Does reranking improve recall@3 (86%) and does better retrieval reduce
+    downstream hallucination?
+  - **Method:** re-run the existing eval twice (NIM_RERANK on/off), same questions, same
+    generator; diff retrieval recall@3 and guarded hallucination rate.
+  - **Read-out:** the retrieval→hallucination causal chain quantified: how many percentage
+    points of hallucination does +X% retrieval accuracy buy?
