@@ -59,3 +59,22 @@
   - **Read-out:** report each metric with Wilson confidence intervals; if guarded hallucination
     stays <5% at scale, the "one guarded prompt" conclusion upgrades from demonstration to
     statistically supported.
+
+- [ ] **Attack the 46/95 shared blind spots: larger judge vs judge panel vs retrieval-grounded.**
+  - **Question:** 46 of 95 hallucinations escape BOTH 8B judges (self + cross-family). Is that
+    a capacity problem (8B judges are too small) or a structural one (judging from parametric
+    knowledge has a ceiling no matter the size)? The answer decides where validate() should
+    invest: bigger judge, more judges, or grounding.
+  - **Method:** three arms scored against the same SQuAD N=200 rows (temp=0 → generations are
+    identical, so all arms judge the same answers and remain McNemar-comparable):
+    (a) **larger judge** — Llama-3.3-70B-Instruct (FP8/AWQ on 1–2×H100) via `NIM_XJUDGE_MODEL`;
+    (b) **judge panel (PoLL, arXiv:2404.18796)** — qwen3-8b + llama-3.1-8b + gemma-2-9b,
+    majority vote (reuse the existing dual-judge plumbing in eval/run_eval.py, add a third);
+    (c) **retrieval-grounded judge** — pass the retrieved context into the judge prompt so it
+    compares the answer against evidence instead of its own knowledge (one-line prompt change
+    in validate()).
+  - **Read-out:** recall on the 95 hallucinations per arm (baselines: self 32%, cross-family
+    47%). The decisive comparison is (c) vs (a): if the grounded 8B judge beats the 70B
+    parametric judge, the bottleneck is grounding, not capacity — directly actionable (the
+    validate() step should always receive the retrieved context). Track precision per arm;
+    panel and grounding may trade precision differently.
