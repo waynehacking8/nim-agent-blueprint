@@ -11,7 +11,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.77
+  "lat": 0.84,
+  "g_answer": "Islamism seeks to integrate itself into legal, social, political, economic, and political spheres of life [1].",
+  "u_answer": "Islamism seeks to integrate itself into all spheres of life, including legal, social, political, and economic aspects. It aims to implement Islamic values across these areas, often through the reordering of government and society in accordance with the Shari'a.",
+  "g_ctx_idx": [
+   19,
+   4,
+   13
+  ],
+  "u_ctx_idx": [
+   19,
+   4,
+   13
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9642497301101685,
+  "u_union_blocks": false
  },
  {
   "q": "When did the Black Death spread into India?",
@@ -25,7 +42,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.88
+  "lat": 0.87,
+  "g_answer": "The provided context does not mention the Black Death or its spread into India. Therefore, I don't know [n].",
+  "u_answer": "The provided context does not mention the Black Death or its spread into India. Therefore, based on the given information, the question cannot be answered.",
+  "g_ctx_idx": [
+   78,
+   84,
+   22
+  ],
+  "u_ctx_idx": [
+   78,
+   84,
+   22
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.6167331337928772,
+  "u_union_blocks": true
  },
  {
   "q": "When was the Latin version of the word Norman first recorded?",
@@ -39,7 +73,24 @@
   "u_halluc": false,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.91
+  "lat": 0.92,
+  "g_answer": "The context provided does not contain information about when the Latin version of the word \"Norman\" was first recorded. Therefore, I don't know.",
+  "u_answer": "The context provided does not mention the Latin version of the word \"Norman\" or when it was first recorded. Therefore, based on the given information, the answer cannot be determined.",
+  "g_ctx_idx": [
+   43,
+   22,
+   13
+  ],
+  "u_ctx_idx": [
+   43,
+   22,
+   13
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.766395628452301,
+  "u_union_blocks": true
  },
  {
   "q": "In what year did William the Silent issue his \"Apologie\"?",
@@ -53,7 +104,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.86
+  "lat": 0.9,
+  "g_answer": "The context does not specify the year William the Silent issued his \"Apologie.\" Therefore, I don't know [n].",
+  "u_answer": "William the Silent issued his \"Apologie\" in 1568.",
+  "g_ctx_idx": [
+   22,
+   84,
+   30
+  ],
+  "u_ctx_idx": [
+   22,
+   84,
+   30
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.07522805035114288,
+  "u_union_blocks": true
  },
  {
   "q": " What was Tugh Temur not known for?",
@@ -62,12 +130,29 @@
   "correct": false,
   "correct_llm": false,
   "g_abstain": true,
-  "u_abstain": true,
+  "u_abstain": false,
   "g_halluc": false,
-  "u_halluc": false,
-  "u_gate_blocks": false,
+  "u_halluc": true,
+  "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.91
+  "lat": 0.94,
+  "g_answer": "The context provided does not mention Tugh Temur or anything related to what Tugh Temur was not known for. Therefore, I don't know.",
+  "u_answer": "The question about \"Tugh Temur\" is not addressed in the provided context. Therefore, based on the given information, it is not possible to determine what Tugh Temur was not known for.",
+  "g_ctx_idx": [
+   43,
+   61,
+   40
+  ],
+  "u_ctx_idx": [
+   43,
+   61,
+   40
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.44029662013053894,
+  "u_union_blocks": true
  },
  {
   "q": "What equates to a squared integer according to polynomial time reduction?",
@@ -81,7 +166,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.18
+  "lat": 1.2,
+  "g_answer": "According to polynomial time reduction, squaring an integer can be reduced to multiplying two integers [1]. This means that the process of squaring an integer is not more difficult than multiplication, as an algorithm for multiplying two integers can be used to square an integer. Therefore, squaring an integer equates to the problem of multiplying two integers in the context of polynomial time reduction.",
+  "u_answer": "According to polynomial time reduction, squaring an integer equates to multiplying two integers. This is because the problem of squaring an integer can be reduced to the problem of multiplying two integers by using the same input for both inputs of the multiplication algorithm. Thus, squaring is not more difficult than multiplication.",
+  "g_ctx_idx": [
+   24,
+   7,
+   52
+  ],
+  "u_ctx_idx": [
+   24,
+   7,
+   52
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9798920750617981,
+  "u_union_blocks": false
  },
  {
   "q": "In the shortest building in downtown Jacksonville?",
@@ -95,7 +197,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.8
+  "lat": 0.82,
+  "g_answer": "The context provided does not mention the shortest building in downtown Jacksonville. Therefore, I don't know [n].",
+  "u_answer": "The information provided does not specify the shortest building in downtown Jacksonville. However, it does mention several notable buildings, such as the Bank of America Tower (617 ft), the Wells Fargo Center (37 stories), and the Riverplace Tower (28 floors). Without specific details on the shortest building, it is not possible to provide an exact answer.",
+  "g_ctx_idx": [
+   2,
+   95,
+   44
+  ],
+  "u_ctx_idx": [
+   2,
+   95,
+   44
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.920009195804596,
+  "u_union_blocks": false
  },
  {
   "q": "What effect would happen if P is ultimately proven to not equal NP ?",
@@ -109,7 +228,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.2
+  "lat": 1.22,
+  "g_answer": "If P is ultimately proven to not equal NP, it would mean that there are problems in NP that are not in P, implying that these problems cannot be solved efficiently by deterministic algorithms. This would have significant implications for various fields, including operations research, logistics, biology, and mathematics, as it would suggest that certain important problems do not have more efficient solutions than currently known [1].",
+  "u_answer": "If P is ultimately proven to not equal NP (i.e., P \u2260 NP), it would mean that there is no known efficient algorithm for solving NP-complete problems, and it is unlikely that such algorithms exist. This would have significant implications:\n\n1. **Computational Complexity**: It would confirm that certain problems, which are NP-complete, cannot be solved efficiently (in polynomial time) by deterministic algorithms. This would reinforce the existing understanding of computational complexity and the inherent difficulty of these problems.\n\n2. **Practical Implications**: Many important problems in fields such as operations research, logistics, biology, and mathematics would remain computationally intractable. For example, problems like the traveling salesman problem, protein structure prediction, and certain types of integer programming would not have efficient solutions, meaning they would require exponential time to solve in the worst case.\n\n3. **Cryptography**: Many cryptographic systems rely on the assumption that certain problems (like factoring large numbers or solving discrete logarithms) are computationally hard. If P \u2260 NP is proven, it would support the security of these cryptographic systems, as it would imply that these problems are not solvable in polynomial time.\n\n4. **Theoretical Computer Science**: The proof would be a major milestone in theoretical computer science, resolving one of the most important open questions in the field. It would also likely lead to a deeper understanding of the nature of computational problems and the limits of efficient computation.\n\nIn summary, proving that P \u2260 NP would confirm the intractability of many important computational problems and have far-reaching implications for both theoretical and applied fields.",
+  "g_ctx_idx": [
+   7,
+   64,
+   52
+  ],
+  "u_ctx_idx": [
+   7,
+   64,
+   52
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.09695544093847275,
+  "u_union_blocks": true
  },
  {
   "q": "To what can the use of prolonged breathing of oxygen at 60 kPa lead?",
@@ -123,7 +259,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.84
+  "lat": 0.84,
+  "g_answer": "The use of prolonged breathing of oxygen at 60 kPa can lead to permanent pulmonary fibrosis [1].",
+  "u_answer": "The use of prolonged breathing of oxygen at 60 kPa can lead to permanent pulmonary fibrosis.",
+  "g_ctx_idx": [
+   46,
+   18,
+   43
+  ],
+  "u_ctx_idx": [
+   46,
+   18,
+   43
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9411859512329102,
+  "u_union_blocks": false
  },
  {
   "q": "Who wrote \"On the Computational Complexity of Science\"?",
@@ -132,12 +285,29 @@
   "correct": false,
   "correct_llm": false,
   "g_abstain": true,
-  "u_abstain": true,
+  "u_abstain": false,
   "g_halluc": false,
-  "u_halluc": false,
+  "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.85
+  "lat": 0.87,
+  "g_answer": "The context provided does not mention anyone who wrote \"On the Computational Complexity of Science.\" Therefore, I don't know [n].",
+  "u_answer": "The question \"Who wrote 'On the Computational Complexity of Science'\" cannot be answered based on the provided context. The given passages discuss the University of Chicago, historical sites in Warsaw, and the historical relationship between Huguenots and the Dutch Republic. None of these texts mention \"On the Computational Complexity of Science\" or its author.",
+  "g_ctx_idx": [
+   13,
+   43,
+   22
+  ],
+  "u_ctx_idx": [
+   13,
+   43,
+   22
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.04201452434062958,
+  "u_union_blocks": true
  },
  {
   "q": "What is the most frequently employed type of reduction?",
@@ -151,7 +321,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.74
+  "lat": 0.74,
+  "g_answer": "The most frequently employed type of reduction is a polynomial-time reduction [1].",
+  "u_answer": "The most frequently employed type of reduction is a polynomial-time reduction.",
+  "g_ctx_idx": [
+   24,
+   83,
+   35
+  ],
+  "u_ctx_idx": [
+   24,
+   83,
+   35
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9752148389816284,
+  "u_union_blocks": false
  },
  {
   "q": " How did the Yuan come to have the 8 schools of medicine?",
@@ -165,7 +352,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.98
+  "lat": 1.09,
+  "g_answer": "The context does not mention the Yuan having 8 schools of medicine. It only refers to the \"Four Great Schools\" of Chinese medicine inherited from the Jin dynasty [1]. Therefore, the claim about 8 schools of medicine is unsupported.",
+  "u_answer": "The Yuan dynasty did not have \"8 schools of medicine.\" Instead, it inherited the \"Four Great Schools\" of Chinese medicine from the Jin dynasty. These four schools shared a common intellectual foundation but differed in their theoretical approaches to medicine. During the Yuan period, Chinese medical practices, including acupuncture, moxibustion, pulse diagnosis, and the use of herbal drugs and elixirs, spread throughout the Mongol Empire as Chinese physicians accompanied military campaigns. This period also saw medical advancements, such as the invention of a suspension method for joint reduction by physician Wei Yilin and the emphasis on diet by Mongol physician Hu Sihui. There is no historical evidence to suggest the Yuan dynasty had eight schools of medicine.",
+  "g_ctx_idx": [
+   27,
+   13,
+   94
+  ],
+  "u_ctx_idx": [
+   27,
+   13,
+   94
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9686298966407776,
+  "u_union_blocks": false
  },
  {
   "q": "Vice President Agnew describes Civil disobedience in what activities?",
@@ -179,7 +383,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.02
+  "lat": 0.99,
+  "g_answer": "Vice President Agnew describes civil disobedience in activities such as muggers, arsonists, draft evaders, campaign hecklers, campus militants, anti-war demonstrators, juvenile delinquents, and political assassins [1].",
+  "u_answer": "Vice President Agnew describes civil disobedience as encompassing a wide range of activities, including the actions of muggers, arsonists, draft evaders, campaign hecklers, campus militants, anti-war demonstrators, juvenile delinquents, and political assassins.",
+  "g_ctx_idx": [
+   23,
+   4,
+   43
+  ],
+  "u_ctx_idx": [
+   23,
+   4,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9713918566703796,
+  "u_union_blocks": false
  },
  {
   "q": "What is Warsaw's symbol?",
@@ -193,7 +414,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.79
+  "lat": 0.79,
+  "g_answer": "Warsaw's symbol is the mermaid, known as the syrenka [2].",
+  "u_answer": "Warsaw's symbol is the mermaid, known as the syrenka. This imagery can be found on statues throughout the city and on the city's coat of arms. The use of the mermaid symbol dates back at least to the mid-14th century.",
+  "g_ctx_idx": [
+   43,
+   20,
+   84
+  ],
+  "u_ctx_idx": [
+   43,
+   20,
+   84
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.982406735420227,
+  "u_union_blocks": false
  },
  {
   "q": "In 1940, what percentage of the population in Fresno was Asian?",
@@ -207,7 +445,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.88
+  "lat": 0.88,
+  "g_answer": "In 1940, the percentage of the population in Fresno that was Asian was 2.7% [1].",
+  "u_answer": "In 1940, 2.7% of the population in Fresno was Asian.",
+  "g_ctx_idx": [
+   17,
+   38,
+   25
+  ],
+  "u_ctx_idx": [
+   17,
+   38,
+   25
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9673784971237183,
+  "u_union_blocks": false
  },
  {
   "q": "Who included 1 as the first prime number in the mid 18th century?",
@@ -221,7 +476,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.92
+  "lat": 0.92,
+  "g_answer": "Christian Goldbach included 1 as the first prime number in the mid-18th century [1].",
+  "u_answer": "In the mid-18th century, **Christian Goldbach** included 1 as the first prime number in his famous correspondence with Leonhard Euler.",
+  "g_ctx_idx": [
+   33,
+   6,
+   79
+  ],
+  "u_ctx_idx": [
+   33,
+   6,
+   79
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9799513816833496,
+  "u_union_blocks": false
  },
  {
   "q": "The rotational inertia of planet Mars is what fixes the what?",
@@ -235,7 +507,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.82
+  "lat": 0.85,
+  "g_answer": "The context provided does not mention the rotational inertia of planet Mars or what it fixes. Therefore, I don't know [n].",
+  "u_answer": "The rotational inertia of planet Mars is what fixes the constancy of the length of a day and the length of a year on Mars.",
+  "g_ctx_idx": [
+   35,
+   40,
+   88
+  ],
+  "u_ctx_idx": [
+   35,
+   40,
+   88
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.01965232752263546,
+  "u_union_blocks": true
  },
  {
   "q": "In what year was Fort Coligny built?",
@@ -249,7 +538,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": false,
-  "lat": 0.91
+  "lat": 0.76,
+  "g_answer": "Fort Coligny was built in 1555 [2].",
+  "u_answer": "Fort Coligny was built in 1555.",
+  "g_ctx_idx": [
+   61,
+   0,
+   2
+  ],
+  "u_ctx_idx": [
+   61,
+   0,
+   2
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.948305070400238,
+  "u_union_blocks": false
  },
  {
   "q": "Which country's cars became more highly sought after as they were more fuel efficient?",
@@ -263,7 +569,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.2
+  "lat": 1.28,
+  "g_answer": "The country whose cars became more highly sought after as they were more fuel efficient is Japan. Japanese imports, such as the Toyota Corona, the Toyota Corolla, the Datsun B210, the Datsun 510, the Honda Civic, the Mitsubishi Galant, the Subaru DL, and later the Honda Accord, had four cylinder engines that were more fuel efficient than the typical American V8 and six cylinder engines [1].",
+  "u_answer": "The country whose cars became more highly sought after as they were more fuel efficient is Japan. Japanese imports, such as the Toyota Corona, Toyota Corolla, Datsun B210, Datsun 510, Honda Civic, Mitsubishi Galant, Subaru DL, and later the Honda Accord, were favored for their four-cylinder engines, which were more fuel-efficient compared to the typical American V8 and six-cylinder engines.",
+  "g_ctx_idx": [
+   31,
+   50,
+   10
+  ],
+  "u_ctx_idx": [
+   31,
+   50,
+   10
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9641690254211426,
+  "u_union_blocks": false
  },
  {
   "q": "What number did Henri Lebesgue not regard as a true number?",
@@ -276,8 +599,25 @@
   "g_halluc": false,
   "u_halluc": true,
   "u_gate_blocks": true,
-  "u_xgate_blocks": false,
-  "lat": 0.82
+  "u_xgate_blocks": true,
+  "lat": 0.92,
+  "g_answer": "The context provided does not mention Henri Lebesgue or any number he did not regard as a true number. Therefore, I do not know [n].",
+  "u_answer": "The question contains a historical inaccuracy. Henri Lebesgue, a French mathematician, did not regard the number 1 as a prime number. However, the question is based on a misunderstanding, as Lebesgue is not typically associated with debates about the primality of 1. The discussion about whether 1 should be considered a prime number is more closely related to number theorists like G. H. Hardy and the development of number theory in the context of prime numbers. \n\nTherefore, the question as phrased is not historically accurate, and there is no well-documented evidence that Henri Lebesgue specifically regarded any number as not a true number in the context of this debate.",
+  "g_ctx_idx": [
+   41,
+   79,
+   6
+  ],
+  "u_ctx_idx": [
+   41,
+   79,
+   6
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.06986870616674423,
+  "u_union_blocks": true
  },
  {
   "q": "What action did the US plan to take in 2004 due to rising oil prices?",
@@ -291,7 +631,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.93
+  "lat": 0.97,
+  "g_answer": "The U.S. briefly considered military action to forcibly seize Middle Eastern oilfields in late 1973 due to the rise in oil prices and being challenged by under-developed countries [1].",
+  "u_answer": "In 2004, the U.S. briefly considered military action to forcibly seize Middle Eastern oilfields due to rising oil prices and concerns about being challenged by under-developed countries. Although no explicit plan was mentioned, U.S. Secretary of Defense James Schlesinger suggested that \"it was no longer obvious to him that the U.S. could not use force.\" The potential operation would have targeted oilfields in Saudi Arabia and Kuwait, and possibly Abu Dhabi. Intelligence warned that such an occupation would likely last 10 years as the West developed alternative energy sources and would result in the \"total alienation\" of the Arabs and much of the rest of the Third World.",
+  "g_ctx_idx": [
+   49,
+   14,
+   90
+  ],
+  "u_ctx_idx": [
+   49,
+   14,
+   90
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.7173289060592651,
+  "u_union_blocks": false
  },
  {
   "q": "What organization is responsible for their own research?",
@@ -303,9 +660,26 @@
   "u_abstain": false,
   "g_halluc": false,
   "u_halluc": true,
-  "u_gate_blocks": false,
-  "u_xgate_blocks": false,
-  "lat": 0.8
+  "u_gate_blocks": true,
+  "u_xgate_blocks": true,
+  "lat": 0.82,
+  "g_answer": "The context provided does not mention any organization that is responsible for its own research. Therefore, I don't know [n].",
+  "u_answer": "Based on the context provided, **no organization is explicitly stated as being responsible for their own research**. The text discusses the **Intergovernmental Panel on Climate Change (IPCC)**, which does **not** carry out its own research and instead relies on scientific papers and results from other scientific bodies. \n\nThe other contexts discuss **petrologists** and **private schools**, but they do not mention any organization conducting its own research. Therefore, based on the given information, **no organization is identified as being responsible for their own research**.",
+  "g_ctx_idx": [
+   8,
+   71,
+   89
+  ],
+  "u_ctx_idx": [
+   8,
+   71,
+   89
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9658279418945312,
+  "u_union_blocks": true
  },
  {
   "q": "How did the Los Angeles Times define southern California in 1909?",
@@ -319,7 +693,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 1.21
+  "lat": 1.23,
+  "g_answer": "The Los Angeles Times defined southern California in 1900 as including \"the seven counties of Los Angeles, San Bernardino, Orange, Riverside, San Diego, Ventura and Santa Barbara.\" In 1999, the Times added Imperial County to that list. There is no specific information provided about the definition of southern California in 1909 [1].",
+  "u_answer": "The Los Angeles Times defined southern California in 1900 as including \"the seven counties of Los Angeles, San Bernardino, Orange, Riverside, San Diego, Ventura and Santa Barbara.\" In 1999, the Times added Imperial County to that list. Therefore, in 1909, the definition of southern California would still have included the original seven counties, as the addition of Imperial County occurred in 1999, not in 1909.",
+  "g_ctx_idx": [
+   45,
+   61,
+   30
+  ],
+  "u_ctx_idx": [
+   45,
+   61,
+   30
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9365899562835693,
+  "u_union_blocks": true
  },
  {
   "q": "What beds are nitrogen-saturated? ",
@@ -333,7 +724,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.94
+  "lat": 0.97,
+  "g_answer": "The nitrogen-saturated beds are the ones that absorb the nitrogen and deliver a gas stream that is 90% to 93% O2. This is during the process of pressure swing adsorption [1].",
+  "u_answer": "The nitrogen-saturated beds are the zeolite molecular sieves that have absorbed nitrogen during the pressure swing adsorption process. One bed absorbs nitrogen and delivers oxygen, while the other, which is nitrogen-saturated, releases nitrogen when the operating pressure is reduced.",
+  "g_ctx_idx": [
+   18,
+   37,
+   80
+  ],
+  "u_ctx_idx": [
+   18,
+   37,
+   80
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9197438955307007,
+  "u_union_blocks": false
  },
  {
   "q": "What can exposure to partial gas pressures greater than 166 kPa cause?",
@@ -347,7 +755,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 1.37
+  "lat": 1.4,
+  "g_answer": "Exposure to partial gas pressures greater than 160 kPa (about 1.6 atm) may lead to convulsions (normally fatal for divers) [1]. The value 166 kPa is not directly mentioned in the context, but based on the information provided, exposure to partial pressures greater than 160 kPa can cause convulsions. Therefore, it is reasonable to infer that exposure to partial gas pressures greater than 166 kPa could also cause convulsions.",
+  "u_answer": "Exposure to partial gas pressures greater than 160 kPa (about 1.6 atm) can lead to convulsions, which are normally fatal for divers. The question mentions 166 kPa, which is slightly above 160 kPa, so it can also cause convulsions.",
+  "g_ctx_idx": [
+   46,
+   18,
+   64
+  ],
+  "u_ctx_idx": [
+   46,
+   18,
+   64
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.12460185587406158,
+  "u_union_blocks": true
  },
  {
   "q": "When did General Sejm make Vilnius its permanent seat?",
@@ -361,7 +786,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.87
+  "lat": 0.91,
+  "g_answer": "The context provided does not mention when the General Sejm made Vilnius its permanent seat. Therefore, I don't know.",
+  "u_answer": "Based on the information provided in the context, the General Sejm did not make Vilnius its permanent seat. Instead, the General Sejm first became permanent in Warsaw in 1569. Vilnius was one of the capitals of the Polish\u2013Lithuanian Commonwealth, but the context does not mention it becoming the permanent seat of the General Sejm. Therefore, the answer is that the General Sejm did not make Vilnius its permanent seat according to the given information.",
+  "g_ctx_idx": [
+   30,
+   59,
+   43
+  ],
+  "u_ctx_idx": [
+   30,
+   59,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.49991053342819214,
+  "u_union_blocks": true
  },
  {
   "q": "What is another type of public key cryptography algorithm?",
@@ -375,7 +817,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.77
+  "lat": 0.85,
+  "g_answer": "Another type of public key cryptography algorithm is the Diffie\u2013Hellman key exchange [1].",
+  "u_answer": "Another type of public key cryptography algorithm is the Diffie\u2013Hellman key exchange.",
+  "g_ctx_idx": [
+   41,
+   6,
+   7
+  ],
+  "u_ctx_idx": [
+   41,
+   6,
+   7
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9738715291023254,
+  "u_union_blocks": false
  },
  {
   "q": "What is the process of removing trees from a forest known as?",
@@ -389,7 +848,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.75
+  "lat": 0.78,
+  "g_answer": "The process of removing trees from a forest is known as deforestation [2].",
+  "u_answer": "The process of removing trees from a forest is known as **deforestation**.",
+  "g_ctx_idx": [
+   83,
+   37,
+   21
+  ],
+  "u_ctx_idx": [
+   83,
+   37,
+   21
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9758636951446533,
+  "u_union_blocks": false
  },
  {
   "q": "When did Setanta Sports say it would launch as a free service on the digital terrestrial platform?",
@@ -397,27 +873,61 @@
   "recall": null,
   "correct": false,
   "correct_llm": false,
-  "g_abstain": false,
+  "g_abstain": true,
   "u_abstain": true,
-  "g_halluc": true,
-  "u_halluc": false,
-  "u_gate_blocks": false,
-  "u_xgate_blocks": false,
-  "lat": 0.92
- },
- {
-  "q": "What were the first two destinations of Huguenot emigres?",
-  "answerable": true,
-  "recall": true,
-  "correct": true,
-  "correct_llm": true,
-  "g_abstain": false,
-  "u_abstain": false,
   "g_halluc": false,
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.85
+  "lat": 0.99,
+  "g_answer": "Setanta Sports confirmed it would launch in March as a subscription service on the digital terrestrial platform [1]. Therefore, the statement about launching as a free service is not supported by the context.",
+  "u_answer": "Setanta Sports announced it would launch as a subscription service on the digital terrestrial platform in March 2007. The context does not mention it launching as a free service. Therefore, based on the provided information, Setanta Sports did not launch as a free service on the digital terrestrial platform.",
+  "g_ctx_idx": [
+   42,
+   14,
+   59
+  ],
+  "u_ctx_idx": [
+   42,
+   14,
+   59
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9760826826095581,
+  "u_union_blocks": false
+ },
+ {
+  "q": "What were the first two destinations of Huguenot emigres?",
+  "answerable": true,
+  "recall": false,
+  "correct": false,
+  "correct_llm": false,
+  "g_abstain": false,
+  "u_abstain": false,
+  "g_halluc": true,
+  "u_halluc": true,
+  "u_gate_blocks": false,
+  "u_xgate_blocks": false,
+  "lat": 0.89,
+  "g_answer": "The first two destinations of Huguenot emigres were the Dutch Republic and London [2].",
+  "u_answer": "The first two destinations of Huguenot emigres were the Dutch Republic and London.",
+  "g_ctx_idx": [
+   43,
+   22,
+   38
+  ],
+  "u_ctx_idx": [
+   43,
+   22,
+   38
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.47162771224975586,
+  "u_union_blocks": true
  },
  {
   "q": "How did the Yuan come to have the 4 schools of medicine?",
@@ -431,7 +941,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.92
+  "lat": 1.01,
+  "g_answer": "The Yuan inherited the \"Four Great Schools\" of Chinese medical tradition from the Jin dynasty. These schools were based on the same intellectual foundation but advocated different theoretical approaches toward medicine [1].",
+  "u_answer": "The Yuan dynasty inherited the \"Four Great Schools\" of Chinese medicine from the Jin dynasty. These schools shared a common intellectual foundation but differed in their theoretical approaches to medicine. During the Yuan period, the practice of Chinese medicine expanded beyond China, spreading to other parts of the Mongol Empire as Chinese physicians accompanied military campaigns. This transmission of medical knowledge and techniques, including acupuncture, moxibustion, pulse diagnosis, and herbal medicine, contributed to the continued development and recognition of these four schools during the Yuan dynasty.",
+  "g_ctx_idx": [
+   27,
+   13,
+   94
+  ],
+  "u_ctx_idx": [
+   27,
+   13,
+   94
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9823273420333862,
+  "u_union_blocks": false
  },
  {
   "q": "What can the IPCC's report deadlines cause to be omitted?",
@@ -445,7 +972,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.91
+  "lat": 0.95,
+  "g_answer": "The IPCC's report deadlines can cause significant new evidence or events that change our understanding of climate science between the deadline and the publication of an IPCC report to be omitted [1].",
+  "u_answer": "The IPCC's report deadlines can cause significant new evidence or events that change our understanding of climate science to be omitted. This is because the deadline for submissions is set before the report's final release, and any developments between the deadline and publication cannot be included. This has been identified as a potential shortcoming, especially in a field like climate science where understanding is rapidly evolving.",
+  "g_ctx_idx": [
+   8,
+   87,
+   67
+  ],
+  "u_ctx_idx": [
+   8,
+   87,
+   67
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9866059422492981,
+  "u_union_blocks": false
  },
  {
   "q": "What does the IPCC rely on for research?",
@@ -459,7 +1003,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.86
+  "lat": 0.78,
+  "g_answer": "The provided context does not mention the IPCC or its research methods. Therefore, I don't know [n].",
+  "u_answer": "The context provided does not mention the IPCC (Intergovernmental Panel on Climate Change) or its research methods. Therefore, based on the given information, it is not possible to answer the question about what the IPCC relies on for research.",
+  "g_ctx_idx": [
+   88,
+   37,
+   13
+  ],
+  "u_ctx_idx": [
+   88,
+   37,
+   13
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.31527701020240784,
+  "u_union_blocks": true
  },
  {
   "q": "What term do Islamists think should be applied to them?",
@@ -473,7 +1034,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.88
+  "lat": 0.74,
+  "g_answer": "Islamists think the term \"Islam\" should be applied to them [3].",
+  "u_answer": "Islamists think the term \"Muslim\" should be applied to them. They argue that those who seek to live by Islamic principles in various aspects of life are still Muslims, and the term \"Islamist\" is not necessary to describe them.",
+  "g_ctx_idx": [
+   41,
+   23,
+   19
+  ],
+  "u_ctx_idx": [
+   41,
+   23,
+   19
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.03827977180480957,
+  "u_union_blocks": true
  },
  {
   "q": "What makes day length constant on Earth?",
@@ -487,7 +1065,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.88
+  "lat": 0.86,
+  "g_answer": "The rotational inertia of planet Earth is what fixes the constancy of the length of a day and the length of a year [1].",
+  "u_answer": "The constancy of the length of a day on Earth is due to the rotational inertia of the planet. Rotational inertia is the tendency of an object to maintain its state of rotational motion, and in the case of Earth, it helps keep the planet rotating at a relatively constant speed, which determines the length of a day.",
+  "g_ctx_idx": [
+   35,
+   64,
+   84
+  ],
+  "u_ctx_idx": [
+   35,
+   64,
+   84
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9780126214027405,
+  "u_union_blocks": false
  },
  {
   "q": "What paper is commonly considered the bellwether ushering in systematic studies computational complexity?",
@@ -501,7 +1096,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.12
+  "lat": 1.01,
+  "g_answer": "The paper \"On the Computational Complexity of Algorithms\" by Juris Hartmanis and Richard Stearns (1965) is commonly considered the bellwether ushering in systematic studies of computational complexity [1].",
+  "u_answer": "The paper commonly considered the bellwether ushering in systematic studies in computational complexity is \"On the Computational Complexity of Algorithms\" by Juris Hartmanis and Richard Stearns (1965). This seminal paper laid out the definitions of time and space complexity and proved the hierarchy theorems, which are foundational to the field.",
+  "g_ctx_idx": [
+   36,
+   52,
+   7
+  ],
+  "u_ctx_idx": [
+   36,
+   52,
+   7
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9560849666595459,
+  "u_union_blocks": false
  },
  {
   "q": "What percentage of Pinedale is black?",
@@ -515,7 +1127,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.86
+  "lat": 0.89,
+  "g_answer": "The context provided does not mention Pinedale or any data regarding its population demographics. Therefore, I don't know [n].",
+  "u_answer": "The provided context does not include any information about Pinedale or its demographic composition. Therefore, it is not possible to determine the percentage of Pinedale that is Black based on the given information.",
+  "g_ctx_idx": [
+   38,
+   76,
+   13
+  ],
+  "u_ctx_idx": [
+   38,
+   76,
+   13
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8807190656661987,
+  "u_union_blocks": false
  },
  {
   "q": "When was the Dutch Revolt?",
@@ -529,7 +1158,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.83
+  "lat": 0.81,
+  "g_answer": "The Dutch Revolt took place from 1568 to 1609 [1].",
+  "u_answer": "The Dutch Revolt took place from 1568 to 1609.",
+  "g_ctx_idx": [
+   22,
+   78,
+   43
+  ],
+  "u_ctx_idx": [
+   22,
+   78,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9608917236328125,
+  "u_union_blocks": false
  },
  {
   "q": "What channels were removed from the network in March of 2007?",
@@ -543,7 +1189,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.81
+  "lat": 0.84,
+  "g_answer": "The basic channels were removed from the network in March of 2007 [1].",
+  "u_answer": "The basic channels were removed from the network in March 2007.",
+  "g_ctx_idx": [
+   9,
+   42,
+   14
+  ],
+  "u_ctx_idx": [
+   9,
+   42,
+   14
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9897818565368652,
+  "u_union_blocks": false
  },
  {
   "q": "When did the General Sejm make Warsaw it's permanent seat?",
@@ -557,7 +1220,24 @@
   "u_halluc": false,
   "u_gate_blocks": true,
   "u_xgate_blocks": false,
-  "lat": 0.82
+  "lat": 0.9,
+  "g_answer": "The General Sejm made Warsaw its permanent seat in 1569 [1].",
+  "u_answer": "The General Sejm made Warsaw its permanent seat in 1569.",
+  "g_ctx_idx": [
+   30,
+   59,
+   43
+  ],
+  "u_ctx_idx": [
+   30,
+   59,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.290547251701355,
+  "u_union_blocks": true
  },
  {
   "q": "Besides the study of prime numbers, what general theory was considered the official example of the military?",
@@ -566,12 +1246,29 @@
   "correct": false,
   "correct_llm": false,
   "g_abstain": true,
-  "u_abstain": true,
+  "u_abstain": false,
   "g_halluc": false,
-  "u_halluc": false,
+  "u_halluc": true,
   "u_gate_blocks": false,
-  "u_xgate_blocks": true,
-  "lat": 0.96
+  "u_xgate_blocks": false,
+  "lat": 0.97,
+  "g_answer": "The context provided does not mention any general theory other than number theory being considered an example of pure mathematics with no military significance. Therefore, I don't know [n].",
+  "u_answer": "The question seems to contain a misunderstanding. Number theory, particularly the study of prime numbers, was considered an example of **pure mathematics** with no military applications, not a \"general theory\" of the military. There is no mention in the provided context of any other general theory being considered the official example of the military. The context instead highlights the unexpected military application of prime numbers in the development of **public key cryptography** in the 1970s.",
+  "g_ctx_idx": [
+   6,
+   43,
+   88
+  ],
+  "u_ctx_idx": [
+   6,
+   43,
+   88
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.86751788854599,
+  "u_union_blocks": false
  },
  {
   "q": "What individuals were responsible for authoring \"On the Computational Complexity of Algorithms\"?",
@@ -585,7 +1282,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.86
+  "lat": 0.82,
+  "g_answer": "The context provided does not mention any individuals responsible for authoring \"On the Computational Complexity of Algorithms.\" Therefore, I don't know [n].",
+  "u_answer": "The question about who authored \"On the Computational Complexity of Algorithms\" cannot be answered based on the provided context. The context discusses the University of Chicago, historical sites in Warsaw, and the historical relationship between Huguenots and the Dutch Republic, none of which mention \"On the Computational Complexity of Algorithms\" or its author.",
+  "g_ctx_idx": [
+   13,
+   43,
+   22
+  ],
+  "u_ctx_idx": [
+   13,
+   43,
+   22
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.0592607744038105,
+  "u_union_blocks": true
  },
  {
   "q": "What are the Sky Q mini set top boxes never able to connect to?",
@@ -599,7 +1313,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.95
+  "lat": 0.98,
+  "g_answer": "The Sky Q Mini set top boxes are never able to connect to satellite feeds. They connect to the Sky Q Silver set top boxes with a Wi-Fi or Power-line connection. [1]",
+  "u_answer": "The Sky Q Mini set top boxes are never able to connect to satellite feeds. Instead, they connect to the Sky Q Silver set top boxes via a Wi-Fi or Power-line connection.",
+  "g_ctx_idx": [
+   15,
+   9,
+   31
+  ],
+  "u_ctx_idx": [
+   15,
+   9,
+   31
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.14336857199668884,
+  "u_union_blocks": true
  },
  {
   "q": "What is a popular strolling destination for pheasants?",
@@ -613,7 +1344,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 1.25
+  "lat": 1.08,
+  "g_answer": "The Krasi\u0144ski Palace Garden is a popular strolling destination for the Varsovians, and it is mentioned that peacocks and pheasants can be seen walking around freely there [2]. Therefore, the Krasi\u0144ski Palace Garden is a popular strolling destination for pheasants.",
+  "u_answer": "A popular strolling destination for pheasants is the \u0141azienki Park. This is because the park is noted for having peacocks and pheasants that can be seen walking around freely.",
+  "g_ctx_idx": [
+   41,
+   26,
+   6
+  ],
+  "u_ctx_idx": [
+   41,
+   26,
+   6
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.10936573892831802,
+  "u_union_blocks": true
  },
  {
   "q": "When did the high school education movement occur?",
@@ -627,7 +1375,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.82
+  "lat": 0.84,
+  "g_answer": "The high school education movement occurred from 1910\u20131940 [1].",
+  "u_answer": "The high school education movement occurred from 1910 to 1940.",
+  "g_ctx_idx": [
+   39,
+   13,
+   10
+  ],
+  "u_ctx_idx": [
+   39,
+   13,
+   10
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9834715127944946,
+  "u_union_blocks": false
  },
  {
   "q": "What is a particular problem in biology that would benefit from determining that P = NP?",
@@ -641,7 +1406,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.8
+  "lat": 0.81,
+  "g_answer": "Protein structure prediction in biology would benefit from determining that P = NP [1].",
+  "u_answer": "A particular problem in biology that would benefit from determining that P = NP is **protein structure prediction**. If P equals NP, it would mean that problems currently considered computationally intractable could be solved efficiently, which would significantly advance the ability to predict protein structures. This has important implications for understanding biological processes, drug development, and disease treatment.",
+  "g_ctx_idx": [
+   7,
+   52,
+   81
+  ],
+  "u_ctx_idx": [
+   7,
+   52,
+   81
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8347249031066895,
+  "u_union_blocks": false
  },
  {
   "q": "What name comes from the English words Normans/Normanz?",
@@ -655,7 +1437,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.93
+  "lat": 0.94,
+  "g_answer": "The name that comes from the English words \"Normans/Normanz\" is the French word \"Normant,\" which is the plural form and is the origin of the modern French word \"normand\" [1].",
+  "u_answer": "The name that comes from the English words \"Normans/Normanz\" is \"Normant,\" which is the plural form. This term is the origin of the modern French word \"normand\" and is linked to the Old Low Franconian word \"Nortmann\" and Old Norse \"Nor\u00f0ma\u00f0r,\" meaning \"Northman\" or \"Viking.\"",
+  "g_ctx_idx": [
+   21,
+   25,
+   84
+  ],
+  "u_ctx_idx": [
+   21,
+   25,
+   84
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9458820819854736,
+  "u_union_blocks": true
  },
  {
   "q": "Besides the study of prime numbers, what general theory was considered the official example of pure mathematics?",
@@ -669,7 +1468,24 @@
   "u_halluc": false,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.82
+  "lat": 0.84,
+  "g_answer": "The provided context does not mention any general theory related to pure mathematics other than the study of prime numbers. Therefore, I do not know [n].",
+  "u_answer": "The question seems to be based on a misunderstanding or a misstatement, as the context provided does not mention anything about prime numbers or pure mathematics in the traditional sense. However, if we interpret the question in the context of the information given, the closest reference to a \"general theory\" associated with the University of Chicago is its emphasis on **theoretical and abstract disciplines**, particularly in the context of **physics and mathematics**.\n\nIn the context of the University of Chicago, the study of **gravitational theory** (as described in the context about Newton's work on gravity) could be considered an example of pure mathematics and theoretical physics. This theory, which explains the force of gravity and its relationship to mass and distance, is a foundational concept in both physics and mathematics.\n\nTherefore, based on the context provided, **gravitational theory** could be considered the general theory associated with pure mathematics.",
+  "g_ctx_idx": [
+   13,
+   64,
+   88
+  ],
+  "u_ctx_idx": [
+   13,
+   64,
+   88
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.969977617263794,
+  "u_union_blocks": true
  },
  {
   "q": "When did income inequality begin to decrease in the US?",
@@ -683,7 +1499,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.83
+  "lat": 0.86,
+  "g_answer": "Income inequality began to decrease in the US from 1910 to 1940 [1].",
+  "u_answer": "Income inequality in the United States began to decrease during the High School movement from 1910 to 1940 and thereafter.",
+  "g_ctx_idx": [
+   1,
+   10,
+   64
+  ],
+  "u_ctx_idx": [
+   1,
+   10,
+   64
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9884059429168701,
+  "u_union_blocks": false
  },
  {
   "q": "How many French colonists were lost by British?",
@@ -697,7 +1530,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.79
+  "lat": 0.84,
+  "g_answer": "The context does not specify the exact number of French colonists lost by the British. [1]",
+  "u_answer": "Based on the context provided, approximately 80,000 French-speaking Roman Catholic residents were in the colonies of French Canada and Acadia when Britain gained control of them. However, the text does not specify the exact number of French colonists lost due to the deportation of the Acadians beginning in 1755. It only mentions that the deportation resulted in land becoming available for European and southern colonial migrants, and that many Acadians were resettled, some going to France, New Orleans, French Guiana, the Falkland Islands, and other locations. \n\nTherefore, the exact number of French colonists lost by the British is not provided in the context.",
+  "g_ctx_idx": [
+   16,
+   57,
+   93
+  ],
+  "u_ctx_idx": [
+   16,
+   57,
+   93
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9701496958732605,
+  "u_union_blocks": false
  },
  {
   "q": "What did Standard & Poor recommend to slow economy recovery?",
@@ -711,7 +1561,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.8
+  "lat": 0.82,
+  "g_answer": "Standard & Poor's recommended increasing access to education to help slow the economy's recovery [1].",
+  "u_answer": "Standard & Poor's recommended increasing access to education to help slow the economy's recovery. They estimated that if the average U.S. worker had completed one more year of school, it would add an additional $105 billion in growth to the country's economy over five years.",
+  "g_ctx_idx": [
+   10,
+   57,
+   41
+  ],
+  "u_ctx_idx": [
+   10,
+   57,
+   41
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9853524565696716,
+  "u_union_blocks": false
  },
  {
   "q": "What revealed the intentions of the British in the middle east regarding oil prices in 2004?",
@@ -725,7 +1592,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 1.36
+  "lat": 1.4,
+  "g_answer": "The intentions of the British in the Middle East regarding oil prices in 2004 were revealed through declassified documents that showed British Prime Minister Edward Heath ordered a British intelligence estimate of U.S. intentions, which concluded America \"might consider it could not tolerate a situation in which the U.S. and its allies were at the mercy of a small group of unreasonable countries,\" and that they would prefer a rapid operation to seize oilfields in Saudi Arabia and Kuwait, and possibly Abu Dhabi [1].",
+  "u_answer": "The intentions of the British in the Middle East regarding oil prices in 2004 were revealed through declassified documents that showed British Prime Minister Edward Heath's concern over U.S. potential military action to seize Middle Eastern oilfields. In response to this concern, Heath ordered a British intelligence estimate of U.S. intentions, which concluded that the U.S. might consider using force to secure oil supplies and that a rapid military operation to seize oilfields in Saudi Arabia and Kuwait, and possibly Abu Dhabi, could be preferred. This intelligence assessment highlighted the British worry about the potential U.S. actions and their implications.",
+  "g_ctx_idx": [
+   49,
+   59,
+   14
+  ],
+  "u_ctx_idx": [
+   49,
+   59,
+   14
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9455022811889648,
+  "u_union_blocks": true
  },
  {
   "q": "How much potential economic growth could the United States amass if everyone went through less schooling?",
@@ -739,7 +1623,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.89
+  "lat": 0.92,
+  "g_answer": "The context does not provide information on how much potential economic growth the United States could amass if everyone went through less schooling. Therefore, I don't know [n].",
+  "u_answer": "Based on the information provided, the text does not directly address how much potential economic growth the United States could amass if everyone went through less schooling. Instead, it emphasizes the positive impact of increased education on economic growth. For example, it mentions that if the average U.S. worker had completed one more year of school, it would add an additional $105 billion in growth to the country's economy over five years.\n\nThe passage also highlights the negative consequences of inequality, including reduced economic growth, lower social goods, and higher health and social problems. It suggests that education is a key driver of economic growth and that educational inequality\u2014particularly gender inequality\u2014can hinder growth and contribute to poverty traps.\n\nTherefore, the text implies that less schooling would likely result in reduced economic growth, rather than increased growth. The exact amount of potential economic growth from less schooling is not specified, but the overall message is that more education leads to greater economic benefits.",
+  "g_ctx_idx": [
+   10,
+   68,
+   39
+  ],
+  "u_ctx_idx": [
+   10,
+   68,
+   39
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8872671723365784,
+  "u_union_blocks": true
  },
  {
   "q": "Which country was thinking about going to war to forcibly take Middle Eastern oil fields?",
@@ -753,7 +1654,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.83
+  "lat": 0.84,
+  "g_answer": "The United States was thinking about going to war to forcibly take Middle Eastern oil fields [1].",
+  "u_answer": "The country that was thinking about going to war to forcibly take Middle Eastern oil fields was the United States.",
+  "g_ctx_idx": [
+   49,
+   16,
+   90
+  ],
+  "u_ctx_idx": [
+   49,
+   16,
+   90
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9805373549461365,
+  "u_union_blocks": false
  },
  {
   "q": "When was the University of Chicago established?",
@@ -767,7 +1685,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.75
+  "lat": 0.78,
+  "g_answer": "The University of Chicago was established in 1890 [1].",
+  "u_answer": "The University of Chicago was established in 1890.",
+  "g_ctx_idx": [
+   13,
+   43,
+   22
+  ],
+  "u_ctx_idx": [
+   13,
+   43,
+   22
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.984788179397583,
+  "u_union_blocks": false
  },
  {
   "q": "Who benefits from the research carried out by the IPCC?",
@@ -781,7 +1716,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.78
+  "lat": 0.81,
+  "g_answer": "The context provided does not specify who benefits from the research carried out by the IPCC. Therefore, I don't know [n].",
+  "u_answer": "The research carried out by the **Intergovernmental Panel on Climate Change (IPCC)** benefits a wide range of stakeholders, including:\n\n1. **Governments and Policymakers**: They use IPCC reports to inform climate policies, international agreements (such as the Paris Agreement), and national strategies for mitigating and adapting to climate change.\n\n2. **Scientists and Researchers**: The IPCC synthesizes and summarizes the latest scientific findings, providing a comprehensive overview of climate science that helps researchers identify gaps and prioritize future studies.\n\n3. **Environmental Organizations**: These groups use IPCC findings to advocate for climate action, raise public awareness, and support conservation efforts.\n\n4. **The General Public**: The IPCC's reports are accessible and often translated into multiple languages, helping the public understand the science behind climate change and its impacts.\n\n5. **Businesses and Industries**: Companies in sectors such as energy, agriculture, and construction use IPCC data to assess risks and opportunities related to climate change, such as transitioning to renewable energy or adapting infrastructure.\n\n6. **International Bodies**: Organizations like the United Nations and the World Bank rely on IPCC assessments to guide global initiatives and funding for climate-related projects.\n\nIn summary, the research carried out by the IPCC benefits **governments, scientists, environmental groups, the public, businesses, and international organizations** by providing a reliable and authoritative source of information on climate change.",
+  "g_ctx_idx": [
+   8,
+   21,
+   87
+  ],
+  "u_ctx_idx": [
+   8,
+   21,
+   87
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.7409650087356567,
+  "u_union_blocks": true
  },
  {
   "q": "How many homes had BSkyB's direct-to-home satellite service available to them in 2010?",
@@ -795,7 +1747,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.9
+  "lat": 0.9,
+  "g_answer": "BSkyB's direct-to-home satellite service was available in 10 million homes in 2010 [1].",
+  "u_answer": "In 2010, BSkyB's direct-to-home satellite service was available to 10 million homes.",
+  "g_ctx_idx": [
+   14,
+   42,
+   25
+  ],
+  "u_ctx_idx": [
+   14,
+   42,
+   25
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9811375141143799,
+  "u_union_blocks": false
  },
  {
   "q": "When did BSkyB announce it's intention to replace it's free-to-air digital channels?",
@@ -809,7 +1778,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.8
+  "lat": 0.9,
+  "g_answer": "BSkyB announced its intention to replace its free-to-air digital terrestrial channels on 8 February 2007 [1].",
+  "u_answer": "BSkyB announced its intention to replace its free-to-air digital terrestrial channels on **8 February 2007**.",
+  "g_ctx_idx": [
+   42,
+   14,
+   9
+  ],
+  "u_ctx_idx": [
+   42,
+   14,
+   9
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9889479875564575,
+  "u_union_blocks": false
  },
  {
   "q": "Which country was worried that the US would invade the Middle East?",
@@ -823,7 +1809,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.84
+  "lat": 0.89,
+  "g_answer": "The context provided does not mention any country worrying about the US invading the Middle East. Therefore, I don't know.",
+  "u_answer": "None of the provided texts mention a country worrying about the US invading the Middle East. The texts discuss the historical significance of the Rhine River in European history and the commemoration of Warsaw's heroic history, but they do not address concerns about the US invading the Middle East.",
+  "g_ctx_idx": [
+   93,
+   78,
+   43
+  ],
+  "u_ctx_idx": [
+   93,
+   78,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8188307285308838,
+  "u_union_blocks": true
  },
  {
   "q": "How large was the audience BSkyB said they could reach?",
@@ -837,7 +1840,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.86
+  "lat": 0.87,
+  "g_answer": "BSkyB said its reach into 36% of households in the UK represented an audience of more than 25m people [1].",
+  "u_answer": "BSkyB said they could reach an audience of more than 25 million people.",
+  "g_ctx_idx": [
+   14,
+   16,
+   42
+  ],
+  "u_ctx_idx": [
+   14,
+   16,
+   42
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9846087098121643,
+  "u_union_blocks": false
  },
  {
   "q": "What author argues pitching the conscience versus the collective?",
@@ -851,7 +1871,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.79
+  "lat": 0.81,
+  "g_answer": "The author who argues pitching the conscience versus the collective is Henry David Thoreau [1].",
+  "u_answer": "The author who argues pitching the conscience versus the collective is Henry David Thoreau.",
+  "g_ctx_idx": [
+   32,
+   59,
+   84
+  ],
+  "u_ctx_idx": [
+   32,
+   59,
+   84
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.5865292549133301,
+  "u_union_blocks": false
  },
  {
   "q": "When did Augustus die?",
@@ -865,7 +1902,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.73
+  "lat": 0.72,
+  "g_answer": "Augustus died in AD 14 [2].",
+  "u_answer": "Augustus died in AD 14.",
+  "g_ctx_idx": [
+   33,
+   29,
+   32
+  ],
+  "u_ctx_idx": [
+   33,
+   29,
+   32
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9705191850662231,
+  "u_union_blocks": false
  },
  {
   "q": "What is the meaning of polynomial-space reduction?",
@@ -879,7 +1933,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": false,
-  "lat": 0.78
+  "lat": 0.81,
+  "g_answer": "The context provided does not mention the meaning of polynomial-space reduction. Therefore, I don't know.",
+  "u_answer": "The term **polynomial-space reduction** refers to a type of reduction used in computational complexity theory, where one problem is transformed into another in a way that the amount of memory (space) required for the transformation is bounded by a polynomial function of the input size.\n\nIn other words, a polynomial-space reduction from problem A to problem B means that there exists an algorithm that can transform any instance of A into an instance of B using a polynomial amount of memory, and solving B then provides a solution to A. This concept is analogous to polynomial-time reduction, but it focuses on space complexity rather than time complexity.\n\nPolynomial-space reductions are used to classify problems based on their computational difficulty, particularly in the context of complexity classes like PSPACE. If a problem A can be polynomial-space reduced to problem B, and B is in PSPACE, then A is also in PSPACE.",
+  "g_ctx_idx": [
+   24,
+   36,
+   37
+  ],
+  "u_ctx_idx": [
+   24,
+   36,
+   37
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.35249030590057373,
+  "u_union_blocks": true
  },
  {
   "q": "What impact did the high school education movement have on the presence of unskilled workers?",
@@ -893,7 +1964,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.67
+  "lat": 1.62,
+  "g_answer": "The high school education movement from 1910\u20131940 led to an increase in skilled workers, which caused a decrease in the price of skilled labor and a period of compression and decreased inequality between skilled and unskilled workers [1]. This suggests that the movement may have reduced the presence of unskilled workers by increasing the availability of skilled workers, thereby reducing the demand for unskilled labor. However, the context does not explicitly state that the presence of unskilled workers decreased; it only mentions a decrease in inequality between skilled and unskilled workers. Therefore, the impact on the presence of unskilled workers is not directly supported by the context.",
+  "u_answer": "The high school education movement from 1910\u20131940 led to an increase in skilled workers, which resulted in a decrease in the price of skilled labor. This period also saw a compression in the wage gap between skilled and unskilled workers, implying that the presence of more skilled workers did not necessarily lead to a significant decrease in the number or economic status of unskilled workers. Instead, it contributed to a reduction in inequality between the two groups. Thus, the movement likely had a moderating effect on the economic disparity between skilled and unskilled workers, though it did not eliminate the presence of unskilled workers.",
+  "g_ctx_idx": [
+   39,
+   13,
+   86
+  ],
+  "u_ctx_idx": [
+   39,
+   13,
+   86
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.97799152135849,
+  "u_union_blocks": false
  },
  {
   "q": "What makes the method of primality more efficient?",
@@ -907,7 +1995,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.96
+  "lat": 0.98,
+  "g_answer": "The method of primality becomes more efficient when a complete list of primes up to the square root of the number being checked is known, allowing trial divisions to be checked only for those m that are prime [2].",
+  "u_answer": "The method of primality becomes more efficient when a complete list of primes up to the square root of the number being tested is known. This allows trial divisions to be checked only for prime numbers, rather than all integers, reducing the number of divisions required and thus improving efficiency. For example, to check the primality of 37, only three divisions (by 2, 3, and 5) are necessary, as 4 and 6 are composite and do not need to be tested.",
+  "g_ctx_idx": [
+   71,
+   3,
+   14
+  ],
+  "u_ctx_idx": [
+   71,
+   3,
+   14
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.3962534964084625,
+  "u_union_blocks": true
  },
  {
   "q": "What is involved in a review of prescribed medications?",
@@ -921,7 +2026,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.11
+  "lat": 1.16,
+  "g_answer": "A review of prescribed medications involves evaluating the appropriateness of the drug therapy, including drug choice, dose, route, frequency, and duration of therapy, as well as assessing its efficacy. The pharmacist must also monitor for potential drug interactions, adverse drug reactions, and assess patient drug allergies while designing and initiating a drug therapy plan [1].",
+  "u_answer": "A review of prescribed medications involves evaluating the appropriateness of the drug therapy, including aspects such as drug choice, dose, route, frequency, and duration of therapy. It also includes assessing the efficacy of the medication, monitoring for potential drug interactions, adverse drug reactions, and evaluating patient drug allergies. The goal is to ensure safe and effective drug therapy tailored to the patient's specific needs.",
+  "g_ctx_idx": [
+   47,
+   88,
+   59
+  ],
+  "u_ctx_idx": [
+   47,
+   88,
+   59
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9811124801635742,
+  "u_union_blocks": false
  },
  {
   "q": "Who joined Norman forces in the destruction of the Armenians?",
@@ -929,13 +2051,30 @@
   "recall": null,
   "correct": false,
   "correct_llm": false,
-  "g_abstain": true,
+  "g_abstain": false,
   "u_abstain": false,
-  "g_halluc": false,
+  "g_halluc": true,
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.23
+  "lat": 0.75,
+  "g_answer": "The question is unsupported by the context.",
+  "u_answer": "The question contains a slight inaccuracy. It was not the Normans who joined forces to destroy the Armenians, but rather some Normans who joined Turkish forces to aid in the destruction of the Armenian vassal-states of Sassoun and Taron in far eastern Anatolia.",
+  "g_ctx_idx": [
+   22,
+   43,
+   25
+  ],
+  "u_ctx_idx": [
+   22,
+   43,
+   25
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.37119224667549133,
+  "u_union_blocks": true
  },
  {
   "q": "What is polish for \"mermaid\"?",
@@ -949,7 +2088,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.77
+  "lat": 0.81,
+  "g_answer": "The Polish word for \"mermaid\" is \"syrenka\" [1].",
+  "u_answer": "The Polish word for \"mermaid\" is **syrenka**.",
+  "g_ctx_idx": [
+   20,
+   43,
+   13
+  ],
+  "u_ctx_idx": [
+   20,
+   43,
+   13
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9435621500015259,
+  "u_union_blocks": false
  },
  {
   "q": "What number did early Greeks not regard as a true number?",
@@ -963,7 +2119,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.78
+  "lat": 0.77,
+  "g_answer": "The early Greeks did not regard 1 as a true number [1].",
+  "u_answer": "The number that early Greeks did not regard as a true number was 1.",
+  "g_ctx_idx": [
+   33,
+   79,
+   6
+  ],
+  "u_ctx_idx": [
+   33,
+   79,
+   6
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9614810943603516,
+  "u_union_blocks": true
  },
  {
   "q": "What is known as swing pressure adsorption?",
@@ -977,7 +2150,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.74
+  "lat": 0.78,
+  "g_answer": "Swing pressure adsorption is known as pressure swing adsorption [1].",
+  "u_answer": "Swing pressure adsorption is a method of producing oxygen gas. It involves using a pair of identical zeolite molecular sieves. One bed absorbs nitrogen from a stream of clean, dry air, delivering a gas stream that is 90% to 93% oxygen. Meanwhile, the other bed, which is saturated with nitrogen, releases the nitrogen gas by reducing the chamber pressure and diverting part of the oxygen gas from the producer bed through it in the reverse direction. After a set cycle time, the operation of the two beds is interchanged, allowing for a continuous supply of gaseous oxygen. This process is also referred to as pressure swing adsorption.",
+  "g_ctx_idx": [
+   18,
+   80,
+   37
+  ],
+  "u_ctx_idx": [
+   18,
+   80,
+   37
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9590312242507935,
+  "u_union_blocks": false
  },
  {
   "q": "What is the original meaning of the word Norman?",
@@ -991,7 +2181,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.87
+  "lat": 0.85,
+  "g_answer": "The original meaning of the word \"Norman\" is not provided in the given context. Therefore, I don't know [n].",
+  "u_answer": "The original meaning of the word \"Norman\" refers to the people from the region of Normandy in northern France. The term originates from the Latin \"Normannus,\" which itself is derived from \"Norma,\" meaning \"law\" or \"custom.\" The Normans were a group of people who, in the 10th and 11th centuries, established a powerful feudal society in Normandy and later played a significant role in European history, including the Norman Conquest of England in 1066.",
+  "g_ctx_idx": [
+   43,
+   84,
+   88
+  ],
+  "u_ctx_idx": [
+   43,
+   84,
+   88
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.020237410441040993,
+  "u_union_blocks": true
  },
  {
   "q": "What did the Los Angeles Times add to the definition of southern California in 1990?",
@@ -1005,7 +2212,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.99
+  "lat": 1.0,
+  "g_answer": "The Los Angeles Times added the county of Imperial to the definition of southern California in 1999, not 1990 [1]. Therefore, the question is unsupported.",
+  "u_answer": "The Los Angeles Times added the county of Imperial to the definition of southern California in 1999, not 1990. There is no mention of any county being added in 1990.",
+  "g_ctx_idx": [
+   45,
+   59,
+   66
+  ],
+  "u_ctx_idx": [
+   45,
+   59,
+   66
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9419813752174377,
+  "u_union_blocks": false
  },
  {
   "q": "What seminal paper is commonly considered the beginning of sociology studies?",
@@ -1019,7 +2243,24 @@
   "u_halluc": false,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.85
+  "lat": 0.85,
+  "g_answer": "The context provided does not mention any seminal paper related to the beginning of sociology studies. Therefore, I don't know [n].",
+  "u_answer": "The context provided does not mention any seminal paper related to the beginning of sociology studies. Therefore, based on the given information, the question cannot be answered.",
+  "g_ctx_idx": [
+   36,
+   13,
+   84
+  ],
+  "u_ctx_idx": [
+   13,
+   36,
+   84
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9246110916137695,
+  "u_union_blocks": true
  },
  {
   "q": "What is the name of Sky Q's broadband router?",
@@ -1033,7 +2274,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.74
+  "lat": 0.75,
+  "g_answer": "The name of Sky Q's broadband router is Sky Q Hub [1].",
+  "u_answer": "The name of Sky Q's broadband router is Sky Q Hub.",
+  "g_ctx_idx": [
+   15,
+   21,
+   9
+  ],
+  "u_ctx_idx": [
+   15,
+   21,
+   9
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9658316373825073,
+  "u_union_blocks": false
  },
  {
   "q": "What was the name of the infamous German Heroic prison?",
@@ -1047,7 +2305,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.75
+  "lat": 0.77,
+  "g_answer": "The name of the infamous German prison mentioned in the context is Pawiak [1].",
+  "u_answer": "The name of the infamous German prison mentioned in the context is Pawiak.",
+  "g_ctx_idx": [
+   43,
+   4,
+   21
+  ],
+  "u_ctx_idx": [
+   43,
+   4,
+   21
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9769504070281982,
+  "u_union_blocks": false
  },
  {
   "q": "What did the people of Rome accept as the only fertile plain?",
@@ -1061,21 +2336,55 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.8
+  "lat": 0.81,
+  "g_answer": "The people of Rome accepted the fertile plain of Frankfurt as the only fertile plain [1].",
+  "u_answer": "The people of Rome accepted the fertile plain of Frankfurt as the only fertile plain.",
+  "g_ctx_idx": [
+   29,
+   84,
+   22
+  ],
+  "u_ctx_idx": [
+   29,
+   84,
+   22
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.767433226108551,
+  "u_union_blocks": true
  },
  {
   "q": "If P is ultimately proven to be equal tot NP, what effect would this have on the efficiency of problems?",
   "answerable": true,
   "recall": true,
-  "correct": true,
+  "correct": false,
   "correct_llm": true,
   "g_abstain": false,
   "u_abstain": false,
-  "g_halluc": false,
+  "g_halluc": true,
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.41
+  "lat": 1.41,
+  "g_answer": "If P is ultimately proven to be equal to NP, it would mean that every problem whose solution can be verified in polynomial time can also be solved in polynomial time. This would have significant implications for the efficiency of solving problems. Many important problems that are currently considered computationally hard could potentially be solved much more efficiently. These include various types of integer programming problems in operations research, many problems in logistics, protein structure prediction in biology, and the ability to find formal proofs of pure mathematics theorems [1].",
+  "u_answer": "If P is ultimately proven to be equal to NP, it would have profound implications for the efficiency of solving problems. Specifically, it would mean that every problem whose solution can be verified in polynomial time (NP) can also be solved in polynomial time (P). This would imply that many important computational problems, which are currently considered intractable (i.e., they take an impractically long time to solve for large inputs), could potentially be solved efficiently.\n\nFor example, problems in logistics, operations research, biology, and mathematics that are currently difficult to solve would become tractable. This would lead to significant advancements in various fields, as efficient algorithms for these problems would become available. Additionally, it would mean that formal proofs of mathematical theorems could be found more easily, and complex optimization problems could be solved in a reasonable amount of time.",
+  "g_ctx_idx": [
+   7,
+   64,
+   24
+  ],
+  "u_ctx_idx": [
+   7,
+   64,
+   24
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8618677854537964,
+  "u_union_blocks": false
  },
  {
   "q": "What was the taxman's political philosophy?",
@@ -1089,7 +2398,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.71
+  "lat": 0.72,
+  "g_answer": "The question is unsupported by the context provided.",
+  "u_answer": "The question about the \"taxman's political philosophy\" cannot be answered based on the provided context. The context does not mention anything about a \"taxman\" or their political philosophy. The passages discuss topics such as Islamism, economic disparities in the U.S., and political behavior in the Scottish Parliament, but none of them refer to a taxman or their beliefs.",
+  "g_ctx_idx": [
+   19,
+   10,
+   92
+  ],
+  "u_ctx_idx": [
+   19,
+   10,
+   92
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.2218697965145111,
+  "u_union_blocks": true
  },
  {
   "q": "The concept of inertia can explain the tendency of people to continue in what?",
@@ -1103,7 +2429,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.81
+  "lat": 0.8,
+  "g_answer": "The concept of inertia can explain the tendency of people to continue in constant motion. [1]",
+  "u_answer": "The concept of inertia can explain the tendency of people to continue in constant motion, including maintaining their state of rest or uniform motion unless acted upon by an external force. This is consistent with Newton's first law of motion, which states that an object will remain at rest or in uniform motion in a straight line unless compelled to change its state by an external force.",
+  "g_ctx_idx": [
+   35,
+   64,
+   59
+  ],
+  "u_ctx_idx": [
+   35,
+   64,
+   59
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.13308832049369812,
+  "u_union_blocks": true
  },
  {
   "q": "What districts does downtown Santa Ana include?",
@@ -1117,7 +2460,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.1
+  "lat": 1.13,
+  "g_answer": "Downtown Santa Ana is part of the rapidly developing business center of Orange County, which includes Downtown Santa Ana, the South Coast Metro, and Newport Center districts [1]. The question specifically asks about districts that downtown Santa Ana includes, but the context does not provide information about the specific districts within downtown Santa Ana itself. Therefore, the answer is unknown.",
+  "u_answer": "Based on the context provided, downtown Santa Ana is mentioned as part of Orange County's rapidly developing business center. However, the specific districts that downtown Santa Ana includes are not explicitly listed in the given text. The text refers to Downtown Santa Ana as one of the areas within Orange County's business centers but does not provide details about the specific districts within downtown Santa Ana itself.",
+  "g_ctx_idx": [
+   44,
+   56,
+   45
+  ],
+  "u_ctx_idx": [
+   44,
+   56,
+   45
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9780334830284119,
+  "u_union_blocks": false
  },
  {
   "q": "What does a writer for the International Crisis Group think the concept of political Islam is a creation of?",
@@ -1131,7 +2491,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.91
+  "lat": 0.92,
+  "g_answer": "A writer for the International Crisis Group thinks the concept of \"political Islam\" is a creation of Americans to explain the Iranian Islamic Revolution [1].",
+  "u_answer": "A writer for the International Crisis Group thinks the concept of \"political Islam\" is a creation of the Americans.",
+  "g_ctx_idx": [
+   19,
+   32,
+   4
+  ],
+  "u_ctx_idx": [
+   19,
+   32,
+   4
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.981633186340332,
+  "u_union_blocks": false
  },
  {
   "q": "How many schools of medicine were recognized in Japan?",
@@ -1145,7 +2522,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.84
+  "lat": 0.87,
+  "g_answer": "The context provided does not mention anything about the number of schools of medicine recognized in Japan. Therefore, I don't know [n].",
+  "u_answer": "The provided context does not mention anything about the number of schools of medicine recognized in Japan. Therefore, based on the given information, it is not possible to answer the question.",
+  "g_ctx_idx": [
+   13,
+   51,
+   27
+  ],
+  "u_ctx_idx": [
+   13,
+   51,
+   27
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8309721350669861,
+  "u_union_blocks": false
  },
  {
   "q": "What did Standard & Poor recommend to speed economy recovery?",
@@ -1159,7 +2553,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.79
+  "lat": 0.81,
+  "g_answer": "Standard & Poor recommended increasing access to education to help speed up the economy's recovery [1].",
+  "u_answer": "Standard & Poor's recommended increasing access to education to help speed up the economy's recovery. They estimated that if the average U.S. worker had completed one more year of school, it would add an additional $105 billion in growth to the country's economy over five years.",
+  "g_ctx_idx": [
+   10,
+   68,
+   82
+  ],
+  "u_ctx_idx": [
+   10,
+   68,
+   82
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9884424805641174,
+  "u_union_blocks": false
  },
  {
   "q": "What are the Sky Q mini set top boxes able to connect to?",
@@ -1173,7 +2584,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.84
+  "lat": 0.87,
+  "g_answer": "The Sky Q Mini set top boxes are able to connect to the Sky Q Silver set top boxes with a Wi-Fi or Power-line connection [1].",
+  "u_answer": "The Sky Q Mini set top boxes are able to connect to the Sky Q Silver set top boxes via a Wi-Fi or Power-line connection.",
+  "g_ctx_idx": [
+   15,
+   14,
+   42
+  ],
+  "u_ctx_idx": [
+   15,
+   14,
+   42
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9866172075271606,
+  "u_union_blocks": false
  },
  {
   "q": "When did income inequality begin to increase in the US?",
@@ -1187,7 +2615,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.82
+  "lat": 0.82,
+  "g_answer": "Income inequality began to increase in the US after the 1970s [1].",
+  "u_answer": "Income inequality in the United States began to increase after the 1970s.",
+  "g_ctx_idx": [
+   1,
+   10,
+   64
+  ],
+  "u_ctx_idx": [
+   1,
+   10,
+   64
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9838778972625732,
+  "u_union_blocks": false
  },
  {
   "q": "When was the Sierra Sky Park Airport formed?",
@@ -1201,7 +2646,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.76
+  "lat": 0.76,
+  "g_answer": "The Sierra Sky Park Airport was formed in 1946 [1].",
+  "u_answer": "The Sierra Sky Park Airport was formed in 1946.",
+  "g_ctx_idx": [
+   28,
+   15,
+   97
+  ],
+  "u_ctx_idx": [
+   28,
+   15,
+   97
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9830414056777954,
+  "u_union_blocks": false
  },
  {
   "q": "What year did BSkyB and Virgin Media have an agreement over the carriage of Sky Channels on cable TV?",
@@ -1215,7 +2677,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.87
+  "lat": 0.89,
+  "g_answer": "BSkyB and Virgin Media had an agreement over the carriage of Sky channels on cable TV in 2007 [1].",
+  "u_answer": "BSkyB and Virgin Media had an agreement over the carriage of Sky channels on cable TV in 2007.",
+  "g_ctx_idx": [
+   9,
+   15,
+   80
+  ],
+  "u_ctx_idx": [
+   9,
+   15,
+   42
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.23489095270633698,
+  "u_union_blocks": true
  },
  {
   "q": "Assessing the Amazon rain forest was restricted after what era?",
@@ -1229,7 +2708,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.98
+  "lat": 1.01,
+  "g_answer": "Prior to the early 1960s, access to the forest's interior was highly restricted, and the forest remained basically intact [1]. Therefore, assessing the Amazon rain forest was restricted after the early 1960s.",
+  "u_answer": "The assessment of the Amazon rain forest was restricted after the early 1960s. Prior to this era, access to the forest's interior was highly restricted, and the forest remained basically intact. This period marks the beginning of increased human activity and deforestation in the Amazon.",
+  "g_ctx_idx": [
+   37,
+   83,
+   59
+  ],
+  "u_ctx_idx": [
+   37,
+   83,
+   59
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8323031663894653,
+  "u_union_blocks": true
  },
  {
   "q": "What is the name of Sky Q's dial-up router?",
@@ -1243,7 +2739,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.73
+  "lat": 0.74,
+  "g_answer": "The name of Sky Q's router is Sky Q Hub [1].",
+  "u_answer": "The name of Sky Q's router is the **Sky Q Hub**.",
+  "g_ctx_idx": [
+   15,
+   21,
+   4
+  ],
+  "u_ctx_idx": [
+   15,
+   21,
+   4
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9729382991790771,
+  "u_union_blocks": false
  },
  {
   "q": "What academy did Tugh Temur found?",
@@ -1257,7 +2770,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.84
+  "lat": 0.78,
+  "g_answer": "Tugh Tem\u00fcr founded the Academy of the Pavilion of the Star of Literature [1].",
+  "u_answer": "Tugh Tem\u00fcr founded the Academy of the Pavilion of the Star of Literature, also known as the \"Qu Zhang Ge Xueshi Yuan\" in Chinese.",
+  "g_ctx_idx": [
+   48,
+   10,
+   14
+  ],
+  "u_ctx_idx": [
+   48,
+   10,
+   14
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.3538978397846222,
+  "u_union_blocks": true
  },
  {
   "q": " Who did Duke Yansheng Kong Duanyou stay with?",
@@ -1271,7 +2801,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 1.08
+  "lat": 1.05,
+  "g_answer": "Duke Yansheng Kong Duanyou fled south with the Song Emperor to Quzhou [1]. Therefore, he stayed with the Song Emperor.",
+  "u_answer": "Duke Yansheng Kong Duanyou fled south with the Song Emperor to Quzhou. Therefore, he stayed with the Song Emperor.",
+  "g_ctx_idx": [
+   34,
+   21,
+   62
+  ],
+  "u_ctx_idx": [
+   34,
+   21,
+   62
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9472439885139465,
+  "u_union_blocks": true
  },
  {
   "q": "What impact did the high school education movement have on the presence of skilled workers?",
@@ -1285,7 +2832,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.95
+  "lat": 0.93,
+  "g_answer": "The high school education movement from 1910\u20131940 led to an increase in skilled workers, which in turn caused a decrease in the price of skilled labor [1].",
+  "u_answer": "The high school education movement from 1910\u20131940 led to an increase in the number of skilled workers. This increase resulted in a decrease in the price of skilled labor, as the supply of skilled workers grew. The movement aimed to equip students with the necessary skill sets to perform effectively in the workforce, thereby contributing to the economy by reducing inequality between skilled and unskilled workers.",
+  "g_ctx_idx": [
+   39,
+   13,
+   86
+  ],
+  "u_ctx_idx": [
+   39,
+   13,
+   86
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9846596717834473,
+  "u_union_blocks": false
  },
  {
   "q": "What is one example of what a clinical pharmacist's duties entail?",
@@ -1299,7 +2863,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.79
+  "lat": 0.79,
+  "g_answer": "One example of a clinical pharmacist's duties is reviewing all prescribed medications prior to dispensing and administration to the patient [1].",
+  "u_answer": "One example of a clinical pharmacist's duties is reviewing all prescribed medications prior to dispensing and administration to the patient, evaluating the appropriateness of the drug therapy, monitoring for potential drug interactions and adverse drug reactions, and assessing patient drug allergies.",
+  "g_ctx_idx": [
+   47,
+   24,
+   6
+  ],
+  "u_ctx_idx": [
+   47,
+   24,
+   6
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.975216805934906,
+  "u_union_blocks": false
  },
  {
   "q": "What can happen when breathing in oxygen with 60 atm?",
@@ -1313,7 +2894,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.83
+  "lat": 0.84,
+  "g_answer": "Breathing in oxygen with a partial pressure of 60 kPa can lead to permanent pulmonary fibrosis [1].",
+  "u_answer": "Breathing in oxygen at a partial pressure of 60 atm is extremely dangerous and can lead to severe oxygen toxicity. Oxygen toxicity occurs when the partial pressure of oxygen in the breathing gas exceeds safe levels, causing harmful effects on the lungs and central nervous system.\n\nAt a partial pressure of 60 kPa, prolonged exposure can lead to permanent pulmonary fibrosis, which is scarring of the lung tissue. This can severely impair lung function and may be irreversible. Additionally, exposure to oxygen partial pressures greater than 160 kPa (about 1.6 atm) can cause convulsions, which are often fatal for divers. At 60 atm, the partial pressure of oxygen would be far beyond safe limits, leading to severe and potentially life-threatening oxygen toxicity.",
+  "g_ctx_idx": [
+   46,
+   18,
+   35
+  ],
+  "u_ctx_idx": [
+   46,
+   18,
+   35
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9371044635772705,
+  "u_union_blocks": true
  },
  {
   "q": "The Rhine and what other river were accepted as the Germanic frontier?",
@@ -1327,7 +2925,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.8
+  "lat": 0.81,
+  "g_answer": "The Rhine and the upper Danube were accepted as the Germanic frontier [1].",
+  "u_answer": "The Rhine and the Danube were accepted as the Germanic frontier.",
+  "g_ctx_idx": [
+   29,
+   84,
+   93
+  ],
+  "u_ctx_idx": [
+   29,
+   84,
+   93
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9758172631263733,
+  "u_union_blocks": false
  },
  {
   "q": "What commemorates Old Town's heroic history?",
@@ -1341,7 +2956,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.89
+  "lat": 0.88,
+  "g_answer": "The statue of Little Insurgent located at the ramparts of the Old Town commemorates the heroic history of the Old Town [1].",
+  "u_answer": "The statue of Little Insurgent located at the ramparts of the Old Town commemorates the Old Town's heroic history. It honors the children who served as messengers and frontline troops during the Warsaw Uprising.",
+  "g_ctx_idx": [
+   43,
+   21,
+   90
+  ],
+  "u_ctx_idx": [
+   43,
+   21,
+   90
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9874716401100159,
+  "u_union_blocks": false
  },
  {
   "q": "What is tuition for 2012 - 13 year at Harvard? ",
@@ -1355,7 +2987,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.96
+  "lat": 0.93,
+  "g_answer": "The context provided does not mention tuition for the 2012\u201313 year at Harvard. Therefore, I don't know [n].",
+  "u_answer": "The context provided does not specify the tuition for the 2012\u201313 year at Harvard. The information given refers to the University of Chicago and mentions Harvard in the context of financial aid, not tuition fees. Therefore, based on the provided context, the tuition for the 2012\u201313 year at Harvard cannot be determined.",
+  "g_ctx_idx": [
+   13,
+   11,
+   60
+  ],
+  "u_ctx_idx": [
+   13,
+   11,
+   60
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.3716888129711151,
+  "u_union_blocks": true
  },
  {
   "q": "How many schools of medicine were recognized in China?",
@@ -1368,8 +3017,25 @@
   "g_halluc": false,
   "u_halluc": false,
   "u_gate_blocks": false,
-  "u_xgate_blocks": false,
-  "lat": 0.82
+  "u_xgate_blocks": true,
+  "lat": 0.82,
+  "g_answer": "The context does not provide information about the number of schools of medicine recognized in China. Therefore, I don't know [n].",
+  "u_answer": "Based on the context provided, there were **four** schools of medicine recognized in China during the Yuan period, known as the \"Four Great Schools.\"",
+  "g_ctx_idx": [
+   13,
+   51,
+   27
+  ],
+  "u_ctx_idx": [
+   13,
+   51,
+   27
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9797130823135376,
+  "u_union_blocks": true
  },
  {
   "q": "Where and when did the investigation of the plague pathogen begin?",
@@ -1383,7 +3049,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.86
+  "lat": 0.91,
+  "g_answer": "The investigation of the plague pathogen began in Hong Kong in 1894 [1].",
+  "u_answer": "The investigation of the plague pathogen began in Hong Kong in 1894. This was when teams of scientists, including the French-Swiss bacteriologist Alexandre Yersin, started their research into the pathogen that caused the 19th-century plague.",
+  "g_ctx_idx": [
+   5,
+   30,
+   74
+  ],
+  "u_ctx_idx": [
+   5,
+   30,
+   74
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9844301342964172,
+  "u_union_blocks": false
  },
  {
   "q": "How many French colonists were gained by British?",
@@ -1397,7 +3080,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 1.06
+  "lat": 1.1,
+  "g_answer": "The context states that Britain gained control of French Canada and Acadia, colonies containing approximately 80,000 primarily French-speaking Roman Catholic residents [2]. Therefore, the number of French colonists gained by Britain is approximately 80,000. [2]",
+  "u_answer": "Based on the context provided, Britain gained control of French Canada and Acadia, which contained approximately 80,000 primarily French-speaking Roman Catholic residents. Therefore, the number of French colonists gained by Britain is approximately **80,000**.",
+  "g_ctx_idx": [
+   43,
+   16,
+   93
+  ],
+  "u_ctx_idx": [
+   43,
+   16,
+   93
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9730532169342041,
+  "u_union_blocks": true
  },
  {
   "q": "Which county is developing its business center?",
@@ -1411,7 +3111,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.74
+  "lat": 0.76,
+  "g_answer": "Orange County is developing its business center [1].",
+  "u_answer": "The county developing its business center is Orange County.",
+  "g_ctx_idx": [
+   44,
+   45,
+   17
+  ],
+  "u_ctx_idx": [
+   44,
+   45,
+   17
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9739911556243896,
+  "u_union_blocks": false
  },
  {
   "q": "What archdiocese is Market Square the seat of?",
@@ -1425,7 +3142,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.82
+  "lat": 0.83,
+  "g_answer": "The context provided does not specify which archdiocese Market Square is the seat of. Therefore, I don't know [n].",
+  "u_answer": "The context provided does not specify which archdiocese Market Square is the seat of. The information given mentions that the city is the seat of a Roman Catholic archdiocese (left bank of the Vistula) and diocese (right bank), but it does not explicitly state which archdiocese corresponds to Market Square. Therefore, based on the given information, the answer cannot be determined.",
+  "g_ctx_idx": [
+   13,
+   40,
+   43
+  ],
+  "u_ctx_idx": [
+   13,
+   40,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9084148406982422,
+  "u_union_blocks": false
  },
  {
   "q": "When did the Jin dynasty begin?",
@@ -1439,7 +3173,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.75
+  "lat": 0.8,
+  "g_answer": "The Jin dynasty began in 1115 [1].",
+  "u_answer": "The Jin dynasty began in 1115.",
+  "g_ctx_idx": [
+   34,
+   94,
+   30
+  ],
+  "u_ctx_idx": [
+   34,
+   94,
+   30
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9654574990272522,
+  "u_union_blocks": false
  },
  {
   "q": "When did Augustus find Rome?",
@@ -1453,7 +3204,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.83
+  "lat": 0.83,
+  "g_answer": "The context provided does not mention Augustus or when he found Rome. Therefore, I don't know [n].",
+  "u_answer": "The question \"When did Augustus find Rome?\" is based on a misunderstanding. Augustus did not \"find\" Rome, as Rome was already an established city and the capital of the Roman Republic long before Augustus's time. Augustus, originally named Gaius Octavius, was born in 63 BCE in Rome. He became the first Roman emperor in 27 BCE, following the end of the Roman Republic and the beginning of the Roman Empire. Therefore, Augustus was born in Rome and did not discover or find it.",
+  "g_ctx_idx": [
+   61,
+   5,
+   48
+  ],
+  "u_ctx_idx": [
+   61,
+   5,
+   48
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.17172569036483765,
+  "u_union_blocks": true
  },
  {
   "q": "Who did Warsaw serve as the seat for in 1529?",
@@ -1467,7 +3235,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.83
+  "lat": 0.86,
+  "g_answer": "Warsaw served as the seat for the General Sejm in 1529 [1].",
+  "u_answer": "In 1529, Warsaw served as the seat for the General Sejm, which was a significant political assembly in the Polish\u2013Lithuanian Commonwealth.",
+  "g_ctx_idx": [
+   30,
+   22,
+   43
+  ],
+  "u_ctx_idx": [
+   30,
+   22,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9813686609268188,
+  "u_union_blocks": false
  },
  {
   "q": "What is not an example of what a clinical pharmacist's duties entail?",
@@ -1481,7 +3266,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": false,
-  "lat": 1.42
+  "lat": 1.47,
+  "g_answer": "The question asks what is not an example of a clinical pharmacist's duties. Based on the context, the clinical pharmacist's role involves creating a comprehensive drug therapy plan, identifying goals of therapy, reviewing prescribed medications, evaluating the appropriateness of drug therapy, monitoring for drug interactions and adverse reactions, and assessing patient drug allergies [1]. \n\nSince the question is about what is *not* an example of a clinical pharmacist's duties, and no specific options are provided, it is not possible to determine the correct answer from the given context. \n\nTherefore, I do not know [n].",
+  "u_answer": "The question asks for something that is **not** an example of a clinical pharmacist's duties. Let's analyze the options based on the context provided:\n\nFrom context [1], we know that a clinical pharmacist's duties include:\n- Creating a comprehensive drug therapy plan\n- Identifying goals of therapy\n- Reviewing all prescribed medications\n- Evaluating the appropriateness of drug therapy (e.g., drug choice, dose, route, frequency, and duration of therapy)\n- Assessing the efficacy of drug therapy\n- Monitoring for potential drug interactions\n- Monitoring for adverse drug reactions\n- Assessing patient drug allergies\n\nNow, let's consider what is **not** an example of a clinical pharmacist's duties. Based on the context, **political activism or ideological debates** (as seen in context [2]) and **computational complexity theory** (as seen in context [3]) are not related to the duties of a clinical pharmacist.\n\nTherefore, the answer is: **Political activism or ideological debates** (or **computational complexity theory**) are not examples of what a clinical pharmacist's duties entail.",
+  "g_ctx_idx": [
+   47,
+   19,
+   52
+  ],
+  "u_ctx_idx": [
+   47,
+   19,
+   52
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.7888516783714294,
+  "u_union_blocks": false
  },
  {
   "q": "What was Thoreau's punishment for not paying his taxes?",
@@ -1495,7 +3297,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.89
+  "lat": 0.94,
+  "g_answer": "The context provided does not mention Thoreau or his punishment for not paying taxes. Therefore, I don't know [n].",
+  "u_answer": "The question about Thoreau's punishment for not paying his taxes is not addressed in the provided context. The context discusses topics related to Isiah Bowman, the Mongol Empire, and Tugh Tem\u00fcr, but it does not mention Henry David Thoreau or his actions regarding taxes. Therefore, based on the given information, the answer cannot be determined.",
+  "g_ctx_idx": [
+   61,
+   72,
+   48
+  ],
+  "u_ctx_idx": [
+   61,
+   72,
+   48
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.05341599881649017,
+  "u_union_blocks": true
  },
  {
   "q": "What is Polish for \"female\"?",
@@ -1503,13 +3322,30 @@
   "recall": null,
   "correct": false,
   "correct_llm": false,
-  "g_abstain": false,
+  "g_abstain": true,
   "u_abstain": false,
-  "g_halluc": true,
+  "g_halluc": false,
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.75
+  "lat": 0.67,
+  "g_answer": "I don't know.",
+  "u_answer": "The Polish word for \"female\" is \"kobieta.\"",
+  "g_ctx_idx": [
+   71,
+   14,
+   96
+  ],
+  "u_ctx_idx": [
+   71,
+   14,
+   96
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.05896492302417755,
+  "u_union_blocks": true
  },
  {
   "q": "What is a non-Islamic revival movement?",
@@ -1523,7 +3359,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.8
+  "lat": 0.8,
+  "g_answer": "The context provided does not mention a \"non-Islamic revival movement.\" Therefore, I don't know.",
+  "u_answer": "A non-Islamic revival movement refers to a movement that seeks to revive or promote a religion or set of beliefs other than Islam. These movements typically emphasize the restoration or reinvigoration of traditional religious practices, values, or cultural identities associated with a specific faith, such as Christianity, Judaism, Hinduism, Buddhism, or others. Unlike Islamism, which focuses on the implementation of Islamic values in all aspects of life, non-Islamic revival movements are centered on the resurgence of their respective religious traditions, often in response to modernization, secularization, or perceived cultural decline.",
+  "g_ctx_idx": [
+   4,
+   19,
+   86
+  ],
+  "u_ctx_idx": [
+   4,
+   19,
+   86
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.5918329954147339,
+  "u_union_blocks": true
  },
  {
   "q": "What was the white population in 1942 in Fresno?",
@@ -1532,12 +3385,29 @@
   "correct": false,
   "correct_llm": false,
   "g_abstain": false,
-  "u_abstain": false,
+  "u_abstain": true,
   "g_halluc": true,
-  "u_halluc": true,
+  "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.83
+  "lat": 0.82,
+  "g_answer": "The white population in 1942 in Fresno was 94.0% [1].",
+  "u_answer": "The white population in Fresno in 1942 was 94.0%, as reported by the Census Bureau in 1940. This percentage reflects the racial composition of the population at that time, though it is important to note that the 1940 data was used to describe the situation in 1942, as specific 1942 census data is not provided in the context.",
+  "g_ctx_idx": [
+   17,
+   14,
+   90
+  ],
+  "u_ctx_idx": [
+   17,
+   14,
+   90
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8654127717018127,
+  "u_union_blocks": true
  },
  {
   "q": "During what time period did income inequality increase in the United States?",
@@ -1551,7 +3421,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.8
+  "lat": 0.82,
+  "g_answer": "Income inequality in the United States began to rise after the 1970s [1].",
+  "u_answer": "Income inequality in the United States began to increase after the 1970s.",
+  "g_ctx_idx": [
+   1,
+   10,
+   59
+  ],
+  "u_ctx_idx": [
+   1,
+   10,
+   59
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9855309724807739,
+  "u_union_blocks": false
  },
  {
   "q": "What are two cars with V8 engines that were more fuel efficient?",
@@ -1565,7 +3452,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.89
+  "lat": 0.9,
+  "g_answer": "The context does not mention any cars with V8 engines that were more fuel efficient. Therefore, I don't know.",
+  "u_answer": "Based on the context provided, there are no cars with V8 engines that were more fuel efficient. In fact, the context states that Japanese imports, such as the Toyota Corona, Toyota Corolla, Datsun B210, Datsun 510, Honda Civic, Mitsubishi Galant, Subaru DL, and Honda Accord, had four-cylinder engines that were more fuel efficient than the typical American V8 and six-cylinder engines. This implies that V8 engines were less fuel efficient compared to these four-cylinder engines. Therefore, the question contains a misconception.",
+  "g_ctx_idx": [
+   31,
+   91,
+   39
+  ],
+  "u_ctx_idx": [
+   31,
+   91,
+   39
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.1927376240491867,
+  "u_union_blocks": true
  },
  {
   "q": "When did Setanta Sports say it would launch as a subscription service?",
@@ -1579,7 +3483,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.94
+  "lat": 0.93,
+  "g_answer": "Setanta Sports confirmed it would launch as a subscription service on 8 February 2007 [1].",
+  "u_answer": "Setanta Sports announced it would launch as a subscription service in March 2007.",
+  "g_ctx_idx": [
+   42,
+   14,
+   33
+  ],
+  "u_ctx_idx": [
+   42,
+   14,
+   33
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9799636006355286,
+  "u_union_blocks": false
  },
  {
   "q": "Which sized cars were the least demanded cars in the crisis?",
@@ -1593,7 +3514,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.74
+  "lat": 0.76,
+  "g_answer": "The least demanded cars in the crisis were large cars [1].",
+  "u_answer": "The least demanded cars during the crisis were the large cars, which were less popular due to reduced demand caused by the crisis. This led to the increased popularity of smaller, more fuel-efficient vehicles like the Japanese imports mentioned in the context.",
+  "g_ctx_idx": [
+   31,
+   59,
+   84
+  ],
+  "u_ctx_idx": [
+   31,
+   59,
+   84
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.40579912066459656,
+  "u_union_blocks": true
  },
  {
   "q": "What is the least used type of reduction?",
@@ -1607,7 +3545,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.78
+  "lat": 0.8,
+  "g_answer": "The context provided does not mention the least used type of reduction. Therefore, I don't know [n].",
+  "u_answer": "The provided context does not mention any specific types of reductions other than **polynomial-time reduction**, which is described as the \"most commonly used\" type. Since no other types of reductions are discussed, it is not possible to determine the \"least used\" type of reduction based on the given information.",
+  "g_ctx_idx": [
+   24,
+   83,
+   85
+  ],
+  "u_ctx_idx": [
+   24,
+   83,
+   85
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9248906970024109,
+  "u_union_blocks": false
  },
  {
   "q": "How many homes had BSkyB's direct-to-home satellite service unavailable to them in 2010?",
@@ -1621,7 +3576,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 1.53
+  "lat": 1.61,
+  "g_answer": "To determine how many homes had BSkyB's direct-to-home satellite service unavailable to them in 2010, we need to calculate the total number of homes in the UK and subtract the number of homes that had access to the service.\n\nFrom the context, we know that BSkyB's direct-to-home satellite service became available in 10 million homes in 2010 [1]. However, the context does not provide the total number of homes in the UK. Without this information, it is not possible to determine the exact number of homes that had the service unavailable to them.\n\nTherefore, I don't know.",
+  "u_answer": "In 2010, BSkyB's direct-to-home satellite service was available in 10 million homes. The total number of households in the UK is not explicitly stated in the context, but it is mentioned that the service reached 36% of households, which represented an audience of more than 25 million people.\n\nTo determine how many homes had the service unavailable, we can infer that if 36% of households had access, then 64% did not. Assuming the total number of households in the UK is approximately 27 million (based on estimates from that time), the number of homes without access would be:\n\n64% of 27 million = 0.64 \u00d7 27,000,000 = **17,280,000 homes**.\n\nTherefore, approximately **17.28 million homes** had BSkyB's direct-to-home satellite service unavailable to them in 2010.",
+  "g_ctx_idx": [
+   14,
+   42,
+   37
+  ],
+  "u_ctx_idx": [
+   14,
+   42,
+   37
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.6333617568016052,
+  "u_union_blocks": true
  },
  {
   "q": "What did families with incomes below $38,000 pay for tuition in 2009?",
@@ -1635,7 +3607,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 1.72
+  "lat": 1.17,
+  "g_answer": "Families with incomes below $60,000 pay nothing for their children to attend, including room and board [1]. Since $38,000 is below $60,000, families with incomes below $38,000 would also pay nothing for tuition in 2009.",
+  "u_answer": "Families with incomes below $60,000 paid nothing for their children to attend, including room and board, as stated in the context. Since $38,000 is below $60,000, families with incomes below $38,000 also paid nothing for tuition in 2009.",
+  "g_ctx_idx": [
+   11,
+   60,
+   51
+  ],
+  "u_ctx_idx": [
+   11,
+   60,
+   51
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.14531396329402924,
+  "u_union_blocks": true
  },
  {
   "q": "Who created the nation's first aviation community?",
@@ -1649,7 +3638,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.77
+  "lat": 0.84,
+  "g_answer": "The nation's first aviation community was created by Developer William Smilie [1].",
+  "u_answer": "The nation's first aviation community was created by William Smilie.",
+  "g_ctx_idx": [
+   28,
+   59,
+   22
+  ],
+  "u_ctx_idx": [
+   28,
+   59,
+   22
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9805884957313538,
+  "u_union_blocks": false
  },
  {
   "q": "What percentage of oxygen will a zeolite sieve produce?",
@@ -1663,7 +3669,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.84
+  "lat": 0.87,
+  "g_answer": "The zeolite sieve produces a gas stream that is 90% to 93% O$_2$ [1].",
+  "u_answer": "Based on the context provided, a zeolite molecular sieve produces a gas stream that is **90% to 93% oxygen**.",
+  "g_ctx_idx": [
+   18,
+   79,
+   83
+  ],
+  "u_ctx_idx": [
+   18,
+   79,
+   83
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.31272754073143005,
+  "u_union_blocks": true
  },
  {
   "q": " When did the Germanic tribes not claim territory in north and west Europe?",
@@ -1677,7 +3700,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.96
+  "lat": 1.02,
+  "g_answer": "The Germanic tribes did not claim territory in north and west Europe during the middle period of classical antiquity, as they were expanding from their original homelands in Scandinavia and northern Europe. [1]",
+  "u_answer": "The Germanic tribes did not claim territory in northern and western Europe during the **late antiquity period**, specifically when they were **conquering southern Europe**. According to the context, the Germanic tribes expanded throughout northern and western Europe in the middle period of classical antiquity, and by late antiquity, they were conquering Celtic and other peoples in southern Europe. This indicates that their territorial claims in northern and western Europe were already established by that time, and their focus shifted to southern Europe during late antiquity.",
+  "g_ctx_idx": [
+   12,
+   29,
+   25
+  ],
+  "u_ctx_idx": [
+   12,
+   29,
+   25
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.17815512418746948,
+  "u_union_blocks": true
  },
  {
   "q": "What was the name of the infamous German Gestapo prison?",
@@ -1691,7 +3731,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.76
+  "lat": 0.77,
+  "g_answer": "The name of the infamous German Gestapo prison is Pawiak [1].",
+  "u_answer": "The name of the infamous German Gestapo prison mentioned in the context is Pawiak.",
+  "g_ctx_idx": [
+   43,
+   17,
+   78
+  ],
+  "u_ctx_idx": [
+   43,
+   17,
+   78
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9704181551933289,
+  "u_union_blocks": false
  },
  {
   "q": "Over how many species of trees can be found in the Saxon Garden?",
@@ -1705,7 +3762,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.81
+  "lat": 0.82,
+  "g_answer": "Over 100 different species of trees can be found in the Saxon Garden [3].",
+  "u_answer": "Over 100 different species of trees can be found in the Saxon Garden.",
+  "g_ctx_idx": [
+   83,
+   13,
+   26
+  ],
+  "u_ctx_idx": [
+   83,
+   13,
+   26
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9792078137397766,
+  "u_union_blocks": false
  },
  {
   "q": "What is the most elemental way to test the primality of any division?",
@@ -1719,7 +3793,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.11
+  "lat": 1.12,
+  "g_answer": "The most elemental way to test the primality of any number is called trial division. This method involves dividing the number by each integer greater than 1 and less than or equal to the square root of the number. If any of these divisions result in an integer, the number is not prime; otherwise, it is prime [1].",
+  "u_answer": "The most elemental way to test the primality of any number is called **trial division**. This method involves dividing the number by each integer greater than 1 and less than or equal to the square root of the number. If any of these divisions result in an integer, the number is not prime; otherwise, it is prime.",
+  "g_ctx_idx": [
+   3,
+   41,
+   6
+  ],
+  "u_ctx_idx": [
+   3,
+   41,
+   6
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9727070331573486,
+  "u_union_blocks": false
  },
  {
   "q": "The city of Pritzker is home to which University?",
@@ -1732,8 +3823,25 @@
   "g_halluc": false,
   "u_halluc": true,
   "u_gate_blocks": false,
-  "u_xgate_blocks": true,
-  "lat": 0.8
+  "u_xgate_blocks": false,
+  "lat": 0.86,
+  "g_answer": "The context provided does not mention a city named Pritzker or any university associated with it. Therefore, I don't know [n].",
+  "u_answer": "The city of Pritzker is not explicitly mentioned in the provided context. However, the Pritzker School of Medicine is part of the University of Chicago. Therefore, if the question refers to the Pritzker School of Medicine, the university is the University of Chicago.",
+  "g_ctx_idx": [
+   13,
+   95,
+   40
+  ],
+  "u_ctx_idx": [
+   13,
+   95,
+   40
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9262509346008301,
+  "u_union_blocks": false
  },
  {
   "q": "What was considered responsible for the black death as well as the epidemic in southern China?",
@@ -1747,7 +3855,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.94
+  "lat": 1.0,
+  "g_answer": "The Black Death was considered responsible for the epidemic in southern China, as both were attributed to Yersinia pestis [1].",
+  "u_answer": "The Black Death and the epidemic in southern China were both considered responsible for the pathogen Yersinia pestis.",
+  "g_ctx_idx": [
+   5,
+   34,
+   22
+  ],
+  "u_ctx_idx": [
+   5,
+   34,
+   22
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9001502394676208,
+  "u_union_blocks": false
  },
  {
   "q": "Who created all of the nation's aviation communities?",
@@ -1761,7 +3886,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.94
+  "lat": 0.93,
+  "g_answer": "The context does not provide information indicating that one person created all of the nation's aviation communities. It only mentions that William Smilie created the nation's first planned aviation community [1]. Therefore, the answer is unknown.",
+  "u_answer": "Based on the information provided in the context, **William Smilie** created the nation's first planned aviation community. However, the context does not state that he created **all** of the nation's aviation communities, only that he created the first one. Therefore, the answer is:\n\n**William Smilie created the nation's first planned aviation community, but the context does not indicate that he created all of the nation's aviation communities.**",
+  "g_ctx_idx": [
+   28,
+   83,
+   43
+  ],
+  "u_ctx_idx": [
+   28,
+   83,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9813013076782227,
+  "u_union_blocks": false
  },
  {
   "q": "What county does the rapidly developing downtown Santa Ana include?",
@@ -1775,7 +3917,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.75
+  "lat": 0.75,
+  "g_answer": "The rapidly developing downtown Santa Ana is included in Orange County [1].",
+  "u_answer": "The rapidly developing downtown Santa Ana is included in Orange County.",
+  "g_ctx_idx": [
+   44,
+   45,
+   56
+  ],
+  "u_ctx_idx": [
+   44,
+   45,
+   56
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9791883826255798,
+  "u_union_blocks": false
  },
  {
   "q": "What health condition can deep sea diving cause?",
@@ -1789,7 +3948,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.77
+  "lat": 0.81,
+  "g_answer": "Deep sea diving can cause oxygen toxicity to the lungs and central nervous system [1].",
+  "u_answer": "Deep sea diving can cause **oxygen toxicity**, which can lead to **pulmonary fibrosis** and **convulsions**. Prolonged breathing of an air mixture with an oxygen partial pressure more than 60 kPa can result in permanent pulmonary fibrosis, while exposure to oxygen partial pressures greater than 160 kPa (about 1.6 atm) may lead to convulsions, which are particularly dangerous for divers.",
+  "g_ctx_idx": [
+   46,
+   50,
+   87
+  ],
+  "u_ctx_idx": [
+   46,
+   50,
+   87
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9595431089401245,
+  "u_union_blocks": false
  },
  {
   "q": "What is another notable university in Warsaw after the University of Warsaw?",
@@ -1803,7 +3979,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.0
+  "lat": 1.02,
+  "g_answer": "The context mentions that Warsaw possesses various universities, most notably the Polish Academy of Sciences and the University of Warsaw [3]. However, it does not provide information about another notable university in Warsaw after the University of Warsaw. Therefore, I do not know.",
+  "u_answer": "Another notable university in Warsaw after the University of Warsaw is the Polish Academy of Sciences.",
+  "g_ctx_idx": [
+   13,
+   43,
+   40
+  ],
+  "u_ctx_idx": [
+   13,
+   43,
+   40
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.2904897630214691,
+  "u_union_blocks": true
  },
  {
   "q": "Who did the Turks take up service with?",
@@ -1817,7 +4010,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.84
+  "lat": 0.85,
+  "g_answer": "The provided context does not mention anything about the Turks or their service relationships. Therefore, I don't know [n].",
+  "u_answer": "The provided context does not mention anything about the Turks or their service relationships. Therefore, based on the given information, the question cannot be answered.",
+  "g_ctx_idx": [
+   21,
+   63,
+   89
+  ],
+  "u_ctx_idx": [
+   21,
+   63,
+   89
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.7848336100578308,
+  "u_union_blocks": true
  },
  {
   "q": "What was the name of the Norman castle?",
@@ -1831,7 +4041,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.74
+  "lat": 0.75,
+  "g_answer": "The name of the Norman castle was Afranji [2].",
+  "u_answer": "The name of the Norman castle mentioned in the context is **Afranji**, which means \"Franks.\"",
+  "g_ctx_idx": [
+   43,
+   25,
+   22
+  ],
+  "u_ctx_idx": [
+   43,
+   25,
+   22
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9798052906990051,
+  "u_union_blocks": false
  },
  {
   "q": "Where were the Germanic tribes not originally located?",
@@ -1845,7 +4072,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.76
+  "lat": 0.76,
+  "g_answer": "The Germanic tribes were not originally located in southern Europe. [2]",
+  "u_answer": "The Germanic tribes were not originally located in southern Europe. They originated from Scandinavia and northern Europe, and later expanded into northern and western Europe during the middle period of classical antiquity. Their expansion continued into southern Europe in late antiquity, but they did not originate there.",
+  "g_ctx_idx": [
+   43,
+   12,
+   25
+  ],
+  "u_ctx_idx": [
+   43,
+   12,
+   25
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.4875905215740204,
+  "u_union_blocks": true
  },
  {
   "q": "Civil disobedience has been argued in more recent times to have suffered from what?",
@@ -1859,7 +4103,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.85
+  "lat": 0.87,
+  "g_answer": "Civil disobedience has been argued in more recent times to have suffered from ambiguity and become utterly debased [1].",
+  "u_answer": "Civil disobedience has been argued in more recent times to have suffered from **ambiguity and debasement**. This is highlighted in the context provided, where Marshall Cohen notes that the term has been used to describe a wide range of activities, from peaceful legal actions to more extreme and illegal acts, leading to its loss of clear meaning.",
+  "g_ctx_idx": [
+   23,
+   59,
+   22
+  ],
+  "u_ctx_idx": [
+   23,
+   59,
+   22
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9673155546188354,
+  "u_union_blocks": false
  },
  {
   "q": "During what time period did income inequality decrease in the United States?",
@@ -1873,7 +4134,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.84
+  "lat": 0.92,
+  "g_answer": "Income inequality in the United States decreased during the High school movement from 1910 to 1940 and thereafter [1].",
+  "u_answer": "Income inequality in the United States decreased during the period from 1910 to 1940, as mentioned in the context. This period is associated with the High School movement.",
+  "g_ctx_idx": [
+   1,
+   10,
+   59
+  ],
+  "u_ctx_idx": [
+   1,
+   10,
+   59
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9866632223129272,
+  "u_union_blocks": false
  },
  {
   "q": "Who included 1 as the first prime number in the mid 20th century?",
@@ -1887,7 +4165,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 1.27
+  "lat": 1.26,
+  "g_answer": "Based on the context provided, Derrick Norman Lehmer's list of primes up to 10,006,721, reprinted as late as 1956, started with 1 as its first prime [1]. Therefore, it can be inferred that Derrick Norman Lehmer included 1 as the first prime number in the mid-20th century.",
+  "u_answer": "Based on the context provided, no mathematician in the mid-20th century is specifically mentioned as including 1 as the first prime number. However, it is noted that **Henri Lebesgue** is said to be the last professional mathematician to call 1 a prime. This suggests that by the early 20th century, the mathematical community had largely moved away from considering 1 as a prime number. Therefore, no prominent mathematician in the mid-20th century is explicitly mentioned as including 1 as the first prime number.",
+  "g_ctx_idx": [
+   33,
+   6,
+   79
+  ],
+  "u_ctx_idx": [
+   33,
+   6,
+   79
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.6987131834030151,
+  "u_union_blocks": true
  },
  {
   "q": " When did the Jip dynasty begin?",
@@ -1901,7 +4196,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.77
+  "lat": 0.78,
+  "g_answer": "The context provided does not mention the Jip dynasty. Therefore, I don't know.",
+  "u_answer": "The Jip dynasty did not begin during the time periods discussed in the provided context. The context covers the Southern Song dynasty, the Yuan dynasty, and events related to Warsaw in the 16th century. There is no mention of the Jip dynasty in the given information. Therefore, based on the provided context, it is not possible to determine when the Jip dynasty began.",
+  "g_ctx_idx": [
+   34,
+   94,
+   30
+  ],
+  "u_ctx_idx": [
+   34,
+   94,
+   30
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.23756539821624756,
+  "u_union_blocks": true
  },
  {
   "q": "What nationality was Pierre L'Oyseleur?",
@@ -1914,8 +4226,25 @@
   "g_halluc": false,
   "u_halluc": true,
   "u_gate_blocks": false,
-  "u_xgate_blocks": true,
-  "lat": 0.83
+  "u_xgate_blocks": false,
+  "lat": 0.83,
+  "g_answer": "The context provided does not mention Pierre L'Oyseleur or his nationality. Therefore, I don't know.",
+  "u_answer": "The question about Pierre L'Oyseleur's nationality cannot be answered based on the provided context. There is no mention of Pierre L'Oyseleur in the given text.",
+  "g_ctx_idx": [
+   10,
+   61,
+   14
+  ],
+  "u_ctx_idx": [
+   10,
+   61,
+   14
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.05851666256785393,
+  "u_union_blocks": true
  },
  {
   "q": "What archdiocese is Warsaw the seat of?",
@@ -1929,7 +4258,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.75
+  "lat": 0.79,
+  "g_answer": "Warsaw is the seat of a Roman Catholic archdiocese [3].",
+  "u_answer": "Warsaw is the seat of a Roman Catholic archdiocese (left bank of the Vistula) and diocese (right bank).",
+  "g_ctx_idx": [
+   43,
+   13,
+   40
+  ],
+  "u_ctx_idx": [
+   43,
+   13,
+   40
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9698777198791504,
+  "u_union_blocks": false
  },
  {
   "q": "What makes the method of trial division more efficient?",
@@ -1943,7 +4289,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.79
+  "lat": 0.85,
+  "g_answer": "The context provided does not mention the method of trial division or its efficiency. Therefore, I don't know.",
+  "u_answer": "The context provided does not directly address the efficiency of the trial division method. However, based on general knowledge:\n\nThe method of trial division is more efficient when applied to smaller numbers or when the number being tested has small prime factors. It is relatively simple to implement and can be efficient for small numbers or when the factors are known to be small. However, it becomes significantly slower for large numbers, especially when the number is a product of two large primes. For such cases, more advanced algorithms like the Sieve of Eratosthenes, Pollard's rho algorithm, or the quadratic sieve are more efficient.",
+  "g_ctx_idx": [
+   64,
+   84,
+   7
+  ],
+  "u_ctx_idx": [
+   64,
+   84,
+   7
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.10358946770429611,
+  "u_union_blocks": true
  },
  {
   "q": "What garden was formally only for running?",
@@ -1955,9 +4318,26 @@
   "u_abstain": false,
   "g_halluc": false,
   "u_halluc": true,
-  "u_gate_blocks": true,
+  "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.74
+  "lat": 0.74,
+  "g_answer": "The question is not supported by the context provided. I don't know.",
+  "u_answer": "The question seems to be a trick question or a play on words. Based on the context provided, there is no mention of a \"garden\" that was formally only for running. However, if we consider the context of \"Operation Market Garden\" from paragraph [2], it might be a reference to the \"garden\" in the title of the operation, which is a misnomer.\n\n\"Operation Market Garden\" was a military operation during World War II, and the term \"garden\" in the name is not related to an actual garden or a place for running. It is a codename and not related to the literal meaning of \"garden.\"\n\nTherefore, there is no garden mentioned in the context that was formally only for running. The question might be a distractor or a misdirection.",
+  "g_ctx_idx": [
+   41,
+   78,
+   62
+  ],
+  "u_ctx_idx": [
+   41,
+   78,
+   62
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.5741826891899109,
+  "u_union_blocks": true
  },
  {
   "q": "What term don't Islamists think should be applied to them?",
@@ -1971,21 +4351,55 @@
   "u_halluc": false,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.92
+  "lat": 0.88,
+  "g_answer": "The context provided does not contain information about what term Islamists think should or should not be applied to them. Therefore, I don't know.",
+  "u_answer": "The provided context does not mention anything about Islamists or a term they do not want applied to them. Therefore, based on the given information, the question cannot be answered.",
+  "g_ctx_idx": [
+   21,
+   52,
+   89
+  ],
+  "u_ctx_idx": [
+   21,
+   52,
+   89
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8687388300895691,
+  "u_union_blocks": true
  },
  {
   "q": "What mechanism can be used to make oxygen?",
   "answerable": true,
   "recall": true,
-  "correct": false,
-  "correct_llm": false,
+  "correct": true,
+  "correct_llm": true,
   "g_abstain": false,
   "u_abstain": false,
-  "g_halluc": true,
+  "g_halluc": false,
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.73
+  "lat": 1.06,
+  "g_answer": "A mechanism that can be used to make oxygen is pressure swing adsorption, which involves passing a stream of clean, dry air through one bed of a pair of identical zeolite molecular sieves, which absorbs the nitrogen and delivers a gas stream that is 90% to 93% O2 [1].",
+  "u_answer": "A mechanism that can be used to make oxygen is **pressure swing adsorption (PSA)**. This method involves passing a stream of clean, dry air through a bed of zeolite molecular sieves, which absorbs nitrogen and delivers a gas stream rich in oxygen (90% to 93% O\u2082). Meanwhile, the other bed, which is saturated with nitrogen, is depressurized and part of the oxygen from the producer bed is diverted through it in the reverse direction, releasing the nitrogen. After a set cycle time, the operation of the two beds is interchanged to ensure a continuous supply of oxygen. This is a non-cryogenic technology used for oxygen production.",
+  "g_ctx_idx": [
+   18,
+   52,
+   91
+  ],
+  "u_ctx_idx": [
+   18,
+   52,
+   91
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9408185482025146,
+  "u_union_blocks": false
  },
  {
   "q": "In which year did the newspaper define southern California?",
@@ -1999,7 +4413,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.77
+  "lat": 0.78,
+  "g_answer": "The newspaper defined southern California in 1900 [3].",
+  "u_answer": "The newspaper defined southern California in 1900.",
+  "g_ctx_idx": [
+   30,
+   22,
+   45
+  ],
+  "u_ctx_idx": [
+   30,
+   22,
+   45
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9823350310325623,
+  "u_union_blocks": false
  },
  {
   "q": "What ethnic neighborhood in Fresno had primarily Japanese residents in 1940?",
@@ -2013,7 +4444,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.89
+  "lat": 0.86,
+  "g_answer": "The ethnic neighborhood in Fresno that had primarily Japanese residents in 1940 was Chinatown. [1]",
+  "u_answer": "The ethnic neighborhood in Fresno that had primarily Japanese residents in 1940 was Chinatown. However, it is noted that Chinatown was primarily a Japanese neighborhood, and Japanese-American businesses still remain there today.",
+  "g_ctx_idx": [
+   17,
+   2,
+   95
+  ],
+  "u_ctx_idx": [
+   17,
+   2,
+   95
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9244375824928284,
+  "u_union_blocks": false
  },
  {
   "q": "The process of growing more trees in the forest is known as what?",
@@ -2027,7 +4475,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.8
+  "lat": 0.78,
+  "g_answer": "The provided context does not mention the process of growing more trees in the forest. Therefore, I don't know [n].",
+  "u_answer": "The process of growing more trees in the forest is known as **afforestation**.",
+  "g_ctx_idx": [
+   65,
+   24,
+   47
+  ],
+  "u_ctx_idx": [
+   65,
+   24,
+   47
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.043621283024549484,
+  "u_union_blocks": true
  },
  {
   "q": "How much potential economic growth could the United States amass if everyone went through more schooling?",
@@ -2041,7 +4506,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.18
+  "lat": 1.17,
+  "g_answer": "If the average United States worker had completed just one more year of school, it would add an additional $105 billion in growth to the country's economy over five years [1]. However, the context does not provide specific information about the potential economic growth if everyone went through more schooling. Therefore, the exact amount of potential economic growth cannot be determined from the given context.",
+  "u_answer": "According to the information provided, if the average United States worker had completed just one more year of school, it would add an additional $105 billion in growth to the country's economy over five years. This suggests that increasing access to education can significantly boost potential economic growth. However, the exact amount of potential economic growth if everyone went through more schooling is not specified in the given context. The example provided illustrates the positive impact of additional education on economic growth, but the full extent of potential growth would depend on various factors, including the level of education, the population affected, and the specific economic conditions.",
+  "g_ctx_idx": [
+   10,
+   39,
+   66
+  ],
+  "u_ctx_idx": [
+   10,
+   39,
+   66
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9728348255157471,
+  "u_union_blocks": false
  },
  {
   "q": "In what year did Alexandre Yersin discover the Yersinia pestis?",
@@ -2055,7 +4537,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.81
+  "lat": 0.8,
+  "g_answer": "Alexandre Yersin discovered Yersinia pestis in 1894 [1].",
+  "u_answer": "Alexandre Yersin discovered Yersinia pestis in 1894.",
+  "g_ctx_idx": [
+   5,
+   73,
+   74
+  ],
+  "u_ctx_idx": [
+   5,
+   73,
+   74
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9763913750648499,
+  "u_union_blocks": true
  },
  {
   "q": "Who did Duke Yansheng Kong Duanyou flee with?",
@@ -2069,7 +4568,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.82
+  "lat": 0.81,
+  "g_answer": "Duke Yansheng Kong Duanyou fled with the Song Emperor [1].",
+  "u_answer": "Duke Yansheng Kong Duanyou fled with the Song Emperor during the Southern Song dynasty.",
+  "g_ctx_idx": [
+   34,
+   0,
+   57
+  ],
+  "u_ctx_idx": [
+   34,
+   0,
+   57
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9799365997314453,
+  "u_union_blocks": false
  },
  {
   "q": "What channels were always available on the network?",
@@ -2083,7 +4599,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.81
+  "lat": 0.83,
+  "g_answer": "The context does not specify which channels were always available on the network. Therefore, I don't know [n].",
+  "u_answer": "The channels that were always available on the network were the basic channels. These channels were removed by Virgin Media on 1 March 2007 due to the dispute with BSkyB over carriage agreements.",
+  "g_ctx_idx": [
+   9,
+   42,
+   67
+  ],
+  "u_ctx_idx": [
+   9,
+   42,
+   67
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.4213801324367523,
+  "u_union_blocks": true
  },
  {
   "q": "In what year did the Black Eagle Brewery change its name to Old Truman Brewery?",
@@ -2097,7 +4630,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 1.08
+  "lat": 1.13,
+  "g_answer": "The Black Eagle Brewery was founded in 1724 and is referred to as the Old Truman Brewery. There is no mention of a name change in the provided context [3]. Therefore, the year when the Black Eagle Brewery changed its name to Old Truman Brewery is not specified in the context.",
+  "u_answer": "The Black Eagle Brewery changed its name to Old Truman Brewery in 1724.",
+  "g_ctx_idx": [
+   42,
+   16,
+   38
+  ],
+  "u_ctx_idx": [
+   42,
+   16,
+   38
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9797347187995911,
+  "u_union_blocks": true
  },
  {
   "q": "Who was the leader when the Franks entered the Euphrates valley?",
@@ -2110,8 +4660,25 @@
   "g_halluc": false,
   "u_halluc": false,
   "u_gate_blocks": false,
-  "u_xgate_blocks": false,
-  "lat": 0.96
+  "u_xgate_blocks": true,
+  "lat": 0.89,
+  "g_answer": "The context provided does not mention the leader of the Franks when they entered the Euphrates valley. Therefore, I don't know.",
+  "u_answer": "The context provided does not mention the Franks entering the Euphrates valley or specify a leader associated with that event. Therefore, based on the given information, the question cannot be answered.",
+  "g_ctx_idx": [
+   22,
+   43,
+   78
+  ],
+  "u_ctx_idx": [
+   22,
+   43,
+   78
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9477121829986572,
+  "u_union_blocks": true
  },
  {
   "q": "What British mathematician took pride in doing work that he felt had no military benefit?",
@@ -2125,7 +4692,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.84
+  "lat": 0.85,
+  "g_answer": "The British mathematician who took pride in doing work that he felt had no military benefit is G. H. Hardy [1].",
+  "u_answer": "The British mathematician who took pride in doing work that he felt had no military benefit was G. H. Hardy.",
+  "g_ctx_idx": [
+   6,
+   11,
+   41
+  ],
+  "u_ctx_idx": [
+   6,
+   11,
+   41
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9847356081008911,
+  "u_union_blocks": false
  },
  {
   "q": "What is one type of public key cryptography algorithm?",
@@ -2139,7 +4723,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.77
+  "lat": 0.79,
+  "g_answer": "One type of public key cryptography algorithm is RSA [2].",
+  "u_answer": "One type of public key cryptography algorithm is RSA.",
+  "g_ctx_idx": [
+   52,
+   41,
+   3
+  ],
+  "u_ctx_idx": [
+   52,
+   41,
+   3
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9835915565490723,
+  "u_union_blocks": false
  },
  {
   "q": "What is an Islamic revival movement?",
@@ -2153,7 +4754,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.99
+  "lat": 0.99,
+  "g_answer": "An Islamic revival movement, also known as Islamism, is a movement that seeks to implement Islamic values in all spheres of life and reorders government and society according to the Shari'a. It is characterized by moral conservatism and literalism [1].",
+  "u_answer": "An Islamic revival movement, also known as Islamism or Political Islam, is a movement that seeks to promote and implement Islamic values across all aspects of life. It is characterized by moral conservatism, literalism, and a focus on reordering government and society according to the principles of Shari'a (Islamic law). These movements can adopt different strategies, ranging from revolutionary approaches to gradually Islamizing society from the bottom up. They have significantly influenced the Middle East, reshaping politics and even borders.",
+  "g_ctx_idx": [
+   4,
+   52,
+   91
+  ],
+  "u_ctx_idx": [
+   4,
+   52,
+   91
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9396451711654663,
+  "u_union_blocks": false
  },
  {
   "q": "What did the Vilnius formally establish in 1573?",
@@ -2167,7 +4785,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.86
+  "lat": 0.87,
+  "g_answer": "The context does not mention what Vilnius formally established in 1573. Therefore, I don't know [n].",
+  "u_answer": "The Vilnius formally established the Warsaw Confederation in 1573.",
+  "g_ctx_idx": [
+   30,
+   22,
+   38
+  ],
+  "u_ctx_idx": [
+   30,
+   22,
+   38
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9786992073059082,
+  "u_union_blocks": true
  },
  {
   "q": "What concept explains why objects continue in constant motion?",
@@ -2181,7 +4816,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.73
+  "lat": 0.72,
+  "g_answer": "The concept of inertia explains why objects continue in constant motion [1].",
+  "u_answer": "The concept that explains why objects continue in constant motion is **inertia**. Inertia is the tendency of an object to resist changes in its state of motion, meaning it will continue in its current state of motion\u2014whether at rest or moving at a constant velocity\u2014unless acted upon by an external force. This principle is a fundamental part of Newton's First Law of Motion.",
+  "g_ctx_idx": [
+   35,
+   4,
+   21
+  ],
+  "u_ctx_idx": [
+   35,
+   4,
+   21
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8879062533378601,
+  "u_union_blocks": false
  },
  {
   "q": "What standards did American cars create in the auto industry?",
@@ -2195,7 +4847,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.82
+  "lat": 0.86,
+  "g_answer": "The provided context does not mention anything about American cars or the standards they created in the auto industry. Therefore, I don't know.",
+  "u_answer": "The provided context does not mention anything about American cars or the standards they created in the auto industry. Therefore, based on the given information, the question cannot be answered.",
+  "g_ctx_idx": [
+   88,
+   13,
+   85
+  ],
+  "u_ctx_idx": [
+   88,
+   13,
+   85
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.7457583546638489,
+  "u_union_blocks": true
  },
  {
   "q": "What distinction does the Bank of America Tower hold?",
@@ -2209,7 +4878,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.84
+  "lat": 0.82,
+  "g_answer": "The provided context does not mention the Bank of America Tower or its distinctions. Therefore, I don't know [n].",
+  "u_answer": "The provided context does not mention the Bank of America Tower or its distinctions. Therefore, based on the given information, the distinction of the Bank of America Tower cannot be determined.",
+  "g_ctx_idx": [
+   13,
+   19,
+   43
+  ],
+  "u_ctx_idx": [
+   13,
+   19,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.7274375557899475,
+  "u_union_blocks": true
  },
  {
   "q": "What is another type of private key cryptography algorithm?",
@@ -2218,12 +4904,29 @@
   "correct": false,
   "correct_llm": false,
   "g_abstain": true,
-  "u_abstain": false,
+  "u_abstain": true,
   "g_halluc": false,
-  "u_halluc": true,
+  "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.83
+  "lat": 0.84,
+  "g_answer": "The provided context does not mention another type of private key cryptography algorithm. Therefore, I don't know.",
+  "u_answer": "The context provided primarily discusses public-key cryptography algorithms such as RSA and Diffie\u2013Hellman. It does not mention any private key (symmetric key) cryptography algorithms. However, a well-known example of a private key cryptography algorithm is the Data Encryption Standard (DES). Another example is the Advanced Encryption Standard (AES). These algorithms use the same key for both encryption and decryption, distinguishing them from public-key cryptography.",
+  "g_ctx_idx": [
+   41,
+   6,
+   3
+  ],
+  "u_ctx_idx": [
+   41,
+   6,
+   3
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.08314608037471771,
+  "u_union_blocks": true
  },
  {
   "q": "What was Tugh Temur known for?",
@@ -2237,7 +4940,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.1
+  "lat": 1.11,
+  "g_answer": "Tugh Temur was known for his cultural contributions, particularly his efforts to honor Confucianism and promote Chinese cultural values. He founded the Academy of the Pavilion of the Star of Literature to transmit Confucian high culture to the Mongolian imperial establishment and supported Zhu Xi's Neo-Confucianism [1].",
+  "u_answer": "Tugh Temur was known for his cultural contributions, particularly his efforts to honor Confucianism and promote Chinese cultural values. He founded the Academy of the Pavilion of the Star of Literature in 1329, which played a significant role in transmitting Confucian high culture to the Mongolian imperial establishment. Additionally, he supported Zhu Xi's Neo-Confucianism and devoted himself to Buddhism.",
+  "g_ctx_idx": [
+   48,
+   40,
+   10
+  ],
+  "u_ctx_idx": [
+   48,
+   40,
+   10
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9623850584030151,
+  "u_union_blocks": false
  },
  {
   "q": " What does a writer for the International Crisis Group think the concept of political Islam is not a creation of?",
@@ -2251,7 +4971,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.86
+  "lat": 0.86,
+  "g_answer": "A writer for the International Crisis Group thinks the concept of political Islam is not a creation of Americans [1].",
+  "u_answer": "A writer for the International Crisis Group thinks the concept of \"political Islam\" is not a creation of Americans. Instead, the writer suggests that the idea of apolitical Islam was a historical fluke during the short-lived era of secular Arab nationalism between 1945 and 1970.",
+  "g_ctx_idx": [
+   19,
+   32,
+   43
+  ],
+  "u_ctx_idx": [
+   19,
+   32,
+   43
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.05680375546216965,
+  "u_union_blocks": true
  },
  {
   "q": "Which newspaper defined southern California?",
@@ -2265,7 +5002,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.8
+  "lat": 0.84,
+  "g_answer": "The context provided does not mention any newspaper defining southern California. Therefore, I don't know.",
+  "u_answer": "The provided context does not mention any newspaper that defined southern California. Therefore, based on the given information, the answer is: **Not mentioned in the context.**",
+  "g_ctx_idx": [
+   84,
+   88,
+   43
+  ],
+  "u_ctx_idx": [
+   84,
+   88,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.47906577587127686,
+  "u_union_blocks": true
  },
  {
   "q": "What else were families with incomes below $38,000 not required to pay for in 2009?",
@@ -2277,9 +5031,26 @@
   "u_abstain": false,
   "g_halluc": true,
   "u_halluc": true,
-  "u_gate_blocks": false,
-  "u_xgate_blocks": false,
-  "lat": 1.11
+  "u_gate_blocks": true,
+  "u_xgate_blocks": true,
+  "lat": 1.13,
+  "g_answer": "Families with incomes below $60,000 pay nothing for their children to attend, including room and board [1]. Therefore, families with incomes below $38,000 were not required to pay for room and board in 2009.",
+  "u_answer": "Based on the information provided, families with incomes below $60,000 were not required to pay anything for their children to attend, including **room and board**. Therefore, families with incomes below $38,000 were also not required to pay for **room and board** in 2009.",
+  "g_ctx_idx": [
+   11,
+   14,
+   10
+  ],
+  "u_ctx_idx": [
+   11,
+   14,
+   10
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.23681879043579102,
+  "u_union_blocks": true
  },
  {
   "q": "What is never involved in a review of prescribed medications?",
@@ -2293,7 +5064,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.81
+  "lat": 0.82,
+  "g_answer": "The provided context does not contain information related to the review of prescribed medications. Therefore, I do not know.",
+  "u_answer": "The question \"What is never involved in a review of prescribed medications?\" is unrelated to the provided context. The context discusses topics such as the Intergovernmental Panel on Climate Change (IPCC), decision problems in computational complexity theory, and political ideologies related to Islam. None of these topics are related to the review of prescribed medications.\n\nIf you have a specific context or additional information related to medication reviews, please provide it so I can give a more accurate answer.",
+  "g_ctx_idx": [
+   8,
+   52,
+   19
+  ],
+  "u_ctx_idx": [
+   8,
+   52,
+   19
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.03284585103392601,
+  "u_union_blocks": true
  },
  {
   "q": "What garden was formally only for royalty?",
@@ -2307,7 +5095,24 @@
   "u_halluc": false,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.74
+  "lat": 0.73,
+  "g_answer": "The Saxon Garden was formally a royal garden [1].",
+  "u_answer": "The Saxon Garden was formally only for royalty.",
+  "g_ctx_idx": [
+   26,
+   40,
+   78
+  ],
+  "u_ctx_idx": [
+   26,
+   40,
+   78
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9851454496383667,
+  "u_union_blocks": true
  },
  {
   "q": "What is Sigilium's symbol?",
@@ -2321,7 +5126,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.87
+  "lat": 0.91,
+  "g_answer": "The symbol of Sigilium is the mermaid (syrenka), which is also Warsaw's symbol and can be found on statues throughout the city and on the city's coat of arms [1].",
+  "u_answer": "The symbol of Sigilium, as mentioned in the context, is the mermaid (syrenka), which is also the symbol of Warsaw. This imagery has been used since at least the mid-14th century and appears on statues, the city's coat of arms, and in historical records.",
+  "g_ctx_idx": [
+   20,
+   10,
+   14
+  ],
+  "u_ctx_idx": [
+   20,
+   4,
+   21
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.32673776149749756,
+  "u_union_blocks": true
  },
  {
   "q": "How many Huguenots were part of the group that founded France Antarctique in 1555?",
@@ -2335,7 +5157,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.93
+  "lat": 0.95,
+  "g_answer": "Around 500 people were part of the group that founded France Antarctique in 1555 [1].",
+  "u_answer": "According to the context provided, a group of Huguenots was part of the French colonizers who arrived in Brazil in 1555 to found France Antarctique. The text mentions that \"a couple of ships with around 500 people arrived at the Guanabara Bay.\" Therefore, approximately 500 Huguenots were part of the group that founded France Antarctique in 1555.",
+  "g_ctx_idx": [
+   0,
+   22,
+   30
+  ],
+  "u_ctx_idx": [
+   0,
+   22,
+   30
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.968877375125885,
+  "u_union_blocks": false
  },
  {
   "q": "What commemorates Warsaw's heroic history?",
@@ -2349,7 +5188,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.49
+  "lat": 1.47,
+  "g_answer": "Places that commemorate Warsaw's heroic history include Pawiak, which is now a Mausoleum of Memory of Martyrdom and a museum [1]. The Warsaw Citadel, an impressive 19th-century fortification, was a place of martyrdom for the Poles [1]. The statue of Little Insurgent located at the ramparts of the Old Town commemorates the children who served as messengers and frontline troops in the Warsaw Uprising [1]. The impressive Warsaw Uprising Monument by Wincenty Ku\u0107ma was erected in memory of the largest insurrection of World War II [1].",
+  "u_answer": "Warsaw's heroic history is commemorated through various places and monuments, including:\n\n1. **Pawiak** - A former German Gestapo prison, now a Mausoleum of Memory of Martyrdom and museum.\n2. **The Warsaw Citadel** - A 19th-century fortification that served as a place of martyrdom for the Poles.\n3. **The statue of Little Insurgent** - Located at the ramparts of the Old Town, it commemorates children who served as messengers and frontline troops during the Warsaw Uprising.\n4. **The Warsaw Uprising Monument** by Wincenty Ku\u0107ma - Erected in memory of the largest insurrection of World War II.",
+  "g_ctx_idx": [
+   43,
+   20,
+   10
+  ],
+  "u_ctx_idx": [
+   43,
+   20,
+   10
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9330252408981323,
+  "u_union_blocks": false
  },
  {
   "q": "What is one type of private key cryptography algorithm?",
@@ -2363,7 +5219,24 @@
   "u_halluc": false,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.78
+  "lat": 0.8,
+  "g_answer": "The context provided does not mention any type of private key cryptography algorithm. Therefore, I don't know [n].",
+  "u_answer": "The question asks for one type of private key cryptography algorithm, but the provided context primarily discusses public-key cryptography algorithms such as RSA and Diffie\u2013Hellman key exchange. Private key cryptography, also known as symmetric key cryptography, involves using the same key for both encryption and decryption. Examples of private key cryptography algorithms include:\n\n- **AES (Advanced Encryption Standard)**\n- **DES (Data Encryption Standard)**\n- **3DES (Triple DES)**\n- **Blowfish**\n- **RC4**\n\nSince the context does not mention any private key algorithms, the answer is not directly provided in the given text. However, based on general knowledge, **AES** is a widely used example of a private key cryptography algorithm.",
+  "g_ctx_idx": [
+   41,
+   52,
+   6
+  ],
+  "u_ctx_idx": [
+   41,
+   52,
+   6
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.10029753297567368,
+  "u_union_blocks": true
  },
  {
   "q": " What academy did Tugh Temur destroy?",
@@ -2372,12 +5245,29 @@
   "correct": false,
   "correct_llm": false,
   "g_abstain": true,
-  "u_abstain": false,
+  "u_abstain": true,
   "g_halluc": false,
-  "u_halluc": true,
+  "u_halluc": false,
   "u_gate_blocks": false,
-  "u_xgate_blocks": false,
-  "lat": 0.77
+  "u_xgate_blocks": true,
+  "lat": 0.78,
+  "g_answer": "The context does not mention any academy that Tugh Tem\u00fcr destroyed. [1]",
+  "u_answer": "The question contains an error. Tugh Tem\u00fcr (also known as Tugh Tem\u00fcr or Tugh Tem\u00fcr) did not destroy an academy. Instead, he founded the Academy of the Pavilion of the Star of Literature (Chinese: \u594e\u7ae0\u95a3\u5b78\u58eb\u9662) in 1329. This academy was established to promote Confucian learning and culture, and it is not mentioned in the provided context that Tugh Tem\u00fcr destroyed any academy. Therefore, the correct answer is that Tugh Tem\u00fcr did not destroy an academy; he founded one.",
+  "g_ctx_idx": [
+   48,
+   10,
+   57
+  ],
+  "u_ctx_idx": [
+   48,
+   9,
+   59
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9753965139389038,
+  "u_union_blocks": true
  },
  {
   "q": "Where are international corporations headquartered?",
@@ -2391,7 +5281,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.76
+  "lat": 0.78,
+  "g_answer": "International corporations are headquartered at the University of California, Irvine [1].",
+  "u_answer": "International corporations are headquartered at the University of California, Irvine, as mentioned in the context.",
+  "g_ctx_idx": [
+   44,
+   43,
+   13
+  ],
+  "u_ctx_idx": [
+   44,
+   43,
+   13
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9740991592407227,
+  "u_union_blocks": false
  },
  {
   "q": "When was the deportation of Acadians?",
@@ -2405,7 +5312,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.78
+  "lat": 0.8,
+  "g_answer": "The deportation of Acadians began in 1755 [3].",
+  "u_answer": "The deportation of Acadians began in 1755.",
+  "g_ctx_idx": [
+   31,
+   22,
+   16
+  ],
+  "u_ctx_idx": [
+   31,
+   22,
+   16
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9899082183837891,
+  "u_union_blocks": false
  },
  {
   "q": "What kind of university is the University of Chicago?",
@@ -2419,7 +5343,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.35
+  "lat": 1.37,
+  "g_answer": "The University of Chicago is a private research university in Chicago, established in 1890. It consists of The College, various graduate programs, interdisciplinary committees organized into four academic research divisions and seven professional schools. It is well known for its professional schools, which include the Pritzker School of Medicine, the University of Chicago Booth School of Business, the Law School, the School of Social Service Administration, the Harris School of Public Policy Studies, the Graham School of Continuing Liberal and Professional Studies, and the Divinity School [1].",
+  "u_answer": "The University of Chicago is a private research university. It is known for its strong emphasis on academic research and its various professional schools, such as the Pritzker School of Medicine, the Booth School of Business, and the Law School. The university offers programs in the arts and sciences, as well as interdisciplinary studies, and is organized into four academic research divisions and seven professional schools.",
+  "g_ctx_idx": [
+   13,
+   40,
+   19
+  ],
+  "u_ctx_idx": [
+   13,
+   40,
+   19
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8327561020851135,
+  "u_union_blocks": false
  },
  {
   "q": "Building a 617 m tall?",
@@ -2433,7 +5374,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 1.19
+  "lat": 1.2,
+  "g_answer": "The Bank of America Tower in Downtown Jacksonville has a height of 617 ft (188 m) [1]. However, the question asks about a building that is 617 m tall, which is significantly taller. The context does not provide information about any building that is 617 m tall. Therefore, based on the given context, I do not know [n].",
+  "u_answer": "The Bank of America Tower in Downtown Jacksonville is 617 feet (188 meters) tall. Therefore, building a 617-meter-tall structure would be significantly taller than the Bank of America Tower. For reference, 617 meters is approximately 2,024 feet, which is much taller than the current tallest building in Jacksonville.",
+  "g_ctx_idx": [
+   2,
+   84,
+   43
+  ],
+  "u_ctx_idx": [
+   2,
+   84,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.37091895937919617,
+  "u_union_blocks": true
  },
  {
   "q": "What year did BSkyB and Virgin Media have a dispute over the carriage of Sky Channels on cable TV?",
@@ -2447,7 +5405,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.89
+  "lat": 0.97,
+  "g_answer": "BSkyB and Virgin Media had a dispute over the carriage of Sky channels on cable TV in 2007 [1].",
+  "u_answer": "BSkyB and Virgin Media had a dispute over the carriage of Sky channels on cable TV in the year **2007**.",
+  "g_ctx_idx": [
+   9,
+   42,
+   15
+  ],
+  "u_ctx_idx": [
+   9,
+   42,
+   15
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.985142171382904,
+  "u_union_blocks": false
  },
  {
   "q": "When was the French version of the word Norman first recorded?",
@@ -2461,7 +5436,24 @@
   "u_halluc": false,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 1.0
+  "lat": 0.88,
+  "g_answer": "The context provided does not mention when the French version of the word \"Norman\" was first recorded. Therefore, I don't know.",
+  "u_answer": "The context provided does not mention when the French version of the word \"Norman\" was first recorded. Therefore, based on the given information, the answer is that it is not specified.",
+  "g_ctx_idx": [
+   0,
+   30,
+   22
+  ],
+  "u_ctx_idx": [
+   0,
+   30,
+   22
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.6027586460113525,
+  "u_union_blocks": true
  },
  {
   "q": "What had Vice President Agnew always suffered from? ",
@@ -2475,7 +5467,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 1.11
+  "lat": 0.82,
+  "g_answer": "Vice President Agnew had always suffered from the ambiguity of the term \"civil disobedience\" [3].",
+  "u_answer": "Vice President Agnew had always suffered from the ambiguity of the term \"civil disobedience,\" which, according to Marshall Cohen, had become \"utterly debased\" in modern times.",
+  "g_ctx_idx": [
+   27,
+   21,
+   23
+  ],
+  "u_ctx_idx": [
+   27,
+   21,
+   23
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.1696452647447586,
+  "u_union_blocks": true
  },
  {
   "q": "The Bank of America Tower was previously known as what?",
@@ -2489,7 +5498,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.85
+  "lat": 0.81,
+  "g_answer": "The provided context does not mention the Bank of America Tower or its previous name. Therefore, I don't know [n].",
+  "u_answer": "The Bank of America Tower was previously known as the **Chicago Board of Trade Building**.",
+  "g_ctx_idx": [
+   43,
+   13,
+   22
+  ],
+  "u_ctx_idx": [
+   43,
+   13,
+   22
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.02362755872309208,
+  "u_union_blocks": true
  },
  {
   "q": "Nearly 7,000 students are enrolled where?",
@@ -2501,9 +5527,26 @@
   "u_abstain": false,
   "g_halluc": true,
   "u_halluc": true,
-  "u_gate_blocks": true,
+  "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 1.01
+  "lat": 1.0,
+  "g_answer": "The University of Chicago enrolls approximately 5,000 students in The College and around 15,000 students overall [3]. Therefore, nearly 7,000 students are enrolled at the University of Chicago.",
+  "u_answer": "The statement \"Nearly 7,000 students are enrolled where?\" refers to the University of Chicago (UChicago). According to the context, the University of Chicago enrolls approximately 5,000 students in The College and around 15,000 students overall. While the exact number of students enrolled in total is around 15,000, the context does not specify that nearly 7,000 students are enrolled in a specific part of the university. However, based on the information provided, the closest reference is to The College, which has approximately 5,000 students. Therefore, the answer is the University of Chicago.",
+  "g_ctx_idx": [
+   11,
+   89,
+   13
+  ],
+  "u_ctx_idx": [
+   11,
+   89,
+   13
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.905673623085022,
+  "u_union_blocks": true
  },
  {
   "q": "Who did the Dutch fight in the Dutch Revolt?",
@@ -2517,7 +5560,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.75
+  "lat": 0.8,
+  "g_answer": "The Dutch fought against Spanish (Catholic) rule during the Dutch Revolt [1].",
+  "u_answer": "In the Dutch Revolt (1568\u20131609), the Dutch fought against Spanish rule. The revolt was part of a larger conflict between the Spanish Habsburgs, who ruled the Spanish Netherlands, and the Dutch provinces seeking independence. The Dutch Republic, led by the House of Orange-Nassau, resisted Spanish Catholic rule, which was supported by the Spanish crown. The conflict eventually led to the establishment of the Dutch Republic as an independent state.",
+  "g_ctx_idx": [
+   22,
+   25,
+   78
+  ],
+  "u_ctx_idx": [
+   22,
+   25,
+   78
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.08463975042104721,
+  "u_union_blocks": true
  },
  {
   "q": "When did the middle school education movement occur?",
@@ -2531,7 +5591,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.81
+  "lat": 0.82,
+  "g_answer": "The context provided does not mention when the middle school education movement occurred. Therefore, I don't know [n].",
+  "u_answer": "The context provided does not mention a \"middle school education movement.\" It refers to a \"mass high school education movement from 1910\u20131940.\" Therefore, based on the given information, the middle school education movement is not specified, and its occurrence cannot be determined from the provided context.",
+  "g_ctx_idx": [
+   39,
+   13,
+   10
+  ],
+  "u_ctx_idx": [
+   39,
+   13,
+   10
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8670740723609924,
+  "u_union_blocks": true
  },
  {
   "q": "What early Huguenot Church was established in England?",
@@ -2545,7 +5622,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.84
+  "lat": 0.82,
+  "g_answer": "The context provided does not mention any early Huguenot Church established in England. Therefore, I don't know [n].",
+  "u_answer": "The question contains a misunderstanding. The context provided does not mention any early Huguenot Church established in England. Instead, it discusses the Huguenots' connections with the Dutch Republic, including the Prinsenhof in Delft, which is one of the 14 active Walloon churches of the Dutch Reformed Church. There is no specific mention of a Huguenot church in England in the given context.",
+  "g_ctx_idx": [
+   22,
+   14,
+   25
+  ],
+  "u_ctx_idx": [
+   22,
+   14,
+   25
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9749712944030762,
+  "u_union_blocks": false
  },
  {
   "q": "What was Warsaw's Market Square listed as in 1980?",
@@ -2559,7 +5653,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.05
+  "lat": 1.05,
+  "g_answer": "Warsaw's Market Square was listed as part of the historic city-centre of Warsaw, which was designated a UNESCO World Heritage Site in 1980 [1]. The specific status of Market Square itself is not mentioned in the context provided.",
+  "u_answer": "Warsaw's Market Square was listed as part of the historic city-centre of Warsaw, which was designated a UNESCO World Heritage Site in 1980.",
+  "g_ctx_idx": [
+   40,
+   10,
+   17
+  ],
+  "u_ctx_idx": [
+   40,
+   10,
+   17
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9677779078483582,
+  "u_union_blocks": false
  },
  {
   "q": "What British mathematician took pride in doing work that he felt had no mathematical benefit?",
@@ -2573,7 +5684,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.87
+  "lat": 0.87,
+  "g_answer": "The British mathematician who took pride in doing work that he felt had no military significance is G. H. Hardy [1].",
+  "u_answer": "The British mathematician who took pride in doing work that he felt had no military significance was G. H. Hardy.",
+  "g_ctx_idx": [
+   6,
+   39,
+   33
+  ],
+  "u_ctx_idx": [
+   6,
+   39,
+   33
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9832163453102112,
+  "u_union_blocks": false
  },
  {
   "q": "When was the French colony in modern day Brazil founded?",
@@ -2587,7 +5715,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.79
+  "lat": 0.83,
+  "g_answer": "The French colony in modern day Brazil was founded in 1555 [2].",
+  "u_answer": "The French colony in modern-day Brazil, known as France Antarctique, was founded in 1555.",
+  "g_ctx_idx": [
+   22,
+   0,
+   38
+  ],
+  "u_ctx_idx": [
+   22,
+   0,
+   38
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9875971674919128,
+  "u_union_blocks": false
  },
  {
   "q": "When did BSkyB announce it's intention to improve it's free-to-air digital channels?",
@@ -2601,7 +5746,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.93
+  "lat": 0.92,
+  "g_answer": "BSkyB announced its intention to replace its three free-to-air digital terrestrial channels with four subscription channels on 8 February 2007 [1].",
+  "u_answer": "BSkyB announced its intention to replace its three free-to-air digital terrestrial channels with four subscription channels on **8 February 2007**.",
+  "g_ctx_idx": [
+   42,
+   14,
+   16
+  ],
+  "u_ctx_idx": [
+   42,
+   14,
+   16
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.988006055355072,
+  "u_union_blocks": false
  },
  {
   "q": "How many French colonists weren't gained by British?",
@@ -2615,7 +5777,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.88
+  "lat": 0.87,
+  "g_answer": "The context does not provide specific numbers regarding how many French colonists weren't gained by the British. Therefore, I don't know [n].",
+  "u_answer": "Based on the context provided, the British gained control of French Canada and Acadia, which contained approximately 80,000 primarily French-speaking Roman Catholic residents. However, the deportation of Acadians began in 1755, and many Acadians were resettled elsewhere, while some migrated to places like New Orleans, Saint-Domingue, and even France. The context does not provide an exact number of French colonists who were not gained by the British, but it does indicate that a significant number of Acadians were not retained in the British-controlled territories and instead migrated elsewhere.\n\nTherefore, the exact number of French colonists not gained by the British is not specified in the context. However, it is clear that a large portion of the original 80,000 residents were not retained in the British-controlled areas.",
+  "g_ctx_idx": [
+   16,
+   93,
+   57
+  ],
+  "u_ctx_idx": [
+   16,
+   93,
+   57
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9366088509559631,
+  "u_union_blocks": false
  },
  {
   "q": "In what year did Huguenot refugees first start to move to London?",
@@ -2629,7 +5808,24 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 1.12
+  "lat": 1.14,
+  "g_answer": "The context does not specify the exact year when Huguenot refugees first started to move to London. However, it mentions that the French Protestant Church of London was established by Royal Charter in 1550, which might suggest that Huguenot refugees were already present in London by that time. [1]",
+  "u_answer": "The Huguenot refugees first started to move to London in **1550**, as the French Protestant Church of London was established by Royal Charter in that year. This indicates the beginning of their migration to the area.",
+  "g_ctx_idx": [
+   38,
+   14,
+   0
+  ],
+  "u_ctx_idx": [
+   38,
+   14,
+   0
+  ],
+  "u_cot_gate_blocks": true,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9450675845146179,
+  "u_union_blocks": true
  },
  {
   "q": "When did the Sierra Sky Park fall out of use?",
@@ -2643,7 +5839,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.76
+  "lat": 0.83,
+  "g_answer": "The context provided does not mention when Sierra Sky Park fell out of use. Therefore, I don't know [n].",
+  "u_answer": "The context provided does not mention when Sierra Sky Park Airport fell out of use. It only states that the airport is \"still in operation today.\" Therefore, based on the given information, there is no indication that Sierra Sky Park has fallen out of use.",
+  "g_ctx_idx": [
+   15,
+   28,
+   17
+  ],
+  "u_ctx_idx": [
+   15,
+   28,
+   17
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9511311650276184,
+  "u_union_blocks": false
  },
  {
   "q": "What is the total cost of attendance in 2012-13?",
@@ -2657,7 +5870,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.9
+  "lat": 0.89,
+  "g_answer": "The total cost of attendance for the 2012\u201313 school year was $57,000 [1].",
+  "u_answer": "The total cost of attendance for the 2012\u201313 school year is $57,000.",
+  "g_ctx_idx": [
+   11,
+   13,
+   51
+  ],
+  "u_ctx_idx": [
+   11,
+   13,
+   51
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9496548175811768,
+  "u_union_blocks": false
  },
  {
   "q": "What was the government the final judge of?",
@@ -2671,7 +5901,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.95
+  "lat": 0.99,
+  "g_answer": "The government was not the final judge of right and wrong according to Thoreau's political philosophy. Instead, Thoreau argued that the individual is the final judge of right and wrong [2].",
+  "u_answer": "The government was not the final judge of right and wrong, according to Thoreau's political philosophy. Instead, the individual is the final judge of right and wrong. Thoreau argued that individuals, not the government, have the responsibility to act according to their conscience and to resist unjust actions by the government.",
+  "g_ctx_idx": [
+   59,
+   32,
+   88
+  ],
+  "u_ctx_idx": [
+   59,
+   32,
+   88
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9564140439033508,
+  "u_union_blocks": false
  },
  {
   "q": "What had happened to Vice President Agnew's status in modern times?",
@@ -2685,7 +5932,24 @@
   "u_halluc": true,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.85
+  "lat": 0.87,
+  "g_answer": "The context provided does not mention Vice President Agnew or his status in modern times. Therefore, I don't know.",
+  "u_answer": "The question about Vice President Agnew's status in modern times is unrelated to the provided context. The context discusses topics such as the definition of Southern California, the University of Chicago, and historical monuments in Warsaw. There is no mention of Vice President Agnew or any information related to his status. Therefore, based on the given context, the question cannot be answered.",
+  "g_ctx_idx": [
+   45,
+   13,
+   43
+  ],
+  "u_ctx_idx": [
+   45,
+   13,
+   43
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.13457877933979034,
+  "u_union_blocks": true
  },
  {
   "q": " What aspects of life does Islamism not seek to integrate itself into?",
@@ -2699,7 +5963,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.81
+  "lat": 0.88,
+  "g_answer": "The context does not provide information about aspects of life that Islamism does not seek to integrate itself into. Therefore, I don't know [n].",
+  "u_answer": "Based on the context provided, Islamism is described as seeking to integrate into various aspects of life, including legal, social, political, and economic spheres. The text does not explicitly state that Islamism avoids integrating into any particular aspect of life. Instead, it highlights the debate over whether those who seek to live by Islamic principles in these spheres are considered \"Islamists\" rather than simply \"Muslims.\" \n\nTherefore, the context does not provide information about aspects of life that Islamism does **not** seek to integrate into.",
+  "g_ctx_idx": [
+   19,
+   43,
+   12
+  ],
+  "u_ctx_idx": [
+   19,
+   43,
+   12
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9714136123657227,
+  "u_union_blocks": false
  },
  {
   "q": "When did the Germanic tribes claim territory in north and west Europe?",
@@ -2713,7 +5994,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.84
+  "lat": 0.86,
+  "g_answer": "The Germanic tribes expanded throughout northern and western Europe in the middle period of classical antiquity [1].",
+  "u_answer": "The Germanic tribes claimed territory in northern and western Europe during the middle period of classical antiquity.",
+  "g_ctx_idx": [
+   12,
+   25,
+   90
+  ],
+  "u_ctx_idx": [
+   12,
+   25,
+   90
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9864773750305176,
+  "u_union_blocks": false
  },
  {
   "q": "Acessing the Amazon rainforest was restricted before what era?",
@@ -2727,7 +6025,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.97
+  "lat": 0.97,
+  "g_answer": "Prior to the early 1960s, access to the forest's interior was highly restricted [1]. Therefore, accessing the Amazon rainforest was restricted before the early 1960s.",
+  "u_answer": "Access to the Amazon rainforest was restricted before the early 1960s.",
+  "g_ctx_idx": [
+   37,
+   73,
+   59
+  ],
+  "u_ctx_idx": [
+   37,
+   73,
+   59
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9698569774627686,
+  "u_union_blocks": false
  },
  {
   "q": "When was the charter for this church signed?",
@@ -2741,7 +6056,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 0.82
+  "lat": 0.94,
+  "g_answer": "The context provided does not mention when the charter for the church was signed. Therefore, I don't know.",
+  "u_answer": "The question cannot be answered based on the provided context. The text does not mention the signing of a charter for a specific church.",
+  "g_ctx_idx": [
+   30,
+   22,
+   59
+  ],
+  "u_ctx_idx": [
+   30,
+   22,
+   59
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.8555786609649658,
+  "u_union_blocks": true
  },
  {
   "q": "Where were the Germanic tribes originally located?",
@@ -2755,7 +6087,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 0.73
+  "lat": 0.76,
+  "g_answer": "The Germanic tribes were originally located in Scandinavia and northern Europe [2].",
+  "u_answer": "The Germanic tribes were originally located in Scandinavia and northern Europe.",
+  "g_ctx_idx": [
+   43,
+   12,
+   25
+  ],
+  "u_ctx_idx": [
+   43,
+   12,
+   25
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9872581362724304,
+  "u_union_blocks": false
  },
  {
   "q": "What is the most elemental way to test the primality of any integer n?",
@@ -2769,7 +6118,24 @@
   "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": false,
-  "lat": 1.17
+  "lat": 1.26,
+  "g_answer": "The most elemental way to test the primality of any integer n is called trial division. This method involves dividing n by each integer m that is greater than 1 and less than or equal to the square root of n. If the result of any of these divisions is an integer, then n is not a prime; otherwise, it is a prime [1].",
+  "u_answer": "The most elemental way to test the primality of any integer $ n $ is called **trial division**. This method involves dividing $ n $ by each integer $ m $ that is greater than 1 and less than or equal to the square root of $ n $. If any of these divisions result in an integer, then $ n $ is not a prime; otherwise, it is a prime.",
+  "g_ctx_idx": [
+   3,
+   52,
+   7
+  ],
+  "u_ctx_idx": [
+   3,
+   52,
+   7
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": true,
+  "u_minicheck_blocks": false,
+  "u_minicheck_prob": 0.9501141309738159,
+  "u_union_blocks": false
  },
  {
   "q": "What is one of the least important open questions in theoretical computer science?",
@@ -2778,12 +6144,29 @@
   "correct": false,
   "correct_llm": false,
   "g_abstain": true,
-  "u_abstain": false,
+  "u_abstain": true,
   "g_halluc": false,
-  "u_halluc": true,
+  "u_halluc": false,
   "u_gate_blocks": false,
   "u_xgate_blocks": true,
-  "lat": 1.01
+  "lat": 1.02,
+  "g_answer": "The context provided does not mention any open questions in theoretical computer science other than the P versus NP problem. Therefore, it is not possible to determine what one of the least important open questions in theoretical computer science is based on the given information.",
+  "u_answer": "The question of whether P equals NP is described as one of the most important open questions in theoretical computer science. However, the question about **what is one of the least important open questions** is not directly addressed in the provided context. The passage focuses on the significance of the P versus NP problem and does not provide information about less important open questions. Therefore, based on the given context, it is not possible to determine what is considered one of the least important open questions in theoretical computer science.",
+  "g_ctx_idx": [
+   7,
+   52,
+   36
+  ],
+  "u_ctx_idx": [
+   7,
+   52,
+   36
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.4705091118812561,
+  "u_union_blocks": true
  },
  {
   "q": "How small was the audience BSkyB said they couldn't reach?",
@@ -2797,6 +6180,23 @@
   "u_halluc": true,
   "u_gate_blocks": true,
   "u_xgate_blocks": true,
-  "lat": 0.84
+  "lat": 0.87,
+  "g_answer": "The context does not provide information about the size of the audience BSkyB said they couldn't reach. Therefore, I don't know [n].",
+  "u_answer": "The question is asking about the size of the audience that BSkyB said they couldn't reach. However, based on the provided context, there is no direct mention of a specific audience size that BSkyB claimed they couldn't reach. Instead, the context discusses the number of households that BSkyB's service reached (10 million homes in 2010), the percentage of UK households (36%), and the total audience of more than 25 million people.\n\nIf the question is interpreted as asking about the portion of the audience that was not reached, then the context implies that BSkyB reached 36% of UK households, which means they could not reach the remaining 64% of households. However, the exact number of people in that 64% is not specified in the text.",
+  "g_ctx_idx": [
+   14,
+   9,
+   42
+  ],
+  "u_ctx_idx": [
+   14,
+   9,
+   42
+  ],
+  "u_cot_gate_blocks": false,
+  "u_cot_xgate_blocks": false,
+  "u_minicheck_blocks": true,
+  "u_minicheck_prob": 0.252696692943573,
+  "u_union_blocks": true
  }
 ]

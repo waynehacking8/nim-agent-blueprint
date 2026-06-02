@@ -156,7 +156,12 @@ def main():
             "g_abstain": g["abstained"], "u_abstain": u["abstained"],
             "g_halluc": is_hallucination(ex, g), "u_halluc": is_hallucination(ex, u),
             "u_gate_blocks": (not u["grounded"]), "u_xgate_blocks": x_blocks,
-            "lat": round(g["latency_total"], 2)})
+            "lat": round(g["latency_total"], 2),
+            # Raw text + retrieval indices so judge variants (CoT, MiniCheck, semantic
+            # entropy, judge panels) can re-score the SAME answers offline without
+            # re-running generation (roadmap Phase 5).
+            "g_answer": g["answer"], "u_answer": u["answer"],
+            "g_ctx_idx": g["retrieved_idx"], "u_ctx_idx": u["retrieved_idx"]})
         if (i + 1) % 20 == 0 or i + 1 == len(data):
             print(f"  .. {i + 1}/{len(data)} questions", flush=True)
 

@@ -55,17 +55,29 @@ def embed(texts, model=None):
     return [d["embedding"] for d in r.json()["data"]]
 
 def rerank(query, passages, model=None, top_k=None):
-    """Rerank `passages` against `query` via a NIM reranking endpoint.
+    """Rerank `passages` against `query` via a reranking endpoint.
 
-    Returns passage indices (into the input list) best-first. The rerank URL in `_base()`
-    is already the full endpoint, so we POST to it directly. Raises on HTTP error so the
-    caller can fall back to the fusion order when no reranker is available.
+    Returns passage indices (into the input list) best-first. Two wire formats are
+    supported, selected by the URL shape:
+      * NVIDIA NIM ranking API (URL ends in /ranking): {"query": {"text"}, "passages": [...]}
+        -> {"rankings": [{"index", "logit"}]} (already best-first).
+      * OpenAI/Jina-style /rerank (vLLM, TEI): {"query": str, "documents": [...]}
+        -> {"results": [{"index", "relevance_score"}]} (sorted here to be safe).
+    Raises on HTTP error so the caller can fall back to the fusion order when no
+    reranker is available.
     """
     model = model or os.getenv("NIM_RERANK_MODEL", "nvidia/llama-3.2-nv-rerankqa-1b-v2")
-    body = {"model": model, "query": {"text": query},
-            "passages": [{"text": p} for p in passages]}
-    r = httpx.post(_base()["rerank"], headers=_headers(), timeout=120, json=body)
-    r.raise_for_status()
-    rankings = r.json()["rankings"]          # [{"index": i, "logit": s}, ...] best-first
-    idx = [d["index"] for d in rankings]
+    url = _base()["rerank"]
+    if url.rstrip("/").endswith("/ranking"):
+        body = {"model": model, "query": {"text": query},
+                "passages": [{"text": p} for p in passages]}
+        r = httpx.post(url, headers=_headers(), timeout=120, json=body)
+        r.raise_for_status()
+        idx = [d["index"] for d in r.json()["rankings"]]
+    else:
+        body = {"model": model, "query": query, "documents": passages}
+        r = httpx.post(url, headers=_headers(), timeout=120, json=body)
+        r.raise_for_status()
+        results = sorted(r.json()["results"], key=lambda d: -d["relevance_score"])
+        idx = [d["index"] for d in results]
     return idx[:top_k] if top_k else idx

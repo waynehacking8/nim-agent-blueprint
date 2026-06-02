@@ -120,11 +120,14 @@ harder test than out-of-corpus questions). Built deterministically by
 
 | metric | value (95% CI) |
 |---|---|
-| retrieval recall@3 | 86% [78–91%] |
-| answer accuracy — substring | 71% [61–79%] |
+| retrieval recall@3 | 85% [77–91%] |
+| answer accuracy — substring | 70% [60–78%] |
 | answer accuracy — LLM judge | 72% [63–80%] |
-| hallucination, **guarded** generator | **49%** [39–59%] |
-| hallucination, **unguarded** generator | **79%** [70–86%] |
+| hallucination, **guarded** generator | **48%** [38–58%] |
+| hallucination, **unguarded** generator | **78%** [69–85%] |
+
+(Re-run end-to-end for the Phase 5 experiments below — every number reproduces the previous
+round within 1–2 points at temp=0, which is itself a useful determinism check.)
 
 Two findings that change the story the demo set told:
 
@@ -143,20 +146,20 @@ separate GPU. Paired comparison, exact McNemar test:
 
 | judge | precision | recall | F1 | residual hallucination |
 |---|---|---|---|---|
-| self (qwen3-8b) | 79% | 32% [23–41%] | 0.45 | 52% |
-| **cross-family (llama-3.1-8b)** | 71% | **47%** [38–57%] | **0.57** | **38%** |
+| self (qwen3-8b) | 79% | 33% [24–43%] | 0.46 | 50% |
+| **cross-family (llama-3.1-8b)** | 67% | **46%** [37–56%] | **0.55** | **38%** |
 
-Recall **+16 points (p = 0.0026, McNemar exact)** — of hallucinations caught by exactly one
-judge, the cross-family judge caught 19 vs the self judge's 4. This supports the
+Recall **+14 points (p = 0.0044, McNemar exact)** — of hallucinations caught by exactly one
+judge, the cross-family judge caught 16 vs the self judge's 3. This supports the
 shared-blind-spots attribution on this setup (single dataset, one 8B judge pair — see
 [`eval/report_squad.md`](eval/report_squad.md) for the robustness check and limitations) and
 matches the cross-model detection literature (FINCH-ZK, arXiv:2508.14314: detection F1
 improved by 6–39% on FELM from cross-model consistency). The trade-off is real too: the
-independent judge is stricter (precision 79%→71%, more false blocks).
+independent judge is stricter (precision 79%→67%, more false blocks).
 
-The honest residual: **46 of 95 hallucinations were caught by neither 8B judge** — two small
+The honest residual: **48 of 95 hallucinations were caught by neither 8B judge** — two small
 judges still share most blind spots with each other. The next rungs (larger judge, judge
-panel/PoLL, retrieval-grounded verification) target exactly that.
+panel/PoLL, retrieval-grounded verification) target exactly that — measured below.
 
 ![SQuAD gate comparison](eval/report_squad_gates.png)
 
@@ -166,6 +169,79 @@ panel/PoLL, retrieval-grounded verification) target exactly that.
 > NIM_XJUDGE_MODEL=llama-3.1-8b NIM_XJUDGE_URL=…:8013/v1
 > EVAL_CORPUS=corpus_squad.jsonl EVAL_DATASET=dataset_squad.jsonl EVAL_REPORT=report_squad.md
 > python3 eval/run_eval.py` (generator and judge on separate GPUs).
+
+## Attacking the 48 shared blind spots — every method class the literature offers
+
+The 48-of-95 result above is the repo's central open problem: hallucinations that escape
+*both* 8B generative judges. This round runs each published method class against the **same
+200 rows / same answers** (temp=0 ⇒ all comparisons paired, exact McNemar):
+
+| gate | precision | recall | F1 | catches of the 48 blind spots |
+|---|---|---|---|---|
+| self judge (plain) | 79% | 33% | 0.46 | 0 (by definition) |
+| cross-family judge (plain) | 67% | 46% | 0.55 | 0 (by definition) |
+| self + CoT (arXiv:2511.11087) | 82% | 44% | 0.58 | 8 |
+| cross-family + CoT | 66% | 53% | 0.58 | 10 |
+| MiniCheck-FT5 770M, grounded NLI (arXiv:2404.10774) | 74% | 41% | 0.53 | **14** |
+| **cross-family OR MiniCheck (union)** | 65% | **62%** | **0.63** | 14 |
+
+![Judge variants](eval/judge_variants.png)
+
+Four findings ([`eval/report_judge_variants.md`](eval/report_judge_variants.md)):
+
+1. **CoT judging works and is free** — one prompt change lifts self-judge recall 33%→44%
+   (p=0.035) *and* improves precision. The published 22%→58% gain doesn't fully materialize on
+   adversarial near-miss material, but the direction and significance hold.
+2. **A 770M grounded verifier catches what 8B parametric judges cannot.** MiniCheck's overall
+   recall (41%) sits between the two 8B judges, but it recovers **14 of the 48 shared blind
+   spots** — more than any judge variant — because it checks the answer against the retrieved
+   evidence instead of judging from its own (absent) knowledge. The bottleneck is grounding,
+   not capacity.
+3. **The deployable answer is the union**: generative judge OR grounded NLI = 62% recall,
+   F1 0.63 — the two methods catch *different* hallucinations.
+4. **23 of 95 hallucinations still escape everything.** That is the new floor.
+
+### Does better retrieval reduce hallucination? (NIM reranker, NV-RerankQA arXiv:2409.07691)
+
+Re-ran the full eval with a cross-encoder reranking stage (`NIM_RERANK=1`; bge-reranker-v2-m3,
+since NVIDIA's NV-RerankQA checkpoint is license-gated). Paired per question
+([`eval/report_rerank.md`](eval/report_rerank.md)):
+
+| metric | fusion only | + reranker | delta | p |
+|---|---|---|---|---|
+| retrieval recall@3 | 85% | **96%** | +11 pts | 0.0010 |
+| answer accuracy (LLM judge) | 72% | 80% | +8 pts | 0.0386 |
+| hallucination (guarded) | 48% | 52% | +4 pts | n.s. |
+| hallucination (unguarded) | 78% | 86% | +8 pts | n.s. |
+
+The published-scale retrieval gain (+11 vs the paper's +14) is real and carries to accuracy —
+but it does **not** reduce hallucination on the adversarial case. Better retrieval surfaces
+more on-topic context for questions that have no answer in the corpus, and on-topic-but-
+answerless context does not make the generator abstain more. **Retrieval quality and
+hallucination safety are different axes.**
+
+![Reranker comparison](eval/rerank_compare.png)
+
+### Can the generator's own uncertainty flag hallucinations? (Semantic entropy, Nature 2024)
+
+10 samples per question at T=1.0, DeBERTa-MNLI bidirectional-entailment clustering, AUROC
+against the same hallucination labels ([`eval/report_semantic_entropy.md`](eval/report_semantic_entropy.md)):
+
+| slice | semantic entropy | naive entropy | published |
+|---|---|---|---|
+| full set (N=200) | 0.61 | 0.63 | 0.79 / 0.69 |
+| answerable only | 0.64 | **0.70** | — |
+| **adversarial near-miss** | **0.50 (chance)** | 0.39 (inverted) | — |
+
+The published signal reproduces in direction on answerable questions (naive entropy 0.70 vs
+published 0.69) and **collapses to chance exactly where it would be needed most**. Semantic
+entropy detects *confabulations* — arbitrary wrong answers from an uncertain model. SQuAD 2.0's
+near-miss questions induce *systematic* errors: the model confidently gives the same wrong
+answer in most samples. Farquhar et al. scope this out explicitly; this measures how much that
+scoping matters: the repo's central blind-spot set is made of exactly the errors sampling-based
+uncertainty cannot see.
+
+![Semantic entropy](eval/semantic_entropy.png)
 
 ## Talk
 

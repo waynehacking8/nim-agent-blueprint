@@ -1,0 +1,1802 @@
+[
+ {
+  "q": "What aspects of life does Islamism seek to integrate itself into?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.895581747433678,
+  "naive_entropy": 0.05099809758240391
+ },
+ {
+  "q": "When did the Black Death spread into India?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 5,
+  "discrete_se": 1.3592367006650063,
+  "semantic_entropy": 1.313208288921779,
+  "naive_entropy": 0.09999713844400195
+ },
+ {
+  "q": "When was the Latin version of the word Norman first recorded?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.639031859650177,
+  "semantic_entropy": 0.5950678198735605,
+  "naive_entropy": 0.09590180427230015
+ },
+ {
+  "q": "In what year did William the Silent issue his \"Apologie\"?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 6,
+  "discrete_se": 1.4978661367769954,
+  "semantic_entropy": 1.4486628928971832,
+  "naive_entropy": 0.08164929808850244
+ },
+ {
+  "q": " What was Tugh Temur not known for?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.639031859650177,
+  "semantic_entropy": 0.6278336568978953,
+  "naive_entropy": 0.10633940408234006
+ },
+ {
+  "q": "What equates to a squared integer according to polynomial time reduction?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 1.0888999753452238,
+  "semantic_entropy": 1.0764106013433976,
+  "naive_entropy": 0.07284684698616803
+ },
+ {
+  "q": "In the shortest building in downtown Jacksonville?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 6,
+  "discrete_se": 1.6957425341696346,
+  "semantic_entropy": 1.6907577273076322,
+  "naive_entropy": 0.14760309618653739
+ },
+ {
+  "q": "What effect would happen if P is ultimately proven to not equal NP ?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.2798542258336676,
+  "semantic_entropy": 1.2810525315010088,
+  "naive_entropy": 0.22871445335545046
+ },
+ {
+  "q": "To what can the use of prolonged breathing of oxygen at 60 kPa lead?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.00018412254908420003
+ },
+ {
+  "q": "Who wrote \"On the Computational Complexity of Science\"?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.7906046410080992,
+  "naive_entropy": 0.13536227204523424
+ },
+ {
+  "q": "What is the most frequently employed type of reduction?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 6.654166223337858e-06
+ },
+ {
+  "q": " How did the Yuan come to have the 8 schools of medicine?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.8926881112739737,
+  "naive_entropy": 0.1698605797799957
+ },
+ {
+  "q": "Vice President Agnew describes Civil disobedience in what activities?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.03971667565061447
+ },
+ {
+  "q": "What is Warsaw's symbol?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 2.220446049250313e-16,
+  "naive_entropy": 0.02658874201024277
+ },
+ {
+  "q": "In 1940, what percentage of the population in Fresno was Asian?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 2.0637846263210372e-05
+ },
+ {
+  "q": "Who included 1 as the first prime number in the mid 18th century?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.794047780971209,
+  "naive_entropy": 0.037858852641238686
+ },
+ {
+  "q": "The rotational inertia of planet Mars is what fixes the what?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.5004024235381879,
+  "semantic_entropy": 0.4869719372975349,
+  "naive_entropy": 0.020132303666607128
+ },
+ {
+  "q": "In what year was Fort Coligny built?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 0.00010504042140187917
+ },
+ {
+  "q": "Which country's cars became more highly sought after as they were more fuel efficient?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.022906947336455145
+ },
+ {
+  "q": "What number did Henri Lebesgue not regard as a true number?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 10,
+  "discrete_se": 2.3025850929940455,
+  "semantic_entropy": 2.2990925261842663,
+  "naive_entropy": 0.18614830035688149
+ },
+ {
+  "q": "What action did the US plan to take in 2004 due to rising oil prices?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 10,
+  "discrete_se": 2.3025850929940455,
+  "semantic_entropy": 2.3022111718827656,
+  "naive_entropy": 0.11303688309723874
+ },
+ {
+  "q": "What organization is responsible for their own research?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.8943548937065027,
+  "naive_entropy": 0.15891457080469087
+ },
+ {
+  "q": "How did the Los Angeles Times define southern California in 1909?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.1935496040981333,
+  "semantic_entropy": 1.193638058357609,
+  "naive_entropy": 0.06335191246271102
+ },
+ {
+  "q": "What beds are nitrogen-saturated? ",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.0434010206818969
+ },
+ {
+  "q": "What can exposure to partial gas pressures greater than 166 kPa cause?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 7,
+  "discrete_se": 1.8343719702816237,
+  "semantic_entropy": 1.8228856308359804,
+  "naive_entropy": 0.10113266707538068
+ },
+ {
+  "q": "When did General Sejm make Vilnius its permanent seat?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.323193154850617,
+  "naive_entropy": 0.08065106022651711
+ },
+ {
+  "q": "What is another type of public key cryptography algorithm?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 1.0888999753452238,
+  "semantic_entropy": 1.0633549728486766,
+  "naive_entropy": 0.056827971398049945
+ },
+ {
+  "q": "What is the process of removing trees from a forest known as?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 0.0014287579088441008
+ },
+ {
+  "q": "When did Setanta Sports say it would launch as a free service on the digital terrestrial platform?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 1.0549201679861442,
+  "semantic_entropy": 1.0546610973690456,
+  "naive_entropy": 0.0655236264426666
+ },
+ {
+  "q": "What were the first two destinations of Huguenot emigres?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.018335849396394932
+ },
+ {
+  "q": "How did the Yuan come to have the 4 schools of medicine?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.9433483923290392,
+  "semantic_entropy": 0.9410066728980214,
+  "naive_entropy": 0.13227305090184235
+ },
+ {
+  "q": "What can the IPCC's report deadlines cause to be omitted?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 1.1682824501765625,
+  "semantic_entropy": 1.1616256788578267,
+  "naive_entropy": 0.10216878473542654
+ },
+ {
+  "q": "What does the IPCC rely on for research?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.639031859650177,
+  "semantic_entropy": 0.6055596117045762,
+  "naive_entropy": 0.07574226353868066
+ },
+ {
+  "q": "What term do Islamists think should be applied to them?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 1.313834033192747,
+  "semantic_entropy": 1.3096595377105837,
+  "naive_entropy": 0.15353061283142902
+ },
+ {
+  "q": "What makes day length constant on Earth?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.5004024235381879,
+  "semantic_entropy": 0.48604127880055337,
+  "naive_entropy": 0.09425956908142398
+ },
+ {
+  "q": "What paper is commonly considered the bellwether ushering in systematic studies computational complexity?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.023419493099268093
+ },
+ {
+  "q": "What percentage of Pinedale is black?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.11840428750581022
+ },
+ {
+  "q": "When was the Dutch Revolt?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.000160632644138623
+ },
+ {
+  "q": "What channels were removed from the network in March of 2007?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 6,
+  "discrete_se": 1.6957425341696346,
+  "semantic_entropy": 1.6929987424542678,
+  "naive_entropy": 0.11749866787862322
+ },
+ {
+  "q": "When did the General Sejm make Warsaw it's permanent seat?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 1.8606392460268955e-05
+ },
+ {
+  "q": "Besides the study of prime numbers, what general theory was considered the official example of the military?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.1682824501765625,
+  "semantic_entropy": 1.174319447078194,
+  "naive_entropy": 0.2166040849209859
+ },
+ {
+  "q": "What individuals were responsible for authoring \"On the Computational Complexity of Algorithms\"?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 1.0549201679861442,
+  "semantic_entropy": 1.0541526056969872,
+  "naive_entropy": 0.11165810763186475
+ },
+ {
+  "q": "What are the Sky Q mini set top boxes never able to connect to?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.039150765429827414
+ },
+ {
+  "q": "What is a popular strolling destination for pheasants?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 1.0549201679861442,
+  "semantic_entropy": 1.0485287428318113,
+  "naive_entropy": 0.0694304724884628
+ },
+ {
+  "q": "When did the high school education movement occur?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 9.273206669320188e-06
+ },
+ {
+  "q": "What is a particular problem in biology that would benefit from determining that P = NP?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 5,
+  "discrete_se": 1.5047882836811908,
+  "semantic_entropy": 1.497506837919722,
+  "naive_entropy": 0.08575690256318011
+ },
+ {
+  "q": "What name comes from the English words Normans/Normanz?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 1.0296530140645737,
+  "semantic_entropy": 1.0210269521957083,
+  "naive_entropy": 0.06462456912494031
+ },
+ {
+  "q": "Besides the study of prime numbers, what general theory was considered the official example of pure mathematics?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 8,
+  "discrete_se": 2.0253262207700677,
+  "semantic_entropy": 2.02210540075055,
+  "naive_entropy": 0.26953388719801286
+ },
+ {
+  "q": "When did income inequality begin to decrease in the US?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.7720371517890603,
+  "naive_entropy": 0.037866967616587824
+ },
+ {
+  "q": "How many French colonists were lost by British?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.6108643020548935,
+  "semantic_entropy": 0.6134853424576772,
+  "naive_entropy": 0.18927878309566537
+ },
+ {
+  "q": "What did Standard & Poor recommend to slow economy recovery?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.32533495059578366,
+  "naive_entropy": 0.016219095479039387
+ },
+ {
+  "q": "What revealed the intentions of the British in the middle east regarding oil prices in 2004?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 7,
+  "discrete_se": 1.8343719702816237,
+  "semantic_entropy": 1.8363510982327775,
+  "naive_entropy": 0.12417065858480532
+ },
+ {
+  "q": "How much potential economic growth could the United States amass if everyone went through less schooling?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.0888999753452238,
+  "semantic_entropy": 1.0934746917136402,
+  "naive_entropy": 0.28896556655942746
+ },
+ {
+  "q": "Which country was thinking about going to war to forcibly take Middle Eastern oil fields?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 0.05197404029369623
+ },
+ {
+  "q": "When was the University of Chicago established?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 8.514948746096707e-09
+ },
+ {
+  "q": "Who benefits from the research carried out by the IPCC?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.2132967147363359
+ },
+ {
+  "q": "How many homes had BSkyB's direct-to-home satellite service available to them in 2010?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.00032598881916318697
+ },
+ {
+  "q": "When did BSkyB announce it's intention to replace it's free-to-air digital channels?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.30617103670332657,
+  "naive_entropy": 0.013300889801562993
+ },
+ {
+  "q": "Which country was worried that the US would invade the Middle East?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 7,
+  "discrete_se": 1.7480673485460894,
+  "semantic_entropy": 1.7572808162471287,
+  "naive_entropy": 0.20244591519456923
+ },
+ {
+  "q": "How large was the audience BSkyB said they could reach?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.6730116670092565,
+  "semantic_entropy": 0.6763608597442599,
+  "naive_entropy": 0.05387730752510794
+ },
+ {
+  "q": "What author argues pitching the conscience versus the collective?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.004043496790172401
+ },
+ {
+  "q": "When did Augustus die?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 1.1920926041852909e-07
+ },
+ {
+  "q": "What is the meaning of polynomial-space reduction?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.5004024235381879,
+  "semantic_entropy": 0.5084315377403763,
+  "naive_entropy": 0.14742390313608267
+ },
+ {
+  "q": "What impact did the high school education movement have on the presence of unskilled workers?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.7985225598151204,
+  "naive_entropy": 0.13451133087597797
+ },
+ {
+  "q": "What makes the method of primality more efficient?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 5,
+  "discrete_se": 1.4184836619456564,
+  "semantic_entropy": 1.4207987751271092,
+  "naive_entropy": 0.07398470312525686
+ },
+ {
+  "q": "What is involved in a review of prescribed medications?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.1682824501765625,
+  "semantic_entropy": 1.172171066927115,
+  "naive_entropy": 0.09396205585016348
+ },
+ {
+  "q": "Who joined Norman forces in the destruction of the Armenians?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.9037969057526456,
+  "naive_entropy": 0.09433302083050496
+ },
+ {
+  "q": "What is polish for \"mermaid\"?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.003364302391466367
+ },
+ {
+  "q": "What number did early Greeks not regard as a true number?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 0.00225972143514455
+ },
+ {
+  "q": "What is known as swing pressure adsorption?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.2206072645530175,
+  "semantic_entropy": 1.2074225504990994,
+  "naive_entropy": 0.07608100453658627
+ },
+ {
+  "q": "What is the original meaning of the word Norman?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 10,
+  "discrete_se": 2.3025850929940455,
+  "semantic_entropy": 2.3023024625851383,
+  "naive_entropy": 0.20441782353269217
+ },
+ {
+  "q": "What did the Los Angeles Times add to the definition of southern California in 1990?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.30822948349710894,
+  "naive_entropy": 0.0254807075521365
+ },
+ {
+  "q": "What seminal paper is commonly considered the beginning of sociology studies?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 6,
+  "discrete_se": 1.6094379124341003,
+  "semantic_entropy": 1.6175196275126504,
+  "naive_entropy": 0.08990642637535869
+ },
+ {
+  "q": "What is the name of Sky Q's broadband router?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 0.001661275899303811
+ },
+ {
+  "q": "What was the name of the infamous German Heroic prison?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.30743853007374977,
+  "naive_entropy": 0.01956656813016379
+ },
+ {
+  "q": "What did the people of Rome accept as the only fertile plain?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.3206211517877702,
+  "naive_entropy": 0.025679429452219134
+ },
+ {
+  "q": "If P is ultimately proven to be equal tot NP, what effect would this have on the efficiency of problems?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.639031859650177,
+  "semantic_entropy": 0.6512376535323853,
+  "naive_entropy": 0.1528756564814358
+ },
+ {
+  "q": "What was the taxman's political philosophy?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 5,
+  "discrete_se": 1.4184836619456564,
+  "semantic_entropy": 1.4099383760579882,
+  "naive_entropy": 0.14195396741900163
+ },
+ {
+  "q": "The concept of inertia can explain the tendency of people to continue in what?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 8,
+  "discrete_se": 2.0253262207700677,
+  "semantic_entropy": 2.0188097191890018,
+  "naive_entropy": 0.12484789236614593
+ },
+ {
+  "q": "What districts does downtown Santa Ana include?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 0.9404479886553263,
+  "semantic_entropy": 0.9319191308313941,
+  "naive_entropy": 0.13835590881158294
+ },
+ {
+  "q": "What does a writer for the International Crisis Group think the concept of political Islam is a creation of?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 5,
+  "discrete_se": 1.5047882836811908,
+  "semantic_entropy": 1.4973698199671128,
+  "naive_entropy": 0.06600657120956638
+ },
+ {
+  "q": "How many schools of medicine were recognized in Japan?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.3228650396621983,
+  "naive_entropy": 0.09569149344743046
+ },
+ {
+  "q": "What did Standard & Poor recommend to speed economy recovery?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.008528217251498226
+ },
+ {
+  "q": "What are the Sky Q mini set top boxes able to connect to?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 2.220446049250313e-16,
+  "naive_entropy": 0.0002454155341044482
+ },
+ {
+  "q": "When did income inequality begin to increase in the US?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.05390358242066053
+ },
+ {
+  "q": "When was the Sierra Sky Park Airport formed?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 4.1325759715012584e-07
+ },
+ {
+  "q": "What year did BSkyB and Virgin Media have an agreement over the carriage of Sky Channels on cable TV?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 0.9404479886553263,
+  "semantic_entropy": 0.8948661647566236,
+  "naive_entropy": 0.040356507898921645
+ },
+ {
+  "q": "Assessing the Amazon rain forest was restricted after what era?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 5,
+  "discrete_se": 1.4184836619456564,
+  "semantic_entropy": 1.4029077957844134,
+  "naive_entropy": 0.09796488984383124
+ },
+ {
+  "q": "What is the name of Sky Q's dial-up router?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.5004024235381879,
+  "semantic_entropy": 0.48148748910122124,
+  "naive_entropy": 0.05031158438835019
+ },
+ {
+  "q": "What academy did Tugh Temur found?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.9433483923290392,
+  "semantic_entropy": 0.9411347696546319,
+  "naive_entropy": 0.12078359360757226
+ },
+ {
+  "q": " Who did Duke Yansheng Kong Duanyou stay with?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.6730116670092565,
+  "semantic_entropy": 0.6771933830114729,
+  "naive_entropy": 0.04050854348891457
+ },
+ {
+  "q": "What impact did the high school education movement have on the presence of skilled workers?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 1.2798542258336676,
+  "semantic_entropy": 1.2726031066212649,
+  "naive_entropy": 0.09898851241207626
+ },
+ {
+  "q": "What is one example of what a clinical pharmacist's duties entail?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.8894361705660109,
+  "naive_entropy": 0.03074742198657046
+ },
+ {
+  "q": "What can happen when breathing in oxygen with 60 atm?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.9033277860567768,
+  "naive_entropy": 0.21053604333612017
+ },
+ {
+  "q": "The Rhine and what other river were accepted as the Germanic frontier?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.003882566198137738
+ },
+ {
+  "q": "What commemorates Old Town's heroic history?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.04016151444335979
+ },
+ {
+  "q": "What is tuition for 2012 - 13 year at Harvard? ",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 7,
+  "discrete_se": 1.7480673485460894,
+  "semantic_entropy": 1.7799884859187227,
+  "naive_entropy": 0.15182664956228972
+ },
+ {
+  "q": "How many schools of medicine were recognized in China?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.875780176064179,
+  "naive_entropy": 0.15993995419641888
+ },
+ {
+  "q": "Where and when did the investigation of the plague pathogen begin?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.5004024235381879,
+  "semantic_entropy": 0.4800778551343434,
+  "naive_entropy": 0.02798022133356396
+ },
+ {
+  "q": "How many French colonists were gained by British?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.7687127502296852,
+  "naive_entropy": 0.06654027944263305
+ },
+ {
+  "q": "Which county is developing its business center?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 0.038054179140083494
+ },
+ {
+  "q": "What archdiocese is Market Square the seat of?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 1.0549201679861442,
+  "semantic_entropy": 1.0498704198501085,
+  "naive_entropy": 0.12671011373374144
+ },
+ {
+  "q": "When did the Jin dynasty begin?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 2.220446049250313e-16,
+  "naive_entropy": 1.549719305179072e-07
+ },
+ {
+  "q": "When did Augustus find Rome?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 7,
+  "discrete_se": 1.8866967846580784,
+  "semantic_entropy": 1.8887705857929282,
+  "naive_entropy": 0.13565495251396684
+ },
+ {
+  "q": "Who did Warsaw serve as the seat for in 1529?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.7710357657302378,
+  "naive_entropy": 0.06249494504570434
+ },
+ {
+  "q": "What is not an example of what a clinical pharmacist's duties entail?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.18325870776954586
+ },
+ {
+  "q": "What was Thoreau's punishment for not paying his taxes?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 1.0888999753452238,
+  "semantic_entropy": 1.0737731056494424,
+  "naive_entropy": 0.11940287045495779
+ },
+ {
+  "q": "What is Polish for \"female\"?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.06577665292750572
+ },
+ {
+  "q": "What is a non-Islamic revival movement?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 6,
+  "discrete_se": 1.6094379124341003,
+  "semantic_entropy": 1.5944506718607128,
+  "naive_entropy": 0.31432952854599233
+ },
+ {
+  "q": "What was the white population in 1942 in Fresno?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 6,
+  "discrete_se": 1.6094379124341003,
+  "semantic_entropy": 1.59161645103519,
+  "naive_entropy": 0.1473704685117393
+ },
+ {
+  "q": "During what time period did income inequality increase in the United States?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.0012463299623175915
+ },
+ {
+  "q": "What are two cars with V8 engines that were more fuel efficient?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.6108643020548935,
+  "semantic_entropy": 0.6090804655805945,
+  "naive_entropy": 0.06919621231021082
+ },
+ {
+  "q": "When did Setanta Sports say it would launch as a subscription service?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.034272276174939977
+ },
+ {
+  "q": "Which sized cars were the least demanded cars in the crisis?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 5,
+  "discrete_se": 1.4708084763221114,
+  "semantic_entropy": 1.4678147548951113,
+  "naive_entropy": 0.12089297150857785
+ },
+ {
+  "q": "What is the least used type of reduction?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.5004024235381879,
+  "semantic_entropy": 0.5017226342022985,
+  "naive_entropy": 0.09411213850072934
+ },
+ {
+  "q": "How many homes had BSkyB's direct-to-home satellite service unavailable to them in 2010?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.15025462739092194
+ },
+ {
+  "q": "What did families with incomes below $38,000 pay for tuition in 2009?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.8944949837264906,
+  "naive_entropy": 0.03391288855036857
+ },
+ {
+  "q": "Who created the nation's first aviation community?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.6730116670092565,
+  "semantic_entropy": 0.6683880631614774,
+  "naive_entropy": 0.04433173269201081
+ },
+ {
+  "q": "What percentage of oxygen will a zeolite sieve produce?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 1.2206072645530175,
+  "semantic_entropy": 1.2227147244574117,
+  "naive_entropy": 0.10947057474726926
+ },
+ {
+  "q": " When did the Germanic tribes not claim territory in north and west Europe?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 7,
+  "discrete_se": 1.8866967846580784,
+  "semantic_entropy": 1.8776506450663506,
+  "naive_entropy": 0.2084872735784568
+ },
+ {
+  "q": "What was the name of the infamous German Gestapo prison?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 2.220446049250313e-16,
+  "naive_entropy": 0.018002976865583935
+ },
+ {
+  "q": "Over how many species of trees can be found in the Saxon Garden?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.0007776935546544905
+ },
+ {
+  "q": "What is the most elemental way to test the primality of any division?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.0888999753452238,
+  "semantic_entropy": 1.0695475433546986,
+  "naive_entropy": 0.04341823192617016
+ },
+ {
+  "q": "The city of Pritzker is home to which University?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.6730116670092565,
+  "semantic_entropy": 0.6700706078211787,
+  "naive_entropy": 0.07738047127686822
+ },
+ {
+  "q": "What was considered responsible for the black death as well as the epidemic in southern China?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 5,
+  "discrete_se": 1.2275294114572126,
+  "semantic_entropy": 1.192691914424865,
+  "naive_entropy": 0.1342979879042675
+ },
+ {
+  "q": "Who created all of the nation's aviation communities?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.5004024235381879,
+  "semantic_entropy": 0.4943797935638548,
+  "naive_entropy": 0.09600205067580093
+ },
+ {
+  "q": "What county does the rapidly developing downtown Santa Ana include?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 0.06997914356689247
+ },
+ {
+  "q": "What health condition can deep sea diving cause?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 0.9404479886553263,
+  "semantic_entropy": 0.9236055611186389,
+  "naive_entropy": 0.10036184441002816
+ },
+ {
+  "q": "What is another notable university in Warsaw after the University of Warsaw?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.029385715632734115
+ },
+ {
+  "q": "Who did the Turks take up service with?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 1.2206072645530175,
+  "semantic_entropy": 1.1928878218471857,
+  "naive_entropy": 0.13176242214664408
+ },
+ {
+  "q": "What was the name of the Norman castle?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.5004024235381879,
+  "semantic_entropy": 0.5059043629202111,
+  "naive_entropy": 0.08139204257615154
+ },
+ {
+  "q": "Where were the Germanic tribes not originally located?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 1.0888999753452238,
+  "semantic_entropy": 1.0861834703950788,
+  "naive_entropy": 0.07644042602143566
+ },
+ {
+  "q": "Civil disobedience has been argued in more recent times to have suffered from what?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 6,
+  "discrete_se": 1.6094379124341003,
+  "semantic_entropy": 1.5945357100269462,
+  "naive_entropy": 0.10593346163848591
+ },
+ {
+  "q": "During what time period did income inequality decrease in the United States?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.9502705392332347,
+  "semantic_entropy": 0.9399899470048325,
+  "naive_entropy": 0.04936589316952363
+ },
+ {
+  "q": "Who included 1 as the first prime number in the mid 20th century?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.3284810314060539,
+  "naive_entropy": 0.10844554228512522
+ },
+ {
+  "q": " When did the Jip dynasty begin?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 9,
+  "discrete_se": 2.1639556568820564,
+  "semantic_entropy": 2.160475566368577,
+  "naive_entropy": 0.112583892696647
+ },
+ {
+  "q": "What nationality was Pierre L'Oyseleur?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.023920860266188778
+ },
+ {
+  "q": "What archdiocese is Warsaw the seat of?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.0018796705400518719
+ },
+ {
+  "q": "What makes the method of trial division more efficient?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 8,
+  "discrete_se": 2.0253262207700677,
+  "semantic_entropy": 2.0215360907589925,
+  "naive_entropy": 0.13679117491125087
+ },
+ {
+  "q": "What garden was formally only for running?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.8928773726482968,
+  "naive_entropy": 0.22404875799138887
+ },
+ {
+  "q": "What term don't Islamists think should be applied to them?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.2732289840592141,
+  "naive_entropy": 0.1089735664713424
+ },
+ {
+  "q": "What mechanism can be used to make oxygen?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 6,
+  "discrete_se": 1.6957425341696346,
+  "semantic_entropy": 1.6907614095105636,
+  "naive_entropy": 0.08450612974152641
+ },
+ {
+  "q": "In which year did the newspaper define southern California?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.059341213404487544
+ },
+ {
+  "q": "What ethnic neighborhood in Fresno had primarily Japanese residents in 1940?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.5004024235381879,
+  "semantic_entropy": 0.5058923937667568,
+  "naive_entropy": 0.039237137589955624
+ },
+ {
+  "q": "The process of growing more trees in the forest is known as what?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.639031859650177,
+  "semantic_entropy": 0.5746532976278018,
+  "naive_entropy": 0.05234483466997062
+ },
+ {
+  "q": "How much potential economic growth could the United States amass if everyone went through more schooling?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.7853762983288365,
+  "naive_entropy": 0.17386663944165748
+ },
+ {
+  "q": "In what year did Alexandre Yersin discover the Yersinia pestis?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 2.220446049250313e-16,
+  "naive_entropy": 0.00372664202152823
+ },
+ {
+  "q": "Who did Duke Yansheng Kong Duanyou flee with?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.6108643020548935,
+  "semantic_entropy": 0.6093072242489412,
+  "naive_entropy": 0.02972682432888134
+ },
+ {
+  "q": "What channels were always available on the network?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 5,
+  "discrete_se": 1.5047882836811908,
+  "semantic_entropy": 1.499134914702767,
+  "naive_entropy": 0.1571505208268779
+ },
+ {
+  "q": "In what year did the Black Eagle Brewery change its name to Old Truman Brewery?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.0011689070658668006
+ },
+ {
+  "q": "Who was the leader when the Franks entered the Euphrates valley?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.7836945128329542,
+  "naive_entropy": 0.13045510087742296
+ },
+ {
+  "q": "What British mathematician took pride in doing work that he felt had no military benefit?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 0.00012753439584156466
+ },
+ {
+  "q": "What is one type of public key cryptography algorithm?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.0006399716851222789
+ },
+ {
+  "q": "What is an Islamic revival movement?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 6,
+  "discrete_se": 1.6094379124341003,
+  "semantic_entropy": 1.6083214057444812,
+  "naive_entropy": 0.15036228262041934
+ },
+ {
+  "q": "What did the Vilnius formally establish in 1573?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.3250829733914482,
+  "semantic_entropy": 0.31823832165755084,
+  "naive_entropy": 0.01234439012329618
+ },
+ {
+  "q": "What concept explains why objects continue in constant motion?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.06667877353286823
+ },
+ {
+  "q": "What standards did American cars create in the auto industry?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 2.220446049250313e-16,
+  "naive_entropy": 0.0020008973494761865
+ },
+ {
+  "q": "What distinction does the Bank of America Tower hold?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.639031859650177,
+  "semantic_entropy": 0.5987333569233297,
+  "naive_entropy": 0.11365321658538971
+ },
+ {
+  "q": "What is another type of private key cryptography algorithm?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 5,
+  "discrete_se": 1.4184836619456564,
+  "semantic_entropy": 1.417558043162918,
+  "naive_entropy": 0.13299875465347216
+ },
+ {
+  "q": "What was Tugh Temur known for?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.8889843248777924,
+  "naive_entropy": 0.0544340741662158
+ },
+ {
+  "q": " What does a writer for the International Crisis Group think the concept of political Islam is not a creation of?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 7,
+  "discrete_se": 1.8343719702816237,
+  "semantic_entropy": 1.8310898058287934,
+  "naive_entropy": 0.12022228657537626
+ },
+ {
+  "q": "Which newspaper defined southern California?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.6730116670092565,
+  "semantic_entropy": 0.6790415409934185,
+  "naive_entropy": 0.09514944271929746
+ },
+ {
+  "q": "What else were families with incomes below $38,000 not required to pay for in 2009?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.0888999753452238,
+  "semantic_entropy": 1.0683829022637332,
+  "naive_entropy": 0.08906637727380312
+ },
+ {
+  "q": "What is never involved in a review of prescribed medications?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 5,
+  "discrete_se": 1.3592367006650063,
+  "semantic_entropy": 1.348010519866855,
+  "naive_entropy": 0.18915939915920235
+ },
+ {
+  "q": "What garden was formally only for royalty?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.014959562576491819
+ },
+ {
+  "q": "What is Sigilium's symbol?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 5,
+  "discrete_se": 1.5047882836811908,
+  "semantic_entropy": 1.5100791029186524,
+  "naive_entropy": 0.10426519617622114
+ },
+ {
+  "q": "How many Huguenots were part of the group that founded France Antarctique in 1555?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 2,
+  "discrete_se": 0.6108643020548935,
+  "semantic_entropy": 0.6079576050237692,
+  "naive_entropy": 0.029355566590928132
+ },
+ {
+  "q": "What commemorates Warsaw's heroic history?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.08108130217011277
+ },
+ {
+  "q": "What is one type of private key cryptography algorithm?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 0.9404479886553263,
+  "semantic_entropy": 0.9581751241158252,
+  "naive_entropy": 0.15707824008546528
+ },
+ {
+  "q": " What academy did Tugh Temur destroy?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.9433483923290392,
+  "semantic_entropy": 0.9402589217965067,
+  "naive_entropy": 0.11124152805914012
+ },
+ {
+  "q": "Where are international corporations headquartered?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.7898136713429955,
+  "naive_entropy": 0.04793317026390238
+ },
+ {
+  "q": "When was the deportation of Acadians?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 1.8136829247339392e-07
+ },
+ {
+  "q": "What kind of university is the University of Chicago?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 7,
+  "discrete_se": 1.8866967846580784,
+  "semantic_entropy": 1.8792236235300865,
+  "naive_entropy": 0.10114525316907737
+ },
+ {
+  "q": "Building a 617 m tall?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 8,
+  "discrete_se": 2.0253262207700677,
+  "semantic_entropy": 2.023628206028093,
+  "naive_entropy": 0.11147372404859415
+ },
+ {
+  "q": "What year did BSkyB and Virgin Media have a dispute over the carriage of Sky Channels on cable TV?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.005696928352587545
+ },
+ {
+  "q": "When was the French version of the word Norman first recorded?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.639031859650177,
+  "semantic_entropy": 0.6308124747194088,
+  "naive_entropy": 0.10036078444363634
+ },
+ {
+  "q": "What had Vice President Agnew always suffered from? ",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.639031859650177,
+  "semantic_entropy": 0.6087967409720777,
+  "naive_entropy": 0.037253749418820224
+ },
+ {
+  "q": "The Bank of America Tower was previously known as what?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 0.9404479886553263,
+  "semantic_entropy": 0.9057349576582834,
+  "naive_entropy": 0.12804436478028275
+ },
+ {
+  "q": "Nearly 7,000 students are enrolled where?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.1682824501765625,
+  "semantic_entropy": 1.1687639386493733,
+  "naive_entropy": 0.21187136316397356
+ },
+ {
+  "q": "Who did the Dutch fight in the Dutch Revolt?",
+  "answerable": true,
+  "u_halluc": true,
+  "n_clusters": 10,
+  "discrete_se": 2.3025850929940455,
+  "semantic_entropy": 2.300596310248426,
+  "naive_entropy": 0.15731707464440212
+ },
+ {
+  "q": "When did the middle school education movement occur?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 1.0296530140645737,
+  "semantic_entropy": 1.0307281453919321,
+  "naive_entropy": 0.08734161681528126
+ },
+ {
+  "q": "What early Huguenot Church was established in England?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.9433483923290392,
+  "semantic_entropy": 0.9258896556405691,
+  "naive_entropy": 0.19761954854913305
+ },
+ {
+  "q": "What was Warsaw's Market Square listed as in 1980?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.639031859650177,
+  "semantic_entropy": 0.6217257436782434,
+  "naive_entropy": 0.02416922790497398
+ },
+ {
+  "q": "What British mathematician took pride in doing work that he felt had no mathematical benefit?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.0019786743210281656
+ },
+ {
+  "q": "When was the French colony in modern day Brazil founded?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 2,
+  "discrete_se": 0.6730116670092565,
+  "semantic_entropy": 0.6585806529766953,
+  "naive_entropy": 0.062077906917175615
+ },
+ {
+  "q": "When did BSkyB announce it's intention to improve it's free-to-air digital channels?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 0.0002590671722740856
+ },
+ {
+  "q": "How many French colonists weren't gained by British?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.2997635824656118
+ },
+ {
+  "q": "In what year did Huguenot refugees first start to move to London?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 5,
+  "discrete_se": 1.2275294114572126,
+  "semantic_entropy": 1.2139051282591387,
+  "naive_entropy": 0.1071710758777572
+ },
+ {
+  "q": "When did the Sierra Sky Park fall out of use?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8018185525433373,
+  "semantic_entropy": 0.7930340379158418,
+  "naive_entropy": 0.07004991780003242
+ },
+ {
+  "q": "What is the total cost of attendance in 2012-13?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.015352001679795429
+ },
+ {
+  "q": "What was the government the final judge of?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 3,
+  "discrete_se": 0.9433483923290392,
+  "semantic_entropy": 0.9391445679473069,
+  "naive_entropy": 0.11059653198783204
+ },
+ {
+  "q": "What had happened to Vice President Agnew's status in modern times?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.1682824501765625,
+  "semantic_entropy": 1.1633991585431558,
+  "naive_entropy": 0.13669104449599975
+ },
+ {
+  "q": " What aspects of life does Islamism not seek to integrate itself into?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 3,
+  "discrete_se": 0.8979457248567798,
+  "semantic_entropy": 0.895045759768377,
+  "naive_entropy": 0.19653534698181585
+ },
+ {
+  "q": "When did the Germanic tribes claim territory in north and west Europe?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 0.9404479886553263,
+  "semantic_entropy": 0.9169889263211597,
+  "naive_entropy": 0.06595388132118245
+ },
+ {
+  "q": "Acessing the Amazon rainforest was restricted before what era?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 2.220446049250313e-16,
+  "naive_entropy": 0.00163592427196411
+ },
+ {
+  "q": "When was the charter for this church signed?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 4,
+  "discrete_se": 1.1682824501765625,
+  "semantic_entropy": 1.1407866761170975,
+  "naive_entropy": 0.13989534213197063
+ },
+ {
+  "q": "Where were the Germanic tribes originally located?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": 1.1102230246251564e-16,
+  "naive_entropy": 6.580341273358196e-07
+ },
+ {
+  "q": "What is the most elemental way to test the primality of any integer n?",
+  "answerable": true,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -2.220446049250313e-16,
+  "naive_entropy": 0.009353174135622786
+ },
+ {
+  "q": "What is one of the least important open questions in theoretical computer science?",
+  "answerable": false,
+  "u_halluc": false,
+  "n_clusters": 1,
+  "discrete_se": -0.0,
+  "semantic_entropy": -0.0,
+  "naive_entropy": 0.1510753335272909
+ },
+ {
+  "q": "How small was the audience BSkyB said they couldn't reach?",
+  "answerable": false,
+  "u_halluc": true,
+  "n_clusters": 4,
+  "discrete_se": 1.313834033192747,
+  "semantic_entropy": 1.3182409062194071,
+  "naive_entropy": 0.20977080913314597
+ }
+]

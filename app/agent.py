@@ -36,22 +36,45 @@ def generate(query, context, guarded=True):
         return provider.chat([{"role": "system", "content": sys},
                               {"role": "user", "content": f"Context:\n{ctx}\n\nQuestion: {query}"}])
 
-def validate(answer, context, judge_model=None, judge_url=None):
+JUDGE_SYS = "Is the ANSWER fully supported by the CONTEXT? Reply 'grounded' or 'unsupported'."
+# CoT judging (roadmap Phase 5, arXiv:2511.11087): same question, but the judge must
+# enumerate and check each claim before the verdict. Literature: raises self-detection
+# recall from ~22% to ~58%.
+JUDGE_SYS_COT = ("Is the ANSWER fully supported by the CONTEXT? Think step by step: list each "
+                 "factual claim in the ANSWER and check whether the CONTEXT supports it. "
+                 "Then give your verdict on the last line as exactly one word: "
+                 "grounded or unsupported.")
+
+
+def _parse_verdict(text):
+    """Verdict = the LAST occurrence of grounded/unsupported (CoT reasoning may mention both)."""
+    t = text.lower()
+    g, u = t.rfind("grounded"), t.rfind("unsupported")
+    # "unsupported" contains no "grounded" substring, but guard the reverse anyway.
+    if g == -1 and u == -1:
+        return False  # unparseable -> treat as unsupported (fail closed)
+    return g > u
+
+
+def validate(answer, context, judge_model=None, judge_url=None, cot=False):
     """Groundedness gate. By default the judge is the same model/endpoint as the generator.
 
     Cross-family judge (roadmap Phase 4): pass `judge_model`/`judge_url` (or set
     NIM_JUDGE_MODEL / NIM_JUDGE_URL) to use a judge from a *different* model family —
     a judge that is the same model that hallucinated tends to share the blind spots
     that caused the hallucination in the first place.
+
+    CoT judging (roadmap Phase 5): `cot=True` makes the judge reason step-by-step before
+    its verdict (more tokens, higher recall in the literature).
     """
     with tracer.start_as_current_span("validate"):
         ctx = "\n\n".join(context)
-        verdict = provider.chat([{"role": "system", "content": "Is the ANSWER fully supported by the CONTEXT? Reply 'grounded' or 'unsupported'."},
+        verdict = provider.chat([{"role": "system", "content": JUDGE_SYS_COT if cot else JUDGE_SYS},
                                  {"role": "user", "content": f"CONTEXT:\n{ctx}\n\nANSWER:\n{answer}"}],
-                                max_tokens=16,
+                                max_tokens=512 if cot else 16,
                                 model=judge_model or os.getenv("NIM_JUDGE_MODEL") or None,
                                 base_url=judge_url or os.getenv("NIM_JUDGE_URL") or None)
-        return "grounded" in verdict.lower()
+        return _parse_verdict(verdict) if cot else ("grounded" in verdict.lower())
 
 def answer(query, retriever):
     with tracer.start_as_current_span("agent"):

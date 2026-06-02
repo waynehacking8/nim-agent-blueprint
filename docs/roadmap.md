@@ -84,8 +84,15 @@
 Goal: reproduce published hallucination-detection ceilings on this repo's own eval set, so the
 46/95 escaped-hallucinations finding gets attacked with every method class the literature offers.
 
-- [ ] **MiniCheck grounded NLI verifier (arXiv:2404.10774) on the 95 hallucinations.**
+- [x] **MiniCheck grounded NLI verifier (arXiv:2404.10774) on the 95 hallucinations.**
   Published target: 770M model reaches GPT-4-level balanced accuracy on LLM-AGGREFACT.
+  **DONE — eval/report_judge_variants.md / README "Attacking the 48 shared blind spots".**
+  Result: recall 41% / precision 74% — overall between the two 8B judges, BUT it recovers
+  **14 of the 48 shared blind spots**, more than any judge variant (CoT: 8–10). The structural
+  question is answered: the bottleneck is grounding, not capacity. The deployable configuration
+  is the union (cross-family judge OR MiniCheck): recall 62%, F1 0.63 — best of every gate
+  measured. Residual after everything: 23/95. Scoring script: eval/minicheck_score.py (GPU
+  host) → merged by eval/judge_variants.py.
   - **Question:** the repo's finding is that 46/95 hallucinations escape both 8B generative
     judges. Can a 770M *discriminative* claim-vs-document verifier — which checks the answer
     against the retrieved context instead of judging from parametric knowledge — catch them?
@@ -98,8 +105,16 @@ Goal: reproduce published hallucination-detection ceilings on this repo's own ev
     beats 8B generative judges, the bottleneck is grounding, not capacity — the validate()
     step should always receive the retrieved context.
 
-- [ ] **Semantic Entropy (Farquhar et al., Nature 2024) on the same eval set.**
+- [x] **Semantic Entropy (Farquhar et al., Nature 2024) on the same eval set.**
   Published target: AUROC 0.790 (vs 0.691 naive entropy) for hallucination detection.
+  **DONE — eval/report_semantic_entropy.md / eval/semantic_entropy.png.** Result: the published
+  ceiling does NOT transfer — AUROC 0.61 full-set, **0.50 (chance) on the adversarial near-miss
+  slice**, naive entropy inverted (0.39). On the answerable slice the signal works as published
+  (naive 0.70 vs published 0.69). Mechanism verified from the cluster data: near-miss questions
+  induce *systematic* (confident) errors — same wrong answer in most of the 10 samples — which
+  Farquhar et al. explicitly scope out of semantic entropy. The repo's 48 shared blind spots are
+  exactly this error class; sampling-based uncertainty cannot recover them.
+  Pipeline: eval/semantic_entropy.py sample (API) → score (DeBERTa NLI, GPU) → report.
   - **Question:** every gate in this repo is a binary post-hoc judge. Sampling-based
     uncertainty from the generator itself is a pre-answer signal — does it reach the published
     AUROC on our adversarial near-miss set?
@@ -109,8 +124,13 @@ Goal: reproduce published hallucination-detection ceilings on this repo's own ev
   - **Read-out:** AUROC vs the 0.790 ceiling. Adds a continuous-score axis (the repo currently
     only has discrete recall) and a pre-generation confidence filter that costs no extra model.
 
-- [ ] **CoT judging (arXiv:2511.11087) — cited in this repo's docs but never run.**
+- [x] **CoT judging (arXiv:2511.11087) — cited in this repo's docs but never run.**
   Published target: chain-of-thought raises self-detection recall from ~22% to ~58%.
+  **DONE — eval/report_judge_variants.md.** Result: self recall 33%→44% (**McNemar p=0.035**)
+  with precision *also* improving (79%→82%); cross-family 46%→53% (p=0.21, n.s.). The published
+  +36-point jump compresses to +11 on adversarial near-miss material, but direction and
+  significance hold — and it is literally one prompt string (validate(cot=True), agent.py).
+  CoT catches 8–10 of the 48 shared blind spots.
   - **Question:** the cheapest possible intervention — does adding "think step by step before
     your verdict" to the existing judge prompt close any of the self-judge's 32%-recall gap?
   - **Method:** one prompt change in validate(); re-run the judge pass (not the generation) on
@@ -118,8 +138,15 @@ Goal: reproduce published hallucination-detection ceilings on this repo's own ev
   - **Read-out:** recall/precision with vs without CoT, both judges. Directly tests whether
     the published 22%→58% gain holds on adversarial near-miss material.
 
-- [ ] **NIM reranker gain (NV-RerankQA, arXiv:2409.07691) — wired but never measured.**
+- [x] **NIM reranker gain (NV-RerankQA, arXiv:2409.07691) — wired but never measured.**
   Published target: +14% retrieval accuracy over embedding-only retrieval.
+  **DONE — eval/report_rerank.md / eval/rerank_compare.png.** Result: recall@3 85%→96%
+  (**+11 pts, p=0.0010** — the published-scale gain), answer accuracy +8 pts (p=0.039). The
+  causal-chain question gets a clear NO: hallucination on unanswerable questions does not
+  improve (48%→52% guarded, 78%→86% unguarded; neither significant). Better retrieval surfaces
+  more on-topic context for answerless questions, which does not increase abstention.
+  Substitution note: bge-reranker-v2-m3 (open) stands in for the license-gated NV-RerankQA
+  checkpoint; provider.rerank() now speaks both NIM and Jina/vLLM wire formats.
   - **Question:** the repo's retrieve() supports `NIM_RERANK` but the eval has never measured
     what it buys. Does reranking improve recall@3 (86%) and does better retrieval reduce
     downstream hallucination?
