@@ -102,7 +102,13 @@ def main():
     json.dump(rows, open(_path(ROWS), "w"), indent=1)
 
     una = [r for r in rows if not r["answerable"]]
-    n_halluc = sum(r["u_halluc"] for r in una)
+    # The hallucination ground-truth set is computed over ALL rows, not just the
+    # unanswerable ones: it is the unanswerable-answered errors PLUS the answerable
+    # substring-misses. Every recall denominator below is /n_halluc (95), so the
+    # blind-spot count must be reported against that same set, not against n_una_halluc.
+    n_una_halluc = sum(r["u_halluc"] for r in una)          # unanswerable-answered (78)
+    n_ans_halluc = sum(r["u_halluc"] for r in rows if r["answerable"])  # answerable miss (17)
+    n_halluc = n_una_halluc + n_ans_halluc                  # full hallucination set (95)
     # the shared blind spots: hallucinations BOTH plain 8B judges missed
     blind = [r for r in rows if r["u_halluc"] and not r["u_gate_blocks"] and not r["u_xgate_blocks"]]
 
@@ -112,8 +118,10 @@ def main():
     w(f"Same {len(rows)} SQuAD 2.0 rows / same unguarded answers (temp=0) as "
       "`report_squad.md`; only the judge differs, so all comparisons are paired "
       "(exact McNemar).\n")
-    w(f"Ground truth: {n_halluc} hallucinations among {len(una)} unanswerable questions; "
-      f"**{len(blind)}** of them escape BOTH plain 8B judges (the shared-blind-spot set).\n")
+    w(f"Ground truth: {n_halluc} hallucinations in total ({n_una_halluc} unanswerable-answered "
+      f"+ {n_ans_halluc} answerable substring-miss); **{len(blind)}** of these {n_halluc} escape "
+      "BOTH plain 8B judges (the shared-blind-spot set, the same /"
+      f"{n_halluc} set every recall denominator below uses).\n")
 
     w("## Gate metrics (hallucination detection on the unguarded run)\n")
     w("| gate | precision | recall | F1 | catches of the "

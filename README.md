@@ -157,6 +157,22 @@ matches the cross-model detection literature (FINCH-ZK, arXiv:2508.14314: detect
 improved by 6–39% on FELM from cross-model consistency). The trade-off is real too: the
 independent judge is stricter (precision 79%→67%, more false blocks).
 
+> **Multiple comparisons.** This repo reports **16 paired exact-McNemar tests** across the
+> judge, reranker, and blind-spot experiments (here, [`report_judge_variants.md`](eval/report_judge_variants.md),
+> [`report_rerank.md`](eval/report_rerank.md), [`report_blind_spot_arms.md`](eval/report_blind_spot_arms.md)).
+> All p-values are reported **uncorrected** for readability. Applying Holm–Bonferroni across
+> the full family of 16, **four results survive at α=0.05**: the two question-aware-grounding
+> collapses (cross-vs-grounded and 70B-vs-grounded, p≈10⁻⁹), the reranker's retrieval-recall
+> gain (p=0.0010), and the reranker's substring-accuracy gain (p=0.0034). The structural
+> capacity conclusion does **not** depend on a significant test — it rests on a *non-rejection*
+> (70B ≈ cross-family 8B, p=0.82), which Holm only makes more conservative. The headline
+> shared-blind-spots result (self vs cross-family, **p=0.0044**) sits just above the Holm
+> threshold at its rank (0.00417) and so does **not** survive a strict family-wide correction —
+> it is best read as strongly suggestive on this single setup rather than confirmatory, exactly
+> as the "one 8B judge pair, single dataset" caveat already states. The marginal results
+> (self+CoT recall lift p=0.035, reranker LLM-judge accuracy p=0.039) are **nominally
+> significant but do not survive correction** and are treated as directional only.
+
 The honest residual: **48 of 95 hallucinations were caught by neither 8B judge** — two small
 judges still share most blind spots with each other. The next rungs (larger judge, judge
 panel/PoLL, retrieval-grounded verification) target exactly that — measured below.
@@ -189,9 +205,10 @@ The 48-of-95 result above is the repo's central open problem: hallucinations tha
 
 Four findings ([`eval/report_judge_variants.md`](eval/report_judge_variants.md)):
 
-1. **CoT judging works and is free** — one prompt change lifts self-judge recall 33%→44%
-   (p=0.035) *and* improves precision. The published 22%→58% gain doesn't fully materialize on
-   adversarial near-miss material, but the direction and significance hold.
+1. **CoT judging helps and is free** — one prompt change lifts self-judge recall 33%→44%
+   (p=0.035, nominally significant but does **not** survive Holm correction across the 16-test
+   family; treat as directional) *and* improves precision. The published 22%→58% gain doesn't
+   fully materialize on adversarial near-miss material, but the direction holds.
 2. **A 770M grounded verifier catches what 8B parametric judges cannot.** MiniCheck's overall
    recall (41%) sits between the two 8B judges, but it recovers **14 of the 48 shared blind
    spots** — more than any judge variant — because it checks the answer against the retrieved
@@ -274,8 +291,11 @@ arms, same 200 rows / same answers as every gate above (paired, exact McNemar;
 3. **PoLL majority voting (published as an upgrade) is a measured downgrade here**: 41% <
    the best panel member alone (54%) and < the cross judge it contains (46%). Majority vote
    drags recall toward the weakest member (the 33% self-judge) — it buys precision (70%),
-   not recall. Family *diversity* is what matters: phi-4 (14B, third family) is the best
-   single judge measured, beating the 70B.
+   not recall. Family *diversity* is what matters: phi-4 (14B, third family) has the highest
+   point recall of any single judge measured (54%), though its CI [44–63%] overlaps the 70B's
+   [39–58%] and the cross-family 8B's [37–56%], and no direct paired test was run — so the
+   defensible claim is that a third-family 14B judge is *competitive with* the 70B at a
+   fraction of the cost, not that it significantly beats it.
 4. **Question-aware grounding backfires catastrophically at 8B** (46% → 9%, p<0.0001): shown
    the question, the judge falls into the same near-miss trap as the generator (raw one-word
    `grounded` verdicts on hallucinated answers — not a parsing artifact; verdict columns

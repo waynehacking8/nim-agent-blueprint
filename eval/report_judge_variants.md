@@ -2,7 +2,7 @@
 
 Same 200 SQuAD 2.0 rows / same unguarded answers (temp=0) as `report_squad.md`; only the judge differs, so all comparisons are paired (exact McNemar).
 
-Ground truth: 78 hallucinations among 100 unanswerable questions; **48** of them escape BOTH plain 8B judges (the shared-blind-spot set).
+Ground truth: 95 hallucinations in total (78 unanswerable-answered + 17 answerable substring-miss); **48** of these 95 escape BOTH plain 8B judges (the shared-blind-spot set, the same /95 set every recall denominator below uses).
 
 ## Gate metrics (hallucination detection on the unguarded run)
 
