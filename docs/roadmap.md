@@ -24,6 +24,10 @@
   Precision trade-off observed as predicted (79%→71%). Shared-blind-spots attribution
   supported on this setup (single dataset, one 8B judge pair; unanswerable-only robustness
   check p=0.0043); the deeper honest finding is that 46/95 hallucinations escape BOTH 8B judges.
+  (Numbers above are from the first committed run. The Phase 5 end-to-end re-run reproduces
+  every metric within 1–2 points — current report_squad.md: self recall 33%, cross-family 46%,
+  McNemar p=0.0044, 48/95 escape both. Same conclusion; the drift is run-to-run variance in
+  vLLM serving, documented in the README.)
   Implementation: validate() takes judge_model/judge_url (or NIM_JUDGE_MODEL/NIM_JUDGE_URL);
   the eval harness scores both judges in one pass (NIM_XJUDGE_MODEL/NIM_XJUDGE_URL).
   - **Question:** gate recall is 25% and the attribution is shared blind spots — the judge is the
@@ -60,7 +64,7 @@
     stays <5% at scale, the "one guarded prompt" conclusion upgrades from demonstration to
     statistically supported.
 
-- [ ] **Attack the 46/95 shared blind spots: larger judge vs judge panel vs retrieval-grounded.**
+- [ ] **Attack the 46/95 (48/95 in the current run) shared blind spots: larger judge vs judge panel vs retrieval-grounded.**
   - **Question:** 46 of 95 hallucinations escape BOTH 8B judges (self + cross-family). Is that
     a capacity problem (8B judges are too small) or a structural one (judging from parametric
     knowledge has a ceiling no matter the size)? The answer decides where validate() should
