@@ -146,16 +146,16 @@ separate GPU. Paired comparison, exact McNemar test:
 
 | judge | precision | recall | F1 | residual hallucination |
 |---|---|---|---|---|
-| self (qwen3-8b) | 79% | 33% [24–43%] | 0.46 | 50% |
-| **cross-family (llama-3.1-8b)** | 67% | **46%** [37–56%] | **0.55** | **38%** |
+| self (qwen3-8b) | 79% | 27% [19–37%] | 0.40 | 60% |
+| **cross-family (llama-3.1-8b)** | 74% | **41%** [31–51%] | **0.52** | **48%** |
 
-Recall **+14 points (p = 0.0044, McNemar exact)** — of hallucinations caught by exactly one
-judge, the cross-family judge caught 16 vs the self judge's 3. This supports the
+Recall **+14 points (p = 0.0072, McNemar exact)** — of hallucinations caught by exactly one
+judge, the cross-family judge caught 17 vs the self judge's 4. This supports the
 shared-blind-spots attribution on this setup (single dataset, one 8B judge pair — see
 [`eval/report_squad.md`](eval/report_squad.md) for the robustness check and limitations) and
 matches the cross-model detection literature (FINCH-ZK, arXiv:2508.14314: detection F1
 improved by 6–39% on FELM from cross-model consistency). The trade-off is real too: the
-independent judge is stricter (precision 79%→67%, more false blocks).
+independent judge is stricter (precision 79%→74%, more false blocks).
 
 > **Multiple comparisons.** This repo reports **16 paired exact-McNemar tests** across the
 > judge, reranker, and blind-spot experiments (here, [`report_judge_variants.md`](eval/report_judge_variants.md),
@@ -166,14 +166,14 @@ independent judge is stricter (precision 79%→67%, more false blocks).
 > gain (p=0.0010), and the reranker's substring-accuracy gain (p=0.0034). The structural
 > capacity conclusion does **not** depend on a significant test — it rests on a *non-rejection*
 > (70B ≈ cross-family 8B, p=0.82), which Holm only makes more conservative. The headline
-> shared-blind-spots result (self vs cross-family, **p=0.0044**) sits just above the Holm
+> shared-blind-spots result (self vs cross-family, **p=0.0072**) sits above the Holm
 > threshold at its rank (0.00417) and so does **not** survive a strict family-wide correction —
 > it is best read as strongly suggestive on this single setup rather than confirmatory, exactly
 > as the "one 8B judge pair, single dataset" caveat already states. The marginal results
 > (self+CoT recall lift p=0.035, reranker LLM-judge accuracy p=0.039) are **nominally
 > significant but do not survive correction** and are treated as directional only.
 
-The honest residual: **48 of 95 hallucinations were caught by neither 8B judge** — two small
+The honest residual: **53 of 96 hallucinations were caught by neither 8B judge** — two small
 judges still share most blind spots with each other. The next rungs (larger judge, judge
 panel/PoLL, retrieval-grounded verification) target exactly that — measured below.
 
@@ -186,37 +186,37 @@ panel/PoLL, retrieval-grounded verification) target exactly that — measured be
 > EVAL_CORPUS=corpus_squad.jsonl EVAL_DATASET=dataset_squad.jsonl EVAL_REPORT=report_squad.md
 > python3 eval/run_eval.py` (generator and judge on separate GPUs).
 
-## Attacking the 48 shared blind spots — every method class the literature offers
+## Attacking the 53 shared blind spots — every method class the literature offers
 
-The 48-of-95 result above is the repo's central open problem: hallucinations that escape
+The 53-of-96 result above is the repo's central open problem: hallucinations that escape
 *both* 8B generative judges. This round runs each published method class against the **same
 200 rows / same answers** (temp=0 ⇒ all comparisons paired, exact McNemar):
 
-| gate | precision | recall | F1 | catches of the 48 blind spots |
+| gate | precision | recall | F1 | catches of the 53 blind spots |
 |---|---|---|---|---|
-| self judge (plain) | 79% | 33% | 0.46 | 0 (by definition) |
-| cross-family judge (plain) | 67% | 46% | 0.55 | 0 (by definition) |
-| self + CoT (arXiv:2511.11087) | 82% | 44% | 0.58 | 8 |
-| cross-family + CoT | 66% | 53% | 0.58 | 10 |
-| MiniCheck-FT5 770M, grounded NLI (arXiv:2404.10774) | 74% | 41% | 0.53 | **14** |
-| **cross-family OR MiniCheck (union)** | 65% | **62%** | **0.63** | 14 |
+| self judge (plain) | 79% | 27% | 0.40 | 0 (by definition) |
+| cross-family judge (plain) | 74% | 41% | 0.52 | 0 (by definition) |
+| self + CoT (arXiv:2511.11087) | 81% | 40% | 0.53 | 11 |
+| cross-family + CoT | 62% | 49% | 0.55 | 11 |
+| MiniCheck-FT5 770M, grounded NLI (arXiv:2404.10774) | 66% | 36% | 0.47 | 12 |
+| **cross-family OR MiniCheck (union)** | 63% | **55%** | **0.59** | 12 |
 
 ![Judge variants](eval/judge_variants.png)
 
 Four findings ([`eval/report_judge_variants.md`](eval/report_judge_variants.md)):
 
-1. **CoT judging helps and is free** — one prompt change lifts self-judge recall 33%→44%
+1. **CoT judging helps and is free** — one prompt change lifts self-judge recall 27%→40%
    (p=0.035, nominally significant but does **not** survive Holm correction across the 16-test
    family; treat as directional) *and* improves precision. The published 22%→58% gain doesn't
    fully materialize on adversarial near-miss material, but the direction holds.
 2. **A 770M grounded verifier catches what 8B parametric judges cannot.** MiniCheck's overall
-   recall (41%) sits between the two 8B judges, but it recovers **14 of the 48 shared blind
+   recall (36%) sits between the two 8B judges, but it recovers **12 of the 53 shared blind
    spots** — more than any judge variant — because it checks the answer against the retrieved
    evidence instead of judging from its own (absent) knowledge. The bottleneck is grounding,
    not capacity.
-3. **The deployable answer is the union**: generative judge OR grounded NLI = 62% recall,
-   F1 0.63 — the two methods catch *different* hallucinations.
-4. **23 of 95 hallucinations still escape everything.** That is the new floor.
+3. **The deployable answer is the union**: generative judge OR grounded NLI = 55% recall,
+   F1 0.59 — the two methods catch *different* hallucinations.
+4. **29 of 96 hallucinations still escape everything.** That is the new floor.
 
 ### Does better retrieval reduce hallucination? (NIM reranker, NV-RerankQA arXiv:2409.07691)
 
@@ -290,7 +290,7 @@ arms, same 200 rows / same answers as every gate above (paired, exact McNemar;
    retrieval, not bigger judges.
 3. **PoLL majority voting (published as an upgrade) is a measured downgrade here**: 41% <
    the best panel member alone (54%) and < the cross judge it contains (46%). Majority vote
-   drags recall toward the weakest member (the 33% self-judge) — it buys precision (70%),
+   drags recall toward the weakest member (the 27% self-judge) — it buys precision (70%),
    not recall. Family *diversity* is what matters: phi-4 (14B, third family) has the highest
    point recall of any single judge measured (54%), though its CI [44–63%] overlaps the 70B's
    [39–58%] and the cross-family 8B's [37–56%], and no direct paired test was run — so the
