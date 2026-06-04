@@ -268,6 +268,8 @@ small) or a **structural** one (parametric judging has a ceiling no matter the s
 arms, same 200 rows / same answers as every gate above (paired, exact McNemar;
 [`eval/report_blind_spot_arms.md`](eval/report_blind_spot_arms.md)):
 
+> *The capacity experiment below was run in a separate session (Phase 4) and uses its own ground truth (95 hallucinations, 48 shared blind spots) rather than the Phase 5 re-scored baseline (96/53) above. The 1-row difference reflects the expanded abstention detection in the Phase 5 re-run; the capacity conclusions are unaffected.*
+
 | gate | precision | recall | F1 | of the 48 both-8B-missed | of the 23 escape-everything |
 |---|---|---|---|---|---|
 | cross-family 8B *(baseline)* | 67% | 46% | 0.55 | 0 | 0 |
