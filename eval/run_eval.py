@@ -88,7 +88,7 @@ def llm_accuracy_judge(ex, out):
           f"QUESTION: {ex['q']}\nREFERENCE: {ex['gold']}\nRESPONSE: {out['answer']}"}],
         max_tokens=8, model=ACC_JUDGE_MODEL or None, base_url=ACC_JUDGE_URL or None)
     v = verdict.strip().lower()
-    return "correct" in v and "incorrect" not in v and "wrong" not in v
+    return "correct" in v and "incorrect" not in v and "wrong" not in v and "not correct" not in v
 
 
 def is_hallucination(ex, out):

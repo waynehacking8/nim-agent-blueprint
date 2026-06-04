@@ -88,12 +88,12 @@ def sample():
 # ----------------------------------------------------------------------------- stage 2
 def auroc(scores, labels):
     """AUROC by the Mann-Whitney U statistic (no sklearn dependency)."""
+    from eval.stats_util import auroc_mannwhitney
     pos = [s for s, l in zip(scores, labels) if l]
     neg = [s for s, l in zip(scores, labels) if not l]
     if not pos or not neg:
         return float("nan")
-    wins = sum((p > n) + 0.5 * (p == n) for p in pos for n in neg)
-    return wins / (len(pos) * len(neg))
+    return auroc_mannwhitney(pos, neg)
 
 
 def score():

@@ -4,6 +4,7 @@ The validate step is the differentiator: every answer is checked for groundednes
 (supported by retrieved context) and basic safety before it is returned.
 """
 import os
+import re
 
 from app import provider
 try:
@@ -56,10 +57,15 @@ JUDGE_SYS_QA = ("You are given a QUESTION, the retrieved CONTEXT, and an ANSWER.
 
 
 def _parse_verdict(text):
-    """Verdict = the LAST occurrence of grounded/unsupported (CoT reasoning may mention both)."""
+    """Verdict = the LAST occurrence of grounded/unsupported (CoT reasoning may mention both).
+
+    Uses word-boundary regex so "ungrounded" does not match the \bgrounded\b pattern.
+    """
     t = text.lower()
-    g, u = t.rfind("grounded"), t.rfind("unsupported")
-    # "unsupported" contains no "grounded" substring, but guard the reverse anyway.
+    g_matches = list(re.finditer(r'\bgrounded\b', t))
+    u_matches = list(re.finditer(r'\bunsupported\b', t))
+    g = g_matches[-1].start() if g_matches else -1
+    u = u_matches[-1].start() if u_matches else -1
     if g == -1 and u == -1:
         return False  # unparseable -> treat as unsupported (fail closed)
     return g > u
@@ -93,7 +99,10 @@ def validate(answer, context, judge_model=None, judge_url=None, cot=False, quest
                                 max_tokens=512 if cot else 16,
                                 model=judge_model or os.getenv("NIM_JUDGE_MODEL") or None,
                                 base_url=judge_url or os.getenv("NIM_JUDGE_URL") or None)
-        return _parse_verdict(verdict) if cot else ("grounded" in verdict.lower())
+        if cot:
+            return _parse_verdict(verdict)
+        t = verdict.strip().lower()
+        return bool(re.search(r'\bgrounded\b', t)) and not bool(re.search(r'\bunsupported\b', t))
 
 def answer(query, retriever):
     with tracer.start_as_current_span("agent"):
@@ -107,7 +116,10 @@ def answer(query, retriever):
 _ABSTAIN = ("don't know", "do not know", "cannot answer", "can't answer", "no information",
             "not supported", "unable to", "not in the context", "isn't in the context",
             "does not contain", "doesn't contain", "no relevant", "not mentioned",
-            "not provide", "doesn't mention", "does not mention")
+            "not provide", "doesn't mention", "does not mention",
+            "cannot determine", "insufficient information", "not available in",
+            "not specified", "not stated", "not found in the", "no answer",
+            "not clear from", "not mentioned", "not provided")
 
 
 def is_abstention(text):

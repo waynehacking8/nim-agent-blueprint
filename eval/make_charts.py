@@ -25,6 +25,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 DPI = 150
 
 # --- Numbers from eval/report.md -------------------------------------------
+# Demo-set constants (N=10, from report.md §2). Full SQuAD eval charts
+# below read from the rows JSON; these are only for the illustrative
+# hallucination_ablation and gate_confusion plots.
+#
 # Hallucination rate on the 10 unanswerable (out-of-corpus) questions.
 #   report.md "Headline" table:        guarded 0%, unguarded 40%   (lines 13-14)
 #   report.md gate section:            residual after gate 30%     (line 28)
@@ -432,14 +436,14 @@ def semantic_entropy_chart(scores_path: str) -> None:
     scores = json.load(open(scores_path))
 
     def auroc(rows, key):
+        from eval.stats_util import auroc_mannwhitney
         labels = [r["u_halluc"] for r in rows]
         vals = [r[key] for r in rows]
         pos = [v for v, l in zip(vals, labels) if l]
         neg = [v for v, l in zip(vals, labels) if not l]
         if not pos or not neg:
             return float("nan")
-        wins = sum((p > n) + 0.5 * (p == n) for p in pos for n in neg)
-        return wins / (len(pos) * len(neg))
+        return auroc_mannwhitney(pos, neg)
 
     ans = [r for r in scores if r["answerable"]]
     una = [r for r in scores if not r["answerable"]]

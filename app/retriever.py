@@ -34,6 +34,9 @@ class HybridRetriever:
 
     def _fuse(self, query, alpha):
         """Min-max-normalized dense+keyword fusion -> passage indices, best-first."""
+        # NOTE: provider.embed([query]) re-embeds the query on every call. If _fuse is
+        # invoked multiple times for the same query (e.g. rerank fallback), this is a
+        # redundant embedding round-trip. Cache the query vector if call frequency matters.
         qv = provider.embed([query])[0]
         qt = Counter(re.findall(r"\w+", query.lower()))
         dense = [self._cos(qv, self.vecs[i]) for i in range(len(self.passages))]
