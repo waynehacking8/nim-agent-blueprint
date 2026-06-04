@@ -227,6 +227,7 @@ since NVIDIA's NV-RerankQA checkpoint is license-gated). Paired per question
 | metric | fusion only | + reranker | delta | p |
 |---|---|---|---|---|
 | retrieval recall@3 | 85% | **96%** | +11 pts | 0.0010 |
+| answer accuracy (substring) | 70% | 81% | +11 pts | 0.0034 |
 | answer accuracy (LLM judge) | 72% | 80% | +8 pts | 0.0386 |
 | hallucination (guarded) | 48% | 52% | +4 pts | n.s. |
 | hallucination (unguarded) | 78% | 86% | +8 pts | n.s. |
