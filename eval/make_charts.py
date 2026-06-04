@@ -436,7 +436,9 @@ def semantic_entropy_chart(scores_path: str) -> None:
     scores = json.load(open(scores_path))
 
     def auroc(rows, key):
-        from eval.stats_util import auroc_mannwhitney
+        import sys, os
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from stats_util import auroc_mannwhitney
         labels = [r["u_halluc"] for r in rows]
         vals = [r[key] for r in rows]
         pos = [v for v, l in zip(vals, labels) if l]

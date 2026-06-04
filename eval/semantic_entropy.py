@@ -88,7 +88,8 @@ def sample():
 # ----------------------------------------------------------------------------- stage 2
 def auroc(scores, labels):
     """AUROC by the Mann-Whitney U statistic (no sklearn dependency)."""
-    from eval.stats_util import auroc_mannwhitney
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from stats_util import auroc_mannwhitney
     pos = [s for s, l in zip(scores, labels) if l]
     neg = [s for s, l in zip(scores, labels) if not l]
     if not pos or not neg:
